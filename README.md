@@ -1,12 +1,9 @@
 FreeLancers Gate Documentation
 =================
-------
-#
-#
-#
+
 main goals for freelancers gate
 ---------------
-----
+
 1- help jobless humans to find good jobs that fits the there life needs and wants
 
 2- connect bussiness owners with freelancers that they able to do there jobs in good way.
