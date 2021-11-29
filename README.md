@@ -14,10 +14,6 @@ main goals for freelancers gate
 
 -------
 
-#
-#
-#
-
 Main Flowchart for website
 -------
 ![main](./WebsiteFlowChart/generalSiteFlowChartDesigin.dio.svg)
