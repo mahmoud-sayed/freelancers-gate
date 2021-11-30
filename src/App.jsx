@@ -1,14 +1,18 @@
 import React from "react";
-import { createStore, } from 'redux';
-import allReducers from "./redux/reducers";
+import {useSelector,useDispatch} from 'react-redux';
+import { increment, decrement } from './redux/actions/index';
 
-
-const store = createStore(allReducers)
 
 function App() {
+  const counter = useSelector(state => state.counterReducer);
+  const isLogged = useSelector(state => state.loggerReducer);
+  const dispatch = useDispatch();
   return (
     <div className="App">
-      
+      <h1>counter : {counter}</h1>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={()=> dispatch(decrement())}>-</button>
+      {isLogged ? <h3>this is a secrit thing for loged in only</h3> :''}
     </div>
   );
 }

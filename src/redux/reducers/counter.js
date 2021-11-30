@@ -1,4 +1,4 @@
-import { INCERMENT, DECERMENT } from './../actions/actions';
+import { INCERMENT, DECERMENT } from './../actions';
 
 const counterReducer = (state = 0, action) => {
     switch (action.type) {
@@ -6,7 +6,7 @@ const counterReducer = (state = 0, action) => {
             return state + 1;
 
         case DECERMENT:
-            return state + 1;
+            return state - 1;
         default:
             return state;
     }

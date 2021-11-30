@@ -1,4 +1,4 @@
-import { SIGN_IN } from './../actions/actions'
+import { SIGN_IN } from './../actions'
 
 const loggerReducer = (state = false, action) => {
 
