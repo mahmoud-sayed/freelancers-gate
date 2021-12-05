@@ -40,6 +40,10 @@ connect bussiness owners with freelancers to get things done
  
  - installed sass, router, redux
  - created basic empty pages and components
+ - added glopal file styling using sass with functions and vars
+
+## errors and issues I faced
+
 
 
 

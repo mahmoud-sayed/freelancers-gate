@@ -6,10 +6,10 @@ const MainNavbar = () => {
 
     return(
         <div>
-        <Logo/>
-        <nav>
-            <Link></Link>
-        </nav>
+            <Logo/>
+            <nav>
+                
+            </nav>
         </div>
     );
 }

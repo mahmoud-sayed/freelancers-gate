@@ -1,0 +1,67 @@
+//main Dark Colors
+$dark-black: #000;
+$dark-blue-black:#164188;
+$dark-blue:#007fed;
+$dark-fuchsia:#f20091;
+$dark-green:#379E54;
+$dark-yello:#F77D0E;
+// & Hover
+//---------------
+// Medium Dark Colors
+$medium-dark-black:#8D8E90;
+$medium-dark-blue:#29B2FE;
+$medium-dart-green:#5DC16A;
+$medium-dark-yello:#FFC24E;
+//---------------
+// Light colors
+$light-black:#3a393f;
+$light-blue:#28B4F2;
+//$light-fuchsia:;
+//$light-green:;
+//--------------
+//Hover
+$fuchsia-hover: #fa5f9b;
+$blue-hover:#139FF0;
+//---------------
+//warning
+$danger: #EB3730;
+$warning:#FFC107;
+$success:#28A745;
+//---------------
+// Font & text
+$font-waight-400:400;
+$font-waight-600:600;
+$font-waight-700:700;
+$text-colore:#0e1724;
+$font-size-48:48px;
+$font-size-41:41px;
+$font-size-32:34px;
+$font-size-20:20px;
+$font-size-18:18px;
+$font-size-16:16px;
+$font-size-14:14px;
+$font-size-12:12px;
+//---------------
+//btton
+@mixin btn($bg-color, $font-size, $borderRadius, $paddingUpandDown, $paddingRightAndLeft) {
+    background-color: $bg-color;
+    border: none;
+    border-radius: $borderRadius;
+    color: white;
+    padding: $paddingUpandDown $paddingRightAndLeft;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $font-size;
+}
+
+//------------
+//Font
+@mixin text-style($color:$text-colore, $font-size:$font-size-18, $font-waight:$font-waight-400, $font-style: normal, $line-height:1.55) {
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-waight;
+    font-style: $font-style;
+}
+
+//-------------
