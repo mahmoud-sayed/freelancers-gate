@@ -2,12 +2,12 @@ import React from "react";
 import './../../global/global-style.scss';
 import './style.scss';
 
-const SignIn = () => {
+const SecondaryNavbar = () => {
     return (
         <div>
-            <h1>SignIn</h1>
+            <h1>SecondaryNavbar</h1>
         </div>
     );
 }
 
-export default SignIn;
+export default SecondaryNavbar;
