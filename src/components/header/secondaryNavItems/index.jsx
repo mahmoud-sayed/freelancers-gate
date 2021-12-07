@@ -1,5 +1,5 @@
 import React from "react";
-import './../../global/global-style.scss';
+import './../../../global/global-style.scss';
 import './style.scss';
 
 const SecondaryNavItems = () => {

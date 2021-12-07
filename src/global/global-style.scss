@@ -5,6 +5,7 @@ $dark-blue:#007fed;
 $dark-fuchsia:#f20091;
 $dark-green:#379E54;
 $dark-yello:#F77D0E;
+$white:#fff;
 // & Hover
 //---------------
 // Medium Dark Colors
@@ -65,3 +66,13 @@ $font-size-12:12px;
 }
 
 //-------------
+//display flex
+@mixin display-flex-row-alignCenter-justifyCenter-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin name {}

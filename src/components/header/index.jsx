@@ -1,8 +1,8 @@
 import React from "react";
 import './../../global/global-style.scss';
 import './style.scss';
-import MainNavbar from "../mainNavbar";
-import SecondreNavbar from "../secondaryNavbar";
+import MainNavbar from "./mainNavbar";
+import SecondreNavbar from "./secondaryNavbar";
 
 const Header = () => {
     return (        
