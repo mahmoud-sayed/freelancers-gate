@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const MainNavItems = () => {
     return (
-        <div className="class-items">
+        <div className="nav-items">
             <ul>
                 <li><Link to="/howitworks">how it works</Link></li>
                 <li><Link to="/jobs">browes jobs</Link></li>

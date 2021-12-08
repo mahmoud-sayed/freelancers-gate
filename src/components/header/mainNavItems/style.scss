@@ -1,0 +1,10 @@
+@import './../../../global/global-style.scss';
+.nav-items {
+    ul {
+        @include display-flex-row-alignCenter;
+        gap: 25px;
+        li {
+            color: $dark-black;
+        }
+    }
+}

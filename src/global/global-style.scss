@@ -17,7 +17,7 @@ $medium-dark-yello:#FFC24E;
 // Light colors
 $light-black:#3a393f;
 $light-blue:#28B4F2;
-//$light-fuchsia:;
+$light-fuchsia:#FA5F9B;
 //$light-green:;
 //--------------
 //Hover
@@ -43,17 +43,21 @@ $font-size-16:16px;
 $font-size-14:14px;
 $font-size-12:12px;
 //---------------
+//glopal css classes
+@mixin container-88($width:88%) {
+    width: $width;
+    margin: 0 auto;
+}
+
 //btton
-@mixin btn($bg-color, $font-size, $borderRadius, $paddingUpandDown, $paddingRightAndLeft) {
+@mixin btn($bg-color, $paddingUpandDown, $paddingRightAndLeft) {
     background-color: $bg-color;
     border: none;
-    border-radius: $borderRadius;
     color: white;
     padding: $paddingUpandDown $paddingRightAndLeft;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: $font-size;
 }
 
 //------------
@@ -67,12 +71,8 @@ $font-size-12:12px;
 
 //-------------
 //display flex
-@mixin display-flex-row-alignCenter-justifyCenter-wrap {
+@mixin display-flex-row-alignCenter($flex-direction:row, $align-items:center, ) {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
 }
-
-@mixin name {}

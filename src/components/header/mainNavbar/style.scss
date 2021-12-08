@@ -2,4 +2,46 @@
 .main-nav-wrapper {
     height: 64px;
     background-color: $white;
+    .container {
+        height: 100%;
+        @include display-flex-row-alignCenter;
+        justify-content: space-between;
+        @include container-88;
+        font-size: $font-size-16;
+        .main-nav-items-left {
+            @include display-flex-row-alignCenter;
+            justify-content: flex-start;
+            gap: 20px;
+            a {
+                color: $dark-black;
+                font-weight: $font-waight-400;
+                text-transform: capitalize;
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+        }
+        .main-nav-items-right {
+            @include display-flex-row-alignCenter;
+            justify-content: flex-end;
+            gap: 20px;
+            a {
+                color: $dark-black;
+                text-transform: capitalize;
+                font-weight: $font-waight-400;
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+            .button {
+                font-weight: bold;
+                text-transform: none;
+                @include btn($dark-fuchsia, 5px, 10px);
+                &:hover {
+                    color: $white;
+                    background-color: $light-fuchsia;
+                }
+            }
+        }
+    }
 }

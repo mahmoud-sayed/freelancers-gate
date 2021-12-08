@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Routes} from 'react-router-dom';
 
 // components imported
 import Header from "./components/header";
