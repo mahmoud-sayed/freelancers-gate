@@ -18,6 +18,65 @@
             gap: 130px;
             margin: 50px 0;
             line-height: 33px;
+            .freelancers {
+                flex-grow: 1;
+                flex-basis: 25%;
+            }
+            .about {
+                flex-grow: 1;
+                flex-basis: 25%;
+            }
+            .terms {
+                flex-grow: 1;
+                flex-basis: 25%;
+            }
+            .apps {
+                @include display-flex-row-alignCenter(column);
+                flex-grow: 1;
+                flex-basis: 25%;
+                .mopile-app {
+                    li {
+                        img {
+                            cursor: pointer;
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .social-icons {
+                    width: 100%;
+                    .icons-list {
+                        width: 100%;
+                        @include display-flex-row-alignCenter;
+                        justify-content: space-evenly;
+                        font-size: 30px;
+                        margin-top: 20px;
+                        .facebook {
+                            cursor: pointer;
+                            &:hover {
+                                color: blue;
+                            }
+                        }
+                        .twitter {
+                            cursor: pointer;
+                            &:hover {
+                                color: $light-blue;
+                            }
+                        }
+                        .youtube {
+                            cursor: pointer;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                        .instgram {
+                            cursor: pointer;
+                            &:hover {
+                                color: rgb(209, 81, 81);
+                            }
+                        }
+                    }
+                }
+            }
         }
         .copyright-wrapper {
             width: 100%;

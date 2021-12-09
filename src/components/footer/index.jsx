@@ -1,8 +1,10 @@
 import React from "react";
 import './../../global/global-style.scss';
 import './style.scss';
-import App from './../../App';
+import android from './../../assets/android.png';
+import apple from './../../assets/apple.png';
 import Logo from "../logo";
+import { AiFillYoutube, AiFillFacebook, AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
 
 const Footer = () => {
     return (
@@ -39,15 +41,17 @@ const Footer = () => {
                         <Logo/>
                         <h4>apps</h4>
                         <ul className="mopile-app">
-                            <li></li>
-                            <li></li>
+                            <li><img src={apple} alt="download app for apple" /></li>
+                            <li><img src={android} alt="download app for android" /></li>
                         </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <div className="social-icons">
+                            <ul className="icons-list">
+                                <li className="facebook"><AiFillFacebook/></li>
+                                <li className="twitter"><AiOutlineTwitter/></li>
+                                <li className="youtube"><AiFillYoutube/></li>
+                                <li className="instgram"><AiFillInstagram/></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
