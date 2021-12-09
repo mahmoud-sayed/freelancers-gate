@@ -50,17 +50,19 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <hr />
-                <div className="copyright-content">
-                    
-                    <div className="registerd-user">
-                        <p><span>50.285</span> registerduser</p>
-                    </div>
-                    <div className="total-job-posted">
-                        <p><span>60.759</span> total job posted</p>
-                    </div>
-                    <div className="copy-rights">
-                        &copy; 2021 freelancers gate - All Rights Reserved. v1.0.0
+                
+                <div className="copyright-wrapper">
+                    <hr />
+                    <div className="copyright-content">
+                        <div className="registerd-user">
+                            <p><span>50.285</span> registerduser</p>
+                        </div>
+                        <div className="total-job-posted">
+                            <p><span>60.759</span> total job posted</p>
+                        </div>
+                        <div className="copy-rights">
+                            &copy; 2021 freelancers gate - All Rights Reserved. v1.0.0
+                        </div>
                     </div>
                 </div>
             </div>
