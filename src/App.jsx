@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Footer from "./components/footer";
 
 // components imported
 import Header from "./components/header";
@@ -12,6 +13,7 @@ function App() {
     <Fragment>
         <Header/>
         <RoutesComponent/>
+        <Footer/>
     </Fragment>
   );
 }

@@ -4,8 +4,11 @@ import './style.scss';
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home page</h1>
+        <div className="home-wrapper">
+            <div className="container">
+                <h1>Home page</h1>
+            </div>
+            
         </div>
     );
 }

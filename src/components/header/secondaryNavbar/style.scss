@@ -1,0 +1,9 @@
+@import './../../../global/global-style.scss';
+.secondary-nav-wrapper {
+    height: 48px;
+    background-color: $nav-footer-colore;
+    color: $white;
+    .container {
+        @include container-88;
+    }
+}

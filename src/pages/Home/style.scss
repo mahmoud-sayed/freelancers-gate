@@ -1,0 +1,6 @@
+@import './../../global/global-style.scss';
+.home-wrapper {
+    .container {
+        @include container-88;
+    }
+}

@@ -8,7 +8,7 @@ const Header = () => {
     return (        
         <header className="Header">
             <MainNavbar/>
-            {/*<SecondreNavbar/>*/}
+            <SecondreNavbar/>
         </header>
     );
 }

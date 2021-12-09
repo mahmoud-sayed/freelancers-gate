@@ -11,7 +11,7 @@ const MainNavbar = () => {
         <div className="main-nav-wrapper">
             <div className="container">
                 <div className="main-nav-items-left">
-                    <Link to="/"><Logo/></Link>
+                    <Logo/>
                     <MainNavItems/>
                 </div>
                 <div className="main-nav-items-right">

@@ -4,8 +4,10 @@ import './style.scss';
 
 const SecondaryNavbar = () => {
     return (
-        <div>
-            <h1>SecondaryNavbar</h1>
+        <div className="secondary-nav-wrapper">
+            <div className="container">
+                <h1>SecondaryNavbar</h1>
+            </div>
         </div>
     );
 }

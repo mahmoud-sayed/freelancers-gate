@@ -6,6 +6,7 @@ $dark-fuchsia:#f20091;
 $dark-green:#379E54;
 $dark-yello:#F77D0E;
 $white:#fff;
+$nav-footer-colore:#0e1724;
 // & Hover
 //---------------
 // Medium Dark Colors
@@ -71,7 +72,7 @@ $font-size-12:12px;
 
 //-------------
 //display flex
-@mixin display-flex-row-alignCenter($flex-direction:row, $align-items:center, ) {
+@mixin display-flex-row-alignCenter($flex-direction:row, $align-items:center) {
     display: flex;
     flex-direction: $flex-direction;
     align-items: $align-items;

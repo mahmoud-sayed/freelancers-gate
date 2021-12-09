@@ -1,0 +1,32 @@
+@import './../../global/global-style.scss';
+.footer-wrapper {
+    height: 544px;
+    background-color: $nav-footer-colore;
+    color: $white;
+    .container {
+        @include container-88;
+        @include display-flex-row-alignCenter(column);
+        text-transform: capitalize;
+        .footer-content {
+            width: 100%;
+            @include display-flex-row-alignCenter;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 130px;
+            margin: 50px 0;
+            line-height: 33px;
+        }
+        hr {
+            width: 100%;
+            border: 1.2px solid #2b3340;
+            margin: 10px 0;
+        }
+        .copyright-content {
+            width: 100%;
+            @include display-flex-row-alignCenter;
+            justify-content: space-evenly;
+            gap: 100px;
+            margin: 20px 0;
+        }
+    }
+}
