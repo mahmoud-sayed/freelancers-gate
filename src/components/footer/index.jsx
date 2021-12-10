@@ -5,6 +5,7 @@ import android from './../../assets/android.png';
 import apple from './../../assets/apple.png';
 import Logo from "../logo";
 import { AiFillYoutube, AiFillFacebook, AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -14,42 +15,42 @@ const Footer = () => {
                     <div className="freelancers">
                         <h4>freelancers</h4>
                         <ul>
-                            <li>categorys</li>
-                            <li>projects</li>
-                            <li>freelancers</li>
-                            <li>API for developers</li>
+                            <li><Link to="#">categorys</Link></li>
+                            <li><Link to="#">projects</Link></li>
+                            <li><Link to="#">freelancers</Link></li>
+                            <li><Link to="#">API for developers</Link></li>
                         </ul>
                     </div>
                     <div className="about">
                         <h4>about</h4>
                         <ul>
-                            <li>about us</li>
-                            <li>how it works</li>
+                            <li><Link to="#">about us</Link></li>
+                            <li><Link to="/howitworks">how it works</Link></li>
 
                         </ul>
                     </div>
                     <div className="terms">
                         <h4>terms</h4>
                         <ul>
-                            <li>privacy policy</li>
-                            <li>terms and policy</li>
-                            <li>copyRight policy</li>
-                            <li>fees and charges</li>
+                            <li><Link to="#">privacy policy</Link></li>
+                            <li><Link to="#">terms and policy</Link></li>
+                            <li><Link to="#">copyRight policy</Link></li>
+                            <li><Link to="#">fees and charges</Link></li>
                         </ul>
                     </div>
                     <div className="apps">
                         <Logo/>
                         <h4>apps</h4>
                         <ul className="mopile-app">
-                            <li><img src={apple} alt="download app for apple" /></li>
-                            <li><img src={android} alt="download app for android" /></li>
+                            <li><Link to=""><img src={apple} alt="download app for apple" /></Link></li>
+                            <li><Link to=""><img src={android} alt="download app for android" /></Link></li>
                         </ul>
                         <div className="social-icons">
                             <ul className="icons-list">
-                                <li className="facebook"><AiFillFacebook/></li>
-                                <li className="twitter"><AiOutlineTwitter/></li>
-                                <li className="youtube"><AiFillYoutube/></li>
-                                <li className="instgram"><AiFillInstagram/></li>
+                                <li className="facebook"><Link to="#"><AiFillFacebook/></Link></li>
+                                <li className="twitter"><Link to="#"><AiOutlineTwitter/></Link></li>
+                                <li className="youtube"><Link to="#"><AiFillYoutube/></Link></li>
+                                <li className="instgram"><Link to="#"><AiFillInstagram/></Link></li>
                             </ul>
                         </div>
                     </div>

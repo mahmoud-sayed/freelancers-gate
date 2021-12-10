@@ -21,14 +21,44 @@
             .freelancers {
                 flex-grow: 1;
                 flex-basis: 25%;
+                li {
+                    a {
+                        color: $light-black;
+                        &:hover {
+                            color: $white;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
             .about {
                 flex-grow: 1;
                 flex-basis: 25%;
+                li {
+                    a {
+                        color: $light-black;
+                        &:hover {
+                            color: $white;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
             .terms {
                 flex-grow: 1;
                 flex-basis: 25%;
+                li {
+                    a {
+                        color: $light-black;
+                        &:hover {
+                            color: $white;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
             .apps {
                 @include display-flex-row-alignCenter(column);
@@ -36,9 +66,11 @@
                 flex-basis: 25%;
                 .mopile-app {
                     li {
-                        img {
-                            cursor: pointer;
-                            max-width: 100%;
+                        a {
+                            img {
+                                cursor: pointer;
+                                max-width: 100%;
+                            }
                         }
                     }
                 }
@@ -52,26 +84,38 @@
                         margin-top: 20px;
                         .facebook {
                             cursor: pointer;
-                            &:hover {
-                                color: blue;
+                            a {
+                                color: $white;
+                                &:hover {
+                                    color: blue;
+                                }
                             }
                         }
                         .twitter {
                             cursor: pointer;
-                            &:hover {
-                                color: $light-blue;
+                            a {
+                                color: $white;
+                                &:hover {
+                                    color: $light-blue;
+                                }
                             }
                         }
                         .youtube {
                             cursor: pointer;
-                            &:hover {
-                                color: red;
+                            a {
+                                color: $white;
+                                &:hover {
+                                    color: red;
+                                }
                             }
                         }
                         .instgram {
                             cursor: pointer;
-                            &:hover {
-                                color: rgb(209, 81, 81);
+                            a {
+                                color: $white;
+                                &:hover {
+                                    color: rgb(209, 81, 81);
+                                }
                             }
                         }
                     }
