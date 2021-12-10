@@ -1,6 +1,6 @@
 @import './../../global/global-style.scss';
 .footer-wrapper {
-    height: 544px;
+    min-height: 544px;
     background-color: $nav-footer-colore;
     color: $white;
     .container {
@@ -15,6 +15,7 @@
             @include display-flex-row-alignCenter;
             justify-content: space-evenly;
             align-items: flex-start;
+            flex-wrap: wrap;
             gap: 130px;
             margin: 50px 0;
             line-height: 33px;
@@ -64,12 +65,17 @@
                 @include display-flex-row-alignCenter(column);
                 flex-grow: 1;
                 flex-basis: 25%;
+                width: 100%;
                 .mopile-app {
+                    width: 100%;
                     li {
+                        width: 100%;
                         a {
+                            width: 100%;
                             img {
                                 cursor: pointer;
                                 max-width: 100%;
+                                height: auto;
                             }
                         }
                     }
@@ -139,8 +145,18 @@
                 align-items: flex-end;
                 justify-content: space-evenly;
                 gap: 100px;
+                flex-wrap: wrap;
                 margin: 20px 0;
             }
         }
     }
 }
+
+//larg screen view{
+@media all and (min-width:1200px) {}
+
+//tablet view
+@media all and(max-width:959px) {}
+
+// mobile view
+@media all and (max-width: 767px) {}

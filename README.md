@@ -34,6 +34,8 @@ connect bussiness owners with freelancers to get things done
  * React-router v-6: `npm install react-router-dom@6` study =>  [React Router v6 in depth guide](https://www.youtube.com/watch?v=0cSVuySEB0A)
 
  * Redux: `npm install redux` study=> [React Redux Tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY)
+
+ * React-icons v-4.3.1: `npm install react-icons --save` study=> look at the decumintation
 ----
 
 ## creation steps, Issues I faced and how I did solve it
@@ -41,6 +43,7 @@ connect bussiness owners with freelancers to get things done
  - installed sass, router, redux
  - created basic empty pages and components
  - added glopal file styling using sass with functions and vars
+ - created navbar and footer design maked all links working with pages
 
 ## errors and issues I faced
 

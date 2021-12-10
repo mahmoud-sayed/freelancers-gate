@@ -45,3 +45,12 @@
         }
     }
 }
+
+//larg screen view{
+@media all and (min-width:1200px) {}
+
+//tablet view
+@media all and(max-width:959px) {}
+
+// mobile view
+@media all and (max-width: 767px) {}
