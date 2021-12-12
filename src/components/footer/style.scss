@@ -21,7 +21,7 @@
             line-height: 33px;
             .freelancers {
                 flex-grow: 1;
-                flex-basis: 25%;
+                max-width: 25%;
                 li {
                     a {
                         color: $light-black;
@@ -35,7 +35,7 @@
             }
             .about {
                 flex-grow: 1;
-                flex-basis: 25%;
+                max-width: 25%;
                 li {
                     a {
                         color: $light-black;
@@ -49,7 +49,7 @@
             }
             .terms {
                 flex-grow: 1;
-                flex-basis: 25%;
+                max-width: 25%;
                 li {
                     a {
                         color: $light-black;
@@ -64,17 +64,18 @@
             .apps {
                 @include display-flex-row-alignCenter(column);
                 flex-grow: 1;
-                flex-basis: 25%;
-                width: 100%;
+                max-width: 25%;
                 .mopile-app {
                     width: 100%;
                     li {
                         width: 100%;
                         a {
                             width: 100%;
+                            display: flex;
+                            justify-content: center;
                             img {
                                 cursor: pointer;
-                                max-width: 100%;
+                                max-width: 70%;
                                 height: auto;
                             }
                         }
