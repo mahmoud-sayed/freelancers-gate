@@ -1,6 +1,6 @@
 @import './../../global/global-style.scss';
 .footer-wrapper {
-    min-height: 544px;
+    //min-height: 544px;
     background-color: $nav-footer-colore;
     color: $white;
     .container {
@@ -87,7 +87,7 @@
                         width: 100%;
                         @include display-flex-row-alignCenter;
                         justify-content: space-evenly;
-                        font-size: 30px;
+                        font-size: 25px;
                         margin-top: 20px;
                         .facebook {
                             cursor: pointer;
@@ -153,8 +153,57 @@
     }
 }
 
-//larg screen view{
-@media all and (min-width:1200px) {}
+//large screen view{
+@media all and (min-width:960px) {
+    .footer-wrapper {
+        .container {
+            .footer-content {
+                .freelancers {
+                    li {
+                        a {}
+                    }
+                }
+                .about {
+                    i {
+                        a {}
+                    }
+                }
+                .terms {
+                    li {
+                        a {}
+                    }
+                }
+                .apps {
+                    .mopile-app {
+                        li {
+                            a {}
+                        }
+                    }
+                    .social-icons {
+                        .icons-list {
+                            .facebook {
+                                a {}
+                            }
+                            .twitter {
+                                a {}
+                            }
+                            .youtube {
+                                a {}
+                            }
+                            .instgram {
+                                a {}
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright-wrapper {
+                hr {}
+                .copyright-content {}
+            }
+        }
+    }
+}
 
 //tablet view
 @media all and(max-width:959px) {}

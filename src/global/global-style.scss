@@ -44,13 +44,13 @@ $font-size-16:16px;
 $font-size-14:14px;
 $font-size-12:12px;
 //---------------
-//glopal css classes
+//global css classes
 @mixin container-88($width:88%) {
     width: $width;
     margin: 0 auto;
 }
 
-//btton
+//button
 @mixin btn($bg-color, $paddingUpandDown, $paddingRightAndLeft) {
     background-color: $bg-color;
     border: none;
@@ -63,10 +63,10 @@ $font-size-12:12px;
 
 //------------
 //Font
-@mixin text-style($color:$text-colore, $font-size:$font-size-18, $font-waight:$font-waight-400, $font-style: normal, $line-height:1.55) {
+@mixin text-style($color:$text-colore, $font-size:$font-size-18, $font-wight:$font-waight-400, $font-style: normal, $line-height:1.55) {
     font-size: $font-size;
     color: $color;
-    font-weight: $font-waight;
+    font-weight: $font-wight;
     font-style: $font-style;
 }
 
