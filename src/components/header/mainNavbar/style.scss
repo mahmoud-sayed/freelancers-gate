@@ -57,4 +57,19 @@
 }
 
 // mobile view
-@media all and (max-width: 767px) {}
+@media all and (max-width: 767px) {
+    .main-nav-wrapper {
+        .container {
+            .main-nav-items-left {
+                .nav-items {
+                    display: none;
+                }
+            }
+            .main-nav-items-right {
+                .button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
