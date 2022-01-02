@@ -6,7 +6,7 @@
         height: 100%;
         @include display-flex-row-alignCenter;
         justify-content: space-between;
-        @include container-88;
+        @include container-95;
         font-size: $font-size-16;
         .main-nav-items-left {
             @include display-flex-row-alignCenter;
@@ -14,7 +14,7 @@
             gap: 20px;
             a {
                 color: $dark-black;
-                font-weight: $font-waight-400;
+                font-weight: $font-wight-400;
                 text-transform: capitalize;
                 &:hover {
                     color: $light-blue;
@@ -28,7 +28,7 @@
             a {
                 color: $dark-black;
                 text-transform: capitalize;
-                font-weight: $font-waight-400;
+                font-weight: $font-wight-400;
                 &:hover {
                     color: $light-blue;
                 }
@@ -46,11 +46,15 @@
     }
 }
 
-//larg screen view{
-@media all and (min-width:1200px) {}
+//large screen view{
+@media all and (min-width:1200px) {
+    // nothing to add here until now
+}
 
 //tablet view
-@media all and(max-width:959px) {}
+@media all and(max-width:959px) {
+    // nothing to add here until now
+}
 
 // mobile view
 @media all and (max-width: 767px) {}

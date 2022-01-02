@@ -4,16 +4,16 @@ $dark-blue-black:#164188;
 $dark-blue:#007fed;
 $dark-fuchsia:#f20091;
 $dark-green:#379E54;
-$dark-yello:#F77D0E;
+$dark-yellow:#F77D0E;
 $white:#fff;
-$nav-footer-colore:#0e1724;
+$nav-footer-color:#0e1724;
 // & Hover
 //---------------
 // Medium Dark Colors
 $medium-dark-black: #3a393f;
 $medium-dark-blue:#29B2FE;
 $medium-dart-green:#5DC16A;
-$medium-dark-yello:#FFC24E;
+$medium-dark-yellow:#FFC24E;
 //---------------
 // Light colors
 $light-black:#8D8E90;
@@ -30,11 +30,11 @@ $danger: #EB3730;
 $warning:#FFC107;
 $success:#28A745;
 //---------------
-// Font & text
-$font-waight-400:400;
-$font-waight-600:600;
-$font-waight-700:700;
-$text-colore:#0e1724;
+// Font & text 
+$font-wight-400:400;
+$font-wight-600:600;
+$font-wight-700:700;
+$text-color:#0e1724;
 $font-size-48:48px;
 $font-size-41:41px;
 $font-size-32:34px;
@@ -45,17 +45,17 @@ $font-size-14:14px;
 $font-size-12:12px;
 //---------------
 //global css classes
-@mixin container-88($width:88%) {
+@mixin container-95($width:95%) {
     width: $width;
     margin: 0 auto;
 }
 
 //button
-@mixin btn($bg-color, $paddingUpandDown, $paddingRightAndLeft) {
+@mixin btn($bg-color, $paddingUpAndDown, $paddingRightAndLeft) {
     background-color: $bg-color;
     border: none;
     color: white;
-    padding: $paddingUpandDown $paddingRightAndLeft;
+    padding: $paddingUpAndDown $paddingRightAndLeft;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -63,7 +63,7 @@ $font-size-12:12px;
 
 //------------
 //Font
-@mixin text-style($color:$text-colore, $font-size:$font-size-18, $font-wight:$font-waight-400, $font-style: normal, $line-height:1.55) {
+@mixin text-style($color:$text-color, $font-size:$font-size-18, $font-wight:$font-wight-400, $font-style: normal, $line-height:1.55) {
     font-size: $font-size;
     color: $color;
     font-weight: $font-wight;

@@ -1,11 +1,11 @@
 @import './../../global/global-style.scss';
 .footer-wrapper {
     //min-height: 544px;
-    background-color: $nav-footer-colore;
+    background-color: $nav-footer-color;
     color: $white;
     .container {
         height: 100%;
-        @include container-88;
+        @include container-95;
         @include display-flex-row-alignCenter(column);
         justify-content: space-evenly;
         text-transform: capitalize;
