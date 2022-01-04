@@ -21,6 +21,7 @@ const Footer = () => {
                             <li><Link to="#">API for developers</Link></li>
                         </ul>
                     </div>
+                    <hr className="temporary-hr" />
                     <div className="about">
                         <h4>about</h4>
                         <ul>
@@ -29,6 +30,7 @@ const Footer = () => {
 
                         </ul>
                     </div>
+                    <hr className="temporary-hr" />
                     <div className="terms">
                         <h4>terms</h4>
                         <ul>
@@ -38,24 +40,27 @@ const Footer = () => {
                             <li><Link to="#">fees and charges</Link></li>
                         </ul>
                     </div>
+
                     <div className="apps">
-                        <Logo/>
+                        <Logo className="logo" />
                         <h4>apps</h4>
                         <ul className="mopile-app">
                             <li><Link to=""><img src={apple} alt="download app for apple" /></Link></li>
                             <li><Link to=""><img src={android} alt="download app for android" /></Link></li>
                         </ul>
+
                         <div className="social-icons">
                             <ul className="icons-list">
-                                <li className="facebook"><Link to="#"><AiFillFacebook/></Link></li>
-                                <li className="twitter"><Link to="#"><AiOutlineTwitter/></Link></li>
-                                <li className="youtube"><Link to="#"><AiFillYoutube/></Link></li>
-                                <li className="instgram"><Link to="#"><AiFillInstagram/></Link></li>
+                                <li className="facebook"><Link to="#"><AiFillFacebook /></Link></li>
+                                <li className="twitter"><Link to="#"><AiOutlineTwitter /></Link></li>
+                                <li className="youtube"><Link to="#"><AiFillYoutube /></Link></li>
+                                <li className="instgram"><Link to="#"><AiFillInstagram /></Link></li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
-                
+
                 <div className="copyright-wrapper">
                     <hr />
                     <div className="copyright-content">
