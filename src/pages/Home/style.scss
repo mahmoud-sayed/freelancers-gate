@@ -1,5 +1,9 @@
 @import './../../global/global-style.scss';
 .home-wrapper {
+    width: 100%;
+    img {
+        width: 100%;
+    }
     .container {
         @include container-95;
     }

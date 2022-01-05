@@ -54,7 +54,7 @@ const Footer = () => {
                                 <li className="facebook"><Link to="#"><AiFillFacebook /></Link></li>
                                 <li className="twitter"><Link to="#"><AiOutlineTwitter /></Link></li>
                                 <li className="youtube"><Link to="#"><AiFillYoutube /></Link></li>
-                                <li className="instgram"><Link to="#"><AiFillInstagram /></Link></li>
+                                <li className="instagram"><Link to="#"><AiFillInstagram /></Link></li>
                             </ul>
                         </div>
 
