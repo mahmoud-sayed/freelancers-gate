@@ -68,7 +68,7 @@
                 @include display-flex-row-alignCenter(column);
                 flex-grow: 1;
                 max-width: 25%;
-                .mopile-app {
+                .mobile-app {
                     width: 100%;
                     li {
                         width: 100%;
@@ -193,22 +193,22 @@
                 .about {
                     max-width: 100%;
                 }
-                .terms {}
+                .terms {
+                    max-width: 100%;
+                }
                 .apps {
-                    max-width: 50%;
+                    max-width: 100%;
                     order: -1;
-                    margin-left: 3rem;
+                    margin: 0 auto;
                     .logo {
-                        margin-left: 88px;
+                        //margin-left: 88px;
                     }
                     h4 {
-                        margin-left: 80px;
+                        //margin-left: 80px;
                     }
-                    .mopile-app {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: row;
+                    .mobile-app {
+                        @include display-flex-row-alignCenter(column);
+                        justify-content: space-around;
                         margin: 0 auto;
                     }
                     .social-icons {
@@ -216,7 +216,7 @@
                             gap: 50px;
                             justify-content: center;
                             align-items: center;
-                            margin-left: 31px;
+                            //margin-left: 31px;
                         }
                     }
                 }

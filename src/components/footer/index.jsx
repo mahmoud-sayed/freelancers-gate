@@ -44,7 +44,7 @@ const Footer = () => {
                     <div className="apps">
                         <Logo className="logo" />
                         <h4>apps</h4>
-                        <ul className="mopile-app">
+                        <ul className="mobile-app">
                             <li><Link to=""><img src={apple} alt="download app for apple" /></Link></li>
                             <li><Link to=""><img src={android} alt="download app for android" /></Link></li>
                         </ul>
