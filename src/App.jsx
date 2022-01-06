@@ -11,9 +11,11 @@ function App() {
 
   return (
     <Fragment>
-        <Header/>
-        <RoutesComponent/>
-        <Footer/>
+      <Header />
+      <main>
+        <RoutesComponent />
+      </main>
+      <Footer />
     </Fragment>
   );
 }

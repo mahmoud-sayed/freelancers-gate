@@ -6,7 +6,7 @@
         height: 100%;
         @include display-flex-row-alignCenter;
         justify-content: space-between;
-        @include container-95;
+        @include container-86;
         font-size: $font-size-16;
         .main-nav-items-left {
             @include display-flex-row-alignCenter;
@@ -36,7 +36,7 @@
             .button {
                 font-weight: bold;
                 text-transform: none;
-                @include btn($dark-fuchsia, 5px, 10px);
+                @include btn();
                 &:hover {
                     color: $white;
                     background-color: $light-fuchsia;

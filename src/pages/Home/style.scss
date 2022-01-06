@@ -1,10 +1,55 @@
 @import './../../global/global-style.scss';
 .home-wrapper {
     width: 100%;
-    img {
-        width: 100%;
+    position: relative;
+    .home-header-wrapper {
+        //positioning
+        background-position: center;
+        //box modeling
+        height: calc(100vh - 112px);
+        //background
+        background-image: url('./../../assets/homePhotos/freelancers.jpg');
+        background-size: cover;
+        .content {
+            //positioning
+            //..
+            //box modeling
+            //background
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            h1 {
+                font-size: $font-size-41;
+                font-weight: $font-wight-700;
+            }
+            .button-1 {
+                @include btn($dark-fuchsia,
+                1rem,
+                2.5rem);
+                color: $white;
+                font-size: $font-size-18;
+                font-weight: $font-wight-700;
+                border: 1px solid $dark-fuchsia;
+                &:hover {
+                    background-color: $light-fuchsia;
+                }
+            }
+            .button-2 {
+                @include btn($dark-fuchsia,
+                1rem,
+                2.5rem);
+                color: $white;
+                font-size: $font-size-18;
+                font-weight: $font-wight-700;
+                border: 1px solid $dark-fuchsia;
+                &:hover {
+                    background-color: $light-fuchsia;
+                }
+            }
+        }
     }
     .container {
-        @include container-95;
+        @include container-86;
     }
 }
