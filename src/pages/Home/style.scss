@@ -11,45 +11,57 @@
         background-image: url('./../../assets/homePhotos/freelancers.jpg');
         background-size: cover;
         .content {
-            //positioning
-            //..
-            //box modeling
-            //background
             color: #fff;
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
             height: 100%;
-            h1 {
-                font-size: $font-size-41;
-                font-weight: $font-wight-700;
-            }
-            .button-1 {
-                @include btn($dark-fuchsia,
-                1rem,
-                2.5rem);
-                color: $white;
-                font-size: $font-size-18;
-                font-weight: $font-wight-700;
-                border: 1px solid $dark-fuchsia;
-                &:hover {
-                    background-color: $light-fuchsia;
+            .container {
+                @include container-86;
+                @include display-flex-row-alignCenter(column);
+                height: 100%;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 1rem;
+                padding-bottom: 5rem;
+                h1 {
+                    font-size: $font-size-41;
+                    font-weight: $font-wight-700;
+                    max-width: 40%;
                 }
-            }
-            .button-2 {
-                @include btn($dark-fuchsia,
-                1rem,
-                2.5rem);
-                color: $white;
-                font-size: $font-size-18;
-                font-weight: $font-wight-700;
-                border: 1px solid $dark-fuchsia;
-                &:hover {
-                    background-color: $light-fuchsia;
+                p {
+                    max-width: 40%;
+                    font-size: $font-size-20;
+                    font-weight: $font-wight-400;
+                }
+                .buttons {
+                    @include display-flex-row-alignCenter;
+                    gap: 1rem;
+                    .button-1 {
+                        @include btn($dark-blue,
+                        1rem,
+                        2.5rem);
+                        color: $white;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        border-radius: 3px;
+                        &:hover {
+                            background-color: $blue-hover;
+                        }
+                    }
+                    .button-2 {
+                        @include btn($dark-yellow,
+                        1rem,
+                        2.5rem);
+                        color: $white;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        border: 1px solid $dark-yellow;
+                        &:hover {
+                            background-color: $medium-dark-yellow;
+                        }
+                    }
                 }
             }
         }
-    }
-    .container {
-        @include container-86;
     }
 }

@@ -1,13 +1,19 @@
 //main Dark Colors
-$dark-black: #000;
-$dark-blue-black:#164188;
+$dark-ruddy:#F7022A;
 $dark-blue:#007fed;
-$dark-fuchsia:#f20091;
+$dark-ateneo-blue:#013672;
 $dark-green:#379E54;
 $dark-yellow:#F77D0E;
+$dark-black: #000;
 $white:#fff;
 $nav-footer-color:#0e1724;
 // & Hover
+$hover-ruddy:#FD3556;
+$hover-blue:#139FF0;
+$hover-ateneo-blue:#0251AC;
+$hover-green:#5DC16A;
+$hover-yellow:#FFC24E;
+$hover-black:#8D8E90;
 //---------------
 // Medium Dark Colors
 $medium-dark-black: #3a393f;
@@ -20,10 +26,6 @@ $light-black:#8D8E90;
 $light-blue:#28B4F2;
 $light-fuchsia:#FA5F9B;
 //$light-green:;
-//--------------
-//Hover
-$fuchsia-hover: #fa5f9b;
-$blue-hover:#139FF0;
 //---------------
 //warning
 $danger: #EB3730;

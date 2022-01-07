@@ -10,6 +10,8 @@ const Home = () => {
                 <div className="content">
                     <div className="container">
                         <h1>Hire the best freelancers for any job, online.</h1>
+                        <p className="sub-title">Find great talent. Build your business.
+                            Take your career to the next level.</p>
                         <div className="buttons">
                             <button className="button-1"> Hire a Freelancer </button>
                             <button className="button-2"> Earn Money Freelancing</button>

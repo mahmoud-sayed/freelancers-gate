@@ -36,10 +36,11 @@
             .button {
                 font-weight: bold;
                 text-transform: none;
-                @include btn();
+                border-radius: 3px;
+                @include btn($dark-blue);
                 &:hover {
                     color: $white;
-                    background-color: $light-fuchsia;
+                    background-color: $blue-hover;
                 }
             }
         }
