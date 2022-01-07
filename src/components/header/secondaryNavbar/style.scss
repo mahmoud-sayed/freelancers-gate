@@ -1,9 +1,11 @@
 @import './../../../global/global-style.scss';
 .secondary-nav-wrapper {
     height: 48px;
-    background-color: $nav-footer-color;
+    background-color: $dark-maastricht-blue;
     color: $white;
     .container {
+        height: 100%;
         @include container-86;
+        @include display-flex-row-alignCenter;
     }
 }

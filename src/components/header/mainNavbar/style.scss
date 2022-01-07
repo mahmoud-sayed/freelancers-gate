@@ -37,10 +37,10 @@
                 font-weight: bold;
                 text-transform: none;
                 border-radius: 3px;
-                @include btn($dark-blue);
+                @include btn($dark-ruddy);
                 &:hover {
                     color: $white;
-                    background-color: $blue-hover;
+                    background-color: $hover-ruddy;
                 }
             }
         }

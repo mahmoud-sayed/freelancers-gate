@@ -37,7 +37,7 @@
                     @include display-flex-row-alignCenter;
                     gap: 1rem;
                     .button-1 {
-                        @include btn($dark-blue,
+                        @include btn($dark-ruddy,
                         1rem,
                         2.5rem);
                         color: $white;
@@ -45,19 +45,20 @@
                         font-weight: $font-wight-700;
                         border-radius: 3px;
                         &:hover {
-                            background-color: $blue-hover;
+                            background-color: $hover-ruddy;
                         }
                     }
                     .button-2 {
-                        @include btn($dark-yellow,
+                        @include btn($dark-blue,
                         1rem,
                         2.5rem);
                         color: $white;
                         font-size: $font-size-18;
                         font-weight: $font-wight-700;
-                        border: 1px solid $dark-yellow;
+                        border: 1px solid $dark-blue;
+                        border-radius: 3px;
                         &:hover {
-                            background-color: $medium-dark-yellow;
+                            background-color: $hover-blue;
                         }
                     }
                 }

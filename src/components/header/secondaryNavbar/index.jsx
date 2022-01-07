@@ -6,7 +6,7 @@ const SecondaryNavbar = () => {
     return (
         <div className="secondary-nav-wrapper">
             <div className="container">
-                <h1>SecondaryNavbar</h1>
+                <h3>Secondary Navbar Bar Items</h3>
             </div>
         </div>
     );
