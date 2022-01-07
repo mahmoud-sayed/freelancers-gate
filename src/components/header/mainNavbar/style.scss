@@ -6,7 +6,7 @@
         height: 100%;
         @include display-flex-row-alignCenter;
         justify-content: space-between;
-        @include container-86;
+        @include container-95($width-86);
         font-size: $font-size-16;
         .main-nav-items-left {
             @include display-flex-row-alignCenter;
@@ -54,13 +54,18 @@
 
 //tablet view
 @media all and(max-width:959px) {
-    // nothing to add here until now
+    .main-nav-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
 }
 
 // mobile view
 @media all and (max-width: 767px) {
     .main-nav-wrapper {
         .container {
+            @include container-95($width-95);
             .main-nav-items-left {
                 .nav-items {
                     display: none;

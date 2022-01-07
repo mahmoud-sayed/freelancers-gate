@@ -5,7 +5,40 @@
     color: $white;
     .container {
         height: 100%;
-        @include container-86;
+        @include container-95($width-86);
         @include display-flex-row-alignCenter;
+    }
+}
+
+//large screen view{
+@media all and (min-width:1200px) {
+    // nothing to add here until now
+}
+
+//tablet view
+@media all and(max-width:959px) {
+    .secondary-nav-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 767px) {
+    .secondary-nav-wrapper {
+        .container {
+            @include container-95($width-95);
+            .main-nav-items-left {
+                .nav-items {
+                    display: none;
+                }
+            }
+            .main-nav-items-right {
+                .button {
+                    display: none;
+                }
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@
     color: $white;
     .container {
         height: 100%;
-        @include container-86;
+        @include container-95($width-86);
         @include display-flex-row-alignCenter(column);
         justify-content: space-evenly;
         text-transform: capitalize;
@@ -164,7 +164,31 @@
 
 //tablet view
 @media all and(max-width:959px) {
-    // nothing to add here until now
+    .footer-content {
+        .container {
+            @include container-95;
+            .footer-content {
+                .apps {
+                    max-width: 100%;
+                    order: -1;
+                    margin: 0;
+                    .mobile-app {
+                        @include display-flex-row-alignCenter(column);
+                        justify-content: space-around;
+                        margin: 0;
+                    }
+                    .social-icons {
+                        .icons-list {
+                            gap: 50px;
+                            justify-content: center;
+                            align-items: center;
+                            //margin-left: 31px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // mobile view
@@ -173,6 +197,7 @@
         .container {
             .footer-content {
                 @include display-flex-row-alignCenter(column);
+                @include container-95($width-95);
                 align-items: flex-start;
                 gap: 20px;
                 margin-top: 30px;
@@ -199,13 +224,7 @@
                 .apps {
                     max-width: 100%;
                     order: -1;
-                    margin: 0 auto;
-                    .logo {
-                        //margin-left: 88px;
-                    }
-                    h4 {
-                        //margin-left: 80px;
-                    }
+                    margin: 0;
                     .mobile-app {
                         @include display-flex-row-alignCenter(column);
                         justify-content: space-around;

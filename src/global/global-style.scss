@@ -45,13 +45,11 @@ $font-size-16:16px;
 $font-size-14:14px;
 $font-size-12:12px;
 //---------------
+// container width
+$width-86:86%; // for large screen
+$width-95:95%; //for tablet and mobile
 //global css classes
 @mixin container-95($width:95%) {
-    width: $width;
-    margin: 0 auto;
-}
-
-@mixin container-86($width:86%) {
     width: $width;
     margin: 0 auto;
 }

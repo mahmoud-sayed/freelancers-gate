@@ -16,7 +16,7 @@
             width: 100%;
             height: 100%;
             .container {
-                @include container-86;
+                @include container-95($width-86);
                 @include display-flex-row-alignCenter(column);
                 height: 100%;
                 justify-content: flex-end;
@@ -62,6 +62,33 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+//large screen view{
+@media all and (min-width:1200px) {
+    // nothing to add here until now
+}
+
+//tablet view
+@media all and(max-width:959px) {
+    .home-wrapper {
+        .home-header-wrapper {
+            .content {
+                @include container-95($width-95);
+            }
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 767px) {
+    .home-wrapper {
+        .home-header-wrapper {
+            .content {
+                @include container-95($width-95);
             }
         }
     }
