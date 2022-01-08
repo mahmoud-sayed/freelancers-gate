@@ -158,13 +158,17 @@
 }
 
 //large screen view{
-@media all and (min-width:1200px) {
-    // nothing to add here until now
+@media all and (max-width:1200px) {
+    .footer-wrapper {
+        .container {
+            @include container-95;
+        }
+    }
 }
 
 //tablet view
 @media all and(max-width:959px) {
-    .footer-content {
+    .footer-wrapper {
         .container {
             @include container-95;
             .footer-content {

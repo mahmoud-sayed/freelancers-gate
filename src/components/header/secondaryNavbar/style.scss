@@ -11,8 +11,12 @@
 }
 
 //large screen view{
-@media all and (min-width:1200px) {
-    // nothing to add here until now
+@media all and (max-width:1200px) {
+    .secondary-nav-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
 }
 
 //tablet view
