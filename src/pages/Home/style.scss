@@ -1,80 +1,77 @@
 @import './../../global/global-style.scss';
-//Desktops, large screens
-@media all and (min-width:1025px) {
-    .home-wrapper {
-        width: 100%;
-        position: relative;
-        .home-header-wrapper {
-            //positioning
-            background-position: center;
-            //box modeling
-            height: calc(100vh - 112px);
-            //background
-            background-image: url('./../../assets/homePhotos/freelancers.jpg');
-            background-size: cover;
-            .content {
-                color: #fff;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
+.home-wrapper {
+    width: 100%;
+    position: relative;
+    .home-header-wrapper {
+        //positioning
+        background-position: center;
+        //box modeling
+        height: calc(100vh - 112px);
+        //background
+        background-image: url('./../../assets/homePhotos/freelancers.jpg');
+        background-size: cover;
+        .content {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            .container {
+                @include container-95($width-86);
+                @include display-flex-row-alignCenter(column);
                 height: 100%;
-                .container {
-                    @include container-95($width-86);
-                    @include display-flex-row-alignCenter(column);
-                    height: 100%;
-                    justify-content: flex-end;
-                    align-items: flex-start;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 1rem;
+                padding-bottom: 5rem;
+                h1 {
+                    font-size: $font-size-48;
+                    font-weight: $font-wight-700;
+                    width: 600px;
+                }
+                p {
+                    max-width: 40%;
+                    font-size: $font-size-20;
+                    font-weight: $font-wight-600;
+                    .br {
+                        display: none;
+                    }
+                }
+                .buttons {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
                     gap: 1rem;
-                    padding-bottom: 5rem;
-                    h1 {
-                        font-size: $font-size-48;
+                    .button-1 {
+                        @include btn($dark-ruddy,
+                        1rem,
+                        2.5rem);
+                        color: $white;
+                        font-size: $font-size-18;
                         font-weight: $font-wight-700;
-                        width: 600px;
-                    }
-                    p {
-                        max-width: 40%;
-                        font-size: $font-size-20;
-                        font-weight: $font-wight-600;
-                        .br {
-                            display: none;
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid $dark-ruddy;
+                        gap: .7rem;
+                        box-shadow: 4px 4px 8px #111;
+                        &:hover {
+                            background-color: $hover-ruddy;
                         }
                     }
-                    .buttons {
-                        @include display-flex-row-alignCenter;
-                        justify-content: center;
-                        gap: 1rem;
-                        .button-1 {
-                            @include btn($dark-ruddy,
-                            1rem,
-                            2.5rem);
-                            color: $white;
-                            font-size: $font-size-18;
-                            font-weight: $font-wight-700;
-                            border-radius: 3px;
-                            display: flex;
-                            align-items: center;
-                            border: 1px solid $dark-ruddy;
-                            gap: .7rem;
-                            box-shadow: 4px 4px 8px #111;
-                            &:hover {
-                                background-color: $hover-ruddy;
-                            }
-                        }
-                        .button-2 {
-                            @include btn($dark-blue,
-                            1rem,
-                            2.5rem);
-                            color: $white;
-                            font-size: $font-size-18;
-                            font-weight: $font-wight-700;
-                            border: 1px solid $dark-blue;
-                            border-radius: 3px;
-                            display: flex;
-                            align-items: center;
-                            gap: .7rem;
-                            box-shadow: 4px 4px 8px #111;
-                            &:hover {
-                                background-color: $hover-blue;
-                            }
+                    .button-2 {
+                        @include btn($dark-blue,
+                        1rem,
+                        2.5rem);
+                        color: $white;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        border: 1px solid $dark-blue;
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        gap: .7rem;
+                        box-shadow: 4px 4px 8px #111;
+                        &:hover {
+                            background-color: $hover-blue;
                         }
                     }
                 }
@@ -83,17 +80,22 @@
     }
 }
 
-//Small screens, laptops
-@media all and (min-width:769px) and (max-width:1024) {}
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    .home-wrapper {
+        .home-header-wrapper {
+            height: 800px;
+            .content {
+                .container {
+                    @include container-95(1200px);
+                }
+            }
+        }
+    }
+}
 
-//iPads, Tablets
-@media all and (min-width:481px) and (max-width:768px) {}
-
-//Mobile devices
-@media all and (max-width:480px) {}
-
-//large screen view{
-@media all and (max-width:1200px) {
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {
     .home-wrapper {
         .home-header-wrapper {
             height: 530px;
@@ -121,8 +123,11 @@
     }
 }
 
-//tablet view
-@media all and(main-width:959px) {
+//Small screens, laptops
+@media all and (min-width:769px) and (max-width:1024) {}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
     .home-wrapper {
         .home-header-wrapper {
             .content {

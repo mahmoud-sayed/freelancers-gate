@@ -64,8 +64,8 @@ const Footer = () => {
                 <div className="copyright-wrapper">
                     <hr />
                     <div className="copyright-content">
-                        <div className="registerd-user">
-                            <p><span>50.285</span> registerduser</p>
+                        <div className="registered-user">
+                            <p><span>50.285</span> registeredUser</p>
                         </div>
                         <div className="total-job-posted">
                             <p><span>60.759</span> total job posted</p>

@@ -10,8 +10,17 @@
     }
 }
 
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    .secondary-nav-wrapper {
+        .container {
+            @include container-95(1200px);
+        }
+    }
+}
+
 //large screen view{
-@media all and (max-width:1200px) {
+@media all and (min-width:1025px)and(max-width:1200px) {
     .secondary-nav-wrapper {
         .container {
             @include container-95($width-95);
@@ -19,8 +28,8 @@
     }
 }
 
-//tablet view
-@media all and(max-width:959px) {
+//Small screens, laptops
+@media all and (min-width:769px) and (max-width:1024) {
     .secondary-nav-wrapper {
         .container {
             @include container-95($width-95);
@@ -28,8 +37,17 @@
     }
 }
 
-// mobile view
-@media all and (max-width: 767px) {
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    .secondary-nav-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
+
+//Mobile devices
+@media all and (max-width:480px) {
     .secondary-nav-wrapper {
         .container {
             @include container-95($width-95);
