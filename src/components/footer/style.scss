@@ -167,13 +167,31 @@
 }
 
 //large screen view{
-@media all and (min-width:1025px)and(max-width:1200px) {}
+@media all and (min-width:1025px)and(max-width:1200px) {
+    .footer-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
 
 //Small screens, laptops
-@media all and (min-width:769px) and (max-width:1024) {}
+@media all and (min-width:769px) and (max-width:1024px) {
+    .footer-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
 
 //iPads, Tablets
-@media all and (min-width:481px) and (max-width:768px) {}
+@media all and (min-width:481px) and (max-width:768px) {
+    .footer-wrapper {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
 
 //Mobile devices
 @media all and (max-width:480px) {

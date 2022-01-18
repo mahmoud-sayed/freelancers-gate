@@ -29,7 +29,7 @@
 }
 
 //Small screens, laptops
-@media all and (min-width:769px) and (max-width:1024) {
+@media all and (min-width:769px) and (max-width:1024px) {
     .secondary-nav-wrapper {
         .container {
             @include container-95($width-95);
