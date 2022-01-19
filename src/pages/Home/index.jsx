@@ -21,8 +21,17 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="need-something-done">
-                <h1>need-something-done</h1>
+            <section className="need-something-done-wrapper">
+                <div className="something-content ">
+
+                    <h2>Need Something Done?</h2>
+                    <div className="post-a-job-card">
+
+                    </div>
+                    <div className="choose-freelancer"></div>
+                    <div className="pay-safe"></div>
+                    <div className="here-to-help"></div>
+                </div>
             </section>
             <section className="What-great-about-it">
                 <h1>Find great work</h1>
