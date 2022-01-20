@@ -108,8 +108,28 @@
             height: 800px;
             .content {
                 .container {
-                    @include container-95(1200px);
+                    @include container-95($width-1200px);
                 }
+            }
+        }
+        .brief-section {
+            background-color: khaki;
+            height: 90vh;
+            .container {
+                @include container-95($width-1200px);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
             }
         }
     }
@@ -121,8 +141,26 @@
         .home-header-wrapper {
             .content {
                 .container {
-                    @include container-95(1200px);
+                    @include container-95($width-1200px);
                 }
+            }
+        }
+        .brief-section {
+            .container {
+                @include container-95($width-1200px);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
             }
         }
     }
@@ -152,6 +190,24 @@
                 }
             }
         }
+        .brief-section {
+            .container {
+                @include container-95($width-95);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
+            }
+        }
     }
 }
 
@@ -178,6 +234,24 @@
                         }
                     }
                 }
+            }
+        }
+        .brief-section {
+            .container {
+                @include container-95($width-95);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
             }
         }
     }
@@ -217,6 +291,24 @@
                 }
             }
         }
+        .brief-section {
+            .container {
+                @include container-95($width-95);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
+            }
+        }
     }
 }
 
@@ -251,6 +343,24 @@
                         }
                     }
                 }
+            }
+        }
+        .brief-section {
+            .container {
+                @include container-95($width-95);
+                .need-something-done-wrapper {
+                    .something-content {
+                        .something-content {}
+                        .card {
+                            .card-head {
+                                .card-icon {}
+                                .card-title {}
+                            }
+                            .card-description {}
+                        }
+                    }
+                }
+                .What-great-about-it {}
             }
         }
     }
