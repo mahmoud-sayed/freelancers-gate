@@ -79,6 +79,26 @@
             }
         }
     }
+    .brief-section {
+        background-color: khaki;
+        height: 90vh;
+        .container {
+            @include container-95($width-86);
+            .need-something-done-wrapper {
+                .something-content {
+                    .something-content {}
+                    .card {
+                        .card-head {
+                            .card-icon {}
+                            .card-title {}
+                        }
+                        .card-description {}
+                    }
+                }
+            }
+            .What-great-about-it {}
+        }
+    }
 }
 
 // to control the header height in screens over 1441px

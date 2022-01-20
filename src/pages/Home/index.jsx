@@ -2,7 +2,7 @@ import React from "react";
 import './../../global/global-style.scss';
 import './style.scss';
 //react icon
-import { BsCurrencyDollar, BsFillBriefcaseFill } from 'react-icons/bs';
+import { BsCurrencyDollar, BsFillBriefcaseFill, BsBriefcase } from 'react-icons/bs';
 
 
 const Home = () => {
@@ -21,20 +21,24 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="need-something-done-wrapper">
-                <div className="something-content ">
-
-                    <h2>Need Something Done?</h2>
-                    <div className="post-a-job-card">
+            <section className="brief-section">
+                <div className="container">
+                    <div className="need-something-done-wrapper">
+                        <h2 className="something-title">Need Something Done?</h2>
+                        <div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="What-great-about-it">
 
                     </div>
-                    <div className="choose-freelancer"></div>
-                    <div className="pay-safe"></div>
-                    <div className="here-to-help"></div>
                 </div>
-            </section>
-            <section className="What-great-about-it">
-                <h1>Find great work</h1>
             </section>
             <section className="make-it-real">
                 Make it Real
