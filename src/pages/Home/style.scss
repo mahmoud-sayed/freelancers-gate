@@ -82,18 +82,34 @@
     .brief-section {
         background-color: khaki;
         height: 90vh;
+        width: 100%;
         .container {
             @include container-95($width-86);
             .need-something-done-wrapper {
-                .something-content {
-                    .something-content {}
-                    .card {
-                        .card-head {
-                            .card-icon {}
-                            .card-title {}
+                @include display-flex-row-alignCenter(column,
+                flex-start);
+                width: 100%;
+                .something-title {
+                    font-size: $font-size-32;
+                    color: $dark-black;
+                }
+                .card {
+                    @include display-flex-row-alignCenter(column,
+                    flex-start);
+                    width: 25%;
+                    .card-head {
+                        @include display-flex-row-alignCenter(row,
+                        flex-start);
+                        gap: 20px;
+                        .card-icon {
+                            color: $light-blue;
+                            font-size: $font-size-41;
                         }
-                        .card-description {}
+                        .card-title {
+                            font-size: $font-size-24;
+                        }
                     }
+                    .card-description {}
                 }
             }
             .What-great-about-it {}
