@@ -80,23 +80,28 @@
         }
     }
     .brief-section {
-        background-color: khaki;
-        height: 90vh;
+        height: auto;
+        padding: 50px 0;
         width: 100%;
+        display: flex;
+        justify-content: center;
         .container {
             @include container-95($width-86);
+            @include display-flex-row-alignCenter(row);
             .need-something-done-wrapper {
                 @include display-flex-row-alignCenter(column,
                 flex-start);
-                width: 100%;
+                width: 50%;
                 .something-title {
                     font-size: $font-size-32;
                     color: $dark-black;
+                    margin-bottom: 70px;
                 }
                 .card {
                     @include display-flex-row-alignCenter(column,
                     flex-start);
-                    width: 25%;
+                    width: 50%;
+                    gap: 1rem;
                     .card-head {
                         @include display-flex-row-alignCenter(row,
                         flex-start);
@@ -109,10 +114,44 @@
                             font-size: $font-size-24;
                         }
                     }
-                    .card-description {}
+                    .card-description {
+                        font-size: $font-size-18;
+                        line-height: 1.55;
+                        font-weight: $font-wight-400;
+                    }
                 }
             }
-            .What-great-about-it {}
+            .What-great-about-it {
+                width: 50%;
+                .something-title {
+                    font-size: $font-size-32;
+                    color: $dark-black;
+                    margin-bottom: 70px;
+                }
+                .card {
+                    @include display-flex-row-alignCenter(column,
+                    flex-start);
+                    width: 50%;
+                    gap: 1rem;
+                    .card-head {
+                        @include display-flex-row-alignCenter(row,
+                        flex-start);
+                        gap: 20px;
+                        .card-icon {
+                            color: $light-blue;
+                            font-size: $font-size-41;
+                        }
+                        .card-title {
+                            font-size: $font-size-24;
+                        }
+                    }
+                    .card-description {
+                        font-size: $font-size-18;
+                        line-height: 1.55;
+                        font-weight: $font-wight-400;
+                    }
+                }
+            }
         }
     }
 }

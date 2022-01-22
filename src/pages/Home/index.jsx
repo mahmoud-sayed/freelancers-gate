@@ -43,9 +43,61 @@ const Home = () => {
                                 <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
                             </div>
                         </div>
+                        <div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div>
+
                     </div>
                     <div className="What-great-about-it">
-
+                        <h2 className="something-title">Need Something Done?</h2>
+                        <div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div><div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div><div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div><div className="card">
+                            <div className="card-head">
+                                <BsBriefcase className="card-icon" />
+                                <h3 className="card-title">Post job</h3>
+                            </div>
+                            <div className="card-description">
+                                <p>It’s free and easy to post a job. Simply fill in a title, description and budget and competitive bids come within minutes.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
