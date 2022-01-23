@@ -87,7 +87,8 @@
         justify-content: center;
         .container {
             @include container-95($width-86);
-            @include display-flex-row-alignCenter(row);
+            @include display-flex-row-alignCenter(row,
+            flex-start);
             .need-something-done-wrapper {
                 @include display-flex-row-alignCenter(column,
                 flex-start);
@@ -100,7 +101,7 @@
                 .card {
                     @include display-flex-row-alignCenter(column,
                     flex-start);
-                    width: 50%;
+                    width: 45%;
                     gap: 1rem;
                     .card-head {
                         @include display-flex-row-alignCenter(row,
@@ -131,7 +132,7 @@
                 .card {
                     @include display-flex-row-alignCenter(column,
                     flex-start);
-                    width: 50%;
+                    width: 45%;
                     gap: 1rem;
                     .card-head {
                         @include display-flex-row-alignCenter(row,
