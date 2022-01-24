@@ -89,6 +89,7 @@
             @include container-95($width-86);
             @include display-flex-row-alignCenter(row,
             flex-start);
+            gap: 2%;
             .need-something-done-wrapper {
                 @include display-flex-row-alignCenter(column,
                 flex-start);
@@ -96,60 +97,77 @@
                 .something-title {
                     font-size: $font-size-32;
                     color: $dark-black;
-                    margin-bottom: 70px;
+                    margin: 0 auto 70px auto;
                 }
-                .card {
-                    @include display-flex-row-alignCenter(column,
-                    flex-start);
-                    width: 45%;
-                    gap: 1rem;
-                    .card-head {
-                        @include display-flex-row-alignCenter(row,
+                .cards {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    row-gap: 2rem;
+                    .card {
+                        @include display-flex-row-alignCenter(column,
                         flex-start);
-                        gap: 20px;
-                        .card-icon {
-                            color: $light-blue;
-                            font-size: $font-size-41;
+                        width: 95%;
+                        gap: 1rem;
+                        .card-head {
+                            @include display-flex-row-alignCenter(row,
+                            flex-start);
+                            gap: 20px;
+                            .card-icon {
+                                color: $light-blue;
+                                font-size: $font-size-32;
+                            }
+                            .card-title {
+                                font-size: $font-size-24;
+                            }
                         }
-                        .card-title {
-                            font-size: $font-size-24;
+                        .card-description {
+                            font-size: $font-size-18;
+                            line-height: 1.55;
+                            font-weight: $font-wight-400;
                         }
-                    }
-                    .card-description {
-                        font-size: $font-size-18;
-                        line-height: 1.55;
-                        font-weight: $font-wight-400;
                     }
                 }
             }
+            .vertical-line {
+                border-left: 2px dotted $medium-dark-blue;
+                height: 100%;
+            }
             .What-great-about-it {
+                @include display-flex-row-alignCenter(column);
                 width: 50%;
                 .something-title {
                     font-size: $font-size-32;
                     color: $dark-black;
                     margin-bottom: 70px;
                 }
-                .card {
-                    @include display-flex-row-alignCenter(column,
-                    flex-start);
-                    width: 45%;
-                    gap: 1rem;
-                    .card-head {
-                        @include display-flex-row-alignCenter(row,
+                .cards {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    row-gap: 2rem;
+                    .card {
+                        @include display-flex-row-alignCenter(column,
                         flex-start);
-                        gap: 20px;
-                        .card-icon {
-                            color: $light-blue;
-                            font-size: $font-size-41;
+                        width: 95%;
+                        gap: 1rem;
+                        .card-head {
+                            @include display-flex-row-alignCenter(row,
+                            flex-start);
+                            gap: 20px;
+                            .card-icon {
+                                color: $light-blue;
+                                font-size: $font-size-32;
+                            }
+                            .card-title {
+                                font-size: $font-size-24;
+                            }
                         }
-                        .card-title {
-                            font-size: $font-size-24;
+                        .card-description {
+                            font-size: $font-size-18;
+                            line-height: 1.55;
+                            font-weight: $font-wight-400;
                         }
-                    }
-                    .card-description {
-                        font-size: $font-size-18;
-                        line-height: 1.55;
-                        font-weight: $font-wight-400;
                     }
                 }
             }
