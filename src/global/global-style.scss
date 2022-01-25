@@ -83,3 +83,12 @@ $width-95:95%; //for tablet and mobile
     flex-direction: $flex-direction;
     align-items: $align-items;
 }
+
+//hr
+@mixin hr () {
+    width: 100%;
+    border: 1.2px solid #c8ccd3;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-end;
+}

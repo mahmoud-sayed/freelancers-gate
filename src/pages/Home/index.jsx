@@ -1,9 +1,12 @@
 import React from "react";
 import './../../global/global-style.scss';
 import './style.scss';
+import { Link } from "react-router-dom";
 //react icon
 import { BsCurrencyDollar, BsFillBriefcaseFill, BsFillCreditCard2BackFill, BsPersonLinesFill, BsPersonCheckFill, BsShieldFillCheck, BsFillChatDotsFill, BsAwardFill } from 'react-icons/bs';
 import { RiTimerFill } from "react-icons/ri";
+//image
+import image from './../../assets/homePhotos/skills-images/img-src';
 
 
 const Home = () => {
@@ -110,12 +113,101 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="make-it-real">
-                Make it Real
+            <hr />
+            <section className="skills">
+                <div className="container">
+                    <div className="grouped-skills">
+                        <h2>Find The Best Skilled Freelancers</h2>
+                        <div className="skills-wrapper">
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.salse} alt="Professional Sales" />
+                                </Link>
+                                <h3>Professional Sales</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.writing} alt="Talented Writers" />
+                                </Link>
+                                <h3>Talented Writers</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.voiceOver} alt="Professional Voice Over" />
+                                </Link>
+                                <h3>Professional Voice Over</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.translators} alt="translators professional" />
+                                </Link>
+                                <h3>translators professional</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.mediaProduction} alt="media production" />
+                                </Link>
+                                <h3>Media production</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.hr} alt="Recruitment and Talent Acquisition" />
+                                </Link>
+                                <h3>Recruitment &amp; Talent Acquisition</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.graphicDesign} alt="creative graphic designer" />
+                                </Link>
+                                <h3>Creative Graphic Designer</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.finance} alt="skilled accountants" />
+                                </Link>
+                                <h3>Skilled Accountants</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.developers} alt="professional developers" />
+                                </Link>
+                                <h3>professional developers</h3>
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.consulting} alt="professional consultants" />
+                                </Link>
+                                <h3>professional consultants</h3>
+                            </div>
+
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.arctechure} alt="professional architecture" />
+                                </Link>
+                                <h3>professional architecture</h3>
+
+                            </div>
+                            <div className="skill">
+                                <Link to="/jobs" className="skill-link">
+                                    <img src={image.adminstration} alt="administration" />
+
+                                </Link>
+                                <h3>administration</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section className="categories">
-                categories
+            <hr />
+            <section className="skills-categories">
+                <div className="container">
+                    <div className="categories">
+                        <h2 className="categories-title">Skills &amp; Categories</h2>
+                    </div>
+                </div>
             </section>
+
+
 
         </div>
     );
