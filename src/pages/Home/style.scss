@@ -227,12 +227,40 @@
         margin: 4rem 0;
         .container {
             @include container-95($width-86);
-            .categories {
+            .skills-categories-wrapper {
+                width: 100%;
                 @include display-flex-row-alignCenter(column);
-                h2 {
-                    font-size: $font-size-48;
-                    color: $dark-black;
-                    margin: 0 auto 70px auto;
+                .skills-categories-header {
+                    @include display-flex-row-alignCenter(column);
+                    h2 {
+                        font-size: $font-size-48;
+                        color: $dark-black;
+                        margin: 0 auto 70px auto;
+                    }
+                }
+                .skills-categories-content-wrapper {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, 200px);
+                    row-gap: 3rem;
+                    column-gap: 2rem;
+                    justify-content: center;
+                    .skill-category-item {
+                        .skill-category-item-son {
+                            @include display-flex-row-alignCenter;
+                            justify-content: center;
+                            gap: .5rem;
+                            .icon {
+                                color: $light-blue;
+                                font-size: $font-size-32;
+                            }
+                            h4 {
+                                font-size: $font-size-14;
+                                text-transform: capitalize;
+                                color: $dark-black;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -342,6 +370,11 @@
         .skills-categories {
             .container {
                 @include container-95($width-95);
+                .skills-categories-wrapper {
+                    .skills-categories-content-wrapper {
+                        .skill-category-item {}
+                    }
+                }
             }
         }
     }
@@ -418,6 +451,16 @@
         .skills-categories {
             .container {
                 @include container-95($width-95);
+                .skills-categories-wrapper {
+                    .skills-categories-header {
+                        h2 {
+                            font-size: $font-size-41;
+                        }
+                    }
+                    .skills-categories-content-wrapper {
+                        .skill-category-item {}
+                    }
+                }
             }
         }
     }
@@ -502,6 +545,16 @@
         .skills-categories {
             .container {
                 @include container-95($width-95);
+                .skills-categories-wrapper {
+                    .skills-categories-header {
+                        h2 {
+                            font-size: $font-size-32;
+                        }
+                    }
+                    .skills-categories-content-wrapper {
+                        .skill-category-item {}
+                    }
+                }
             }
         }
     }
@@ -585,6 +638,16 @@
         .skills-categories {
             .container {
                 @include container-95($width-95);
+                .skills-categories-wrapper {
+                    .skills-categories-header {
+                        h2 {
+                            font-size: $font-size-32;
+                        }
+                    }
+                    .skills-categories-content-wrapper {
+                        .skill-category-item {}
+                    }
+                }
             }
         }
     }

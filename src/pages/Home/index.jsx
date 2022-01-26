@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 //react icon
 import { BsCurrencyDollar, BsFillBriefcaseFill, BsFillCreditCard2BackFill, BsPersonLinesFill, BsPersonCheckFill, BsShieldFillCheck, BsFillChatDotsFill, BsAwardFill } from 'react-icons/bs';
 import { RiTimerFill } from "react-icons/ri";
+import { MdMonitor } from 'react-icons/md';
 //image
 import image from './../../assets/homePhotos/skills-images/img-src';
 
@@ -202,8 +203,162 @@ const Home = () => {
             <hr />
             <section className="skills-categories">
                 <div className="container">
-                    <div className="categories">
-                        <h2 className="categories-title">Skills &amp; Categories</h2>
+                    <div className="skills-categories-wrapper">
+                        <div className="skills-categories-header">
+                            <h2 className="categories-title">Skills &amp; Categories</h2>
+                        </div>
+                        <div className="skills-categories-content-wrapper">
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                            <div className="skill-category-item">
+                                <Link to="/jobs" className="skill-category-item-son">
+                                    <MdMonitor className="icon" />
+                                    <h4>website design</h4>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
