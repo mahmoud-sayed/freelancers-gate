@@ -71,6 +71,7 @@ const Home = () => {
 
                     </div>
                     <div className="vertical-line"></div>
+                    <hr />
                     <div className="What-great-about-it">
                         <h2 className="something-title">What's great about it?</h2>
                         <div className="cards">
@@ -206,9 +207,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-
-
         </div>
     );
 }

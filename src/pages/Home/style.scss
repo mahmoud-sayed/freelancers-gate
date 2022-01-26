@@ -134,6 +134,9 @@
                 border-left: 4px dotted $medium-dark-blue;
                 height: 100%;
             }
+            hr {
+                display: none;
+            }
             .What-great-about-it {
                 @include display-flex-row-alignCenter(column);
                 width: 50%;
@@ -220,18 +223,17 @@
             }
         }
     }
-}
-
-.skills-categories {
-    margin: 4rem 0;
-    .container {
-        @include container-95($width-86);
-        .categories {
-            @include display-flex-row-alignCenter(column);
-            h2 {
-                font-size: $font-size-48;
-                color: $dark-black;
-                margin: 0 auto 70px auto;
+    .skills-categories {
+        margin: 4rem 0;
+        .container {
+            @include container-95($width-86);
+            .categories {
+                @include display-flex-row-alignCenter(column);
+                h2 {
+                    font-size: $font-size-48;
+                    color: $dark-black;
+                    margin: 0 auto 70px auto;
+                }
             }
         }
     }
@@ -253,19 +255,6 @@
             height: 90vh;
             .container {
                 @include container-95($width-1200px);
-                .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
-                    }
-                }
-                .What-great-about-it {}
             }
         }
     }
@@ -284,19 +273,16 @@
         .brief-section {
             .container {
                 @include container-95($width-1200px);
-                .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
-                    }
-                }
-                .What-great-about-it {}
+            }
+        }
+        .skills {
+            .container {
+                @include container-95($width-1200px);
+            }
+        }
+        .skills-categories {
+            .container {
+                @include container-95($width-1200px);
             }
         }
     }
@@ -329,19 +315,33 @@
         .brief-section {
             .container {
                 @include container-95($width-95);
+                @include display-flex-row-alignCenter(column,
+                center);
                 .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
-                    }
+                    width: 100%;
                 }
-                .What-great-about-it {}
+                .vertical-line {
+                    display: none;
+                }
+                hr {
+                    display: initial;
+                    @include hr;
+                    @include container-95($width-95);
+                    margin: 5rem 0;
+                }
+                .What-great-about-it {
+                    width: 100%;
+                }
+            }
+        }
+        .skills {
+            .container {
+                @include container-95($width-95);
+            }
+        }
+        .skills-categories {
+            .container {
+                @include container-95($width-95);
             }
         }
     }
@@ -375,19 +375,49 @@
         .brief-section {
             .container {
                 @include container-95($width-95);
+                @include display-flex-row-alignCenter(column,
+                center);
                 .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
+                    width: 100%;
+                    .cards {
+                        justify-content: center;
+                        row-gap: 3.5rem;
                     }
                 }
-                .What-great-about-it {}
+                .vertical-line {
+                    display: none;
+                }
+                hr {
+                    display: initial;
+                    @include hr;
+                    @include container-95($width-95);
+                    margin: 5rem 0;
+                }
+                .What-great-about-it {
+                    width: 100%;
+                    .something-title {
+                        font-size: $font-size-41;
+                    }
+                    .cards {
+                        justify-content: center;
+                        row-gap: 3.5rem;
+                    }
+                }
+            }
+        }
+        .skills {
+            .container {
+                @include container-95($width-95);
+                .grouped-skills {
+                    h2 {
+                        font-size: $font-size-41;
+                    }
+                }
+            }
+        }
+        .skills-categories {
+            .container {
+                @include container-95($width-95);
             }
         }
     }
@@ -430,19 +460,48 @@
         .brief-section {
             .container {
                 @include container-95($width-95);
+                @include display-flex-row-alignCenter(column,
+                center);
                 .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
+                    width: 100%;
+                    .cards {
+                        grid-template-columns: 80%;
+                        justify-content: center;
+                        row-gap: 3.5rem;
                     }
                 }
-                .What-great-about-it {}
+                .vertical-line {
+                    display: none;
+                }
+                hr {
+                    display: initial;
+                    @include hr;
+                    @include container-95($width-95);
+                    margin: 5rem 0;
+                }
+                .What-great-about-it {
+                    width: 100%;
+                    .cards {
+                        grid-template-columns: 80%;
+                        justify-content: center;
+                        row-gap: 3.5rem;
+                    }
+                }
+            }
+        }
+        .skills {
+            .container {
+                @include container-95($width-95);
+                .grouped-skills {
+                    h2 {
+                        font-size: $font-size-32;
+                    }
+                }
+            }
+        }
+        .skills-categories {
+            .container {
+                @include container-95($width-95);
             }
         }
     }
@@ -484,19 +543,48 @@
         .brief-section {
             .container {
                 @include container-95($width-95);
+                @include display-flex-row-alignCenter(column,
+                center);
                 .need-something-done-wrapper {
-                    .something-content {
-                        .something-content {}
-                        .card {
-                            .card-head {
-                                .card-icon {}
-                                .card-title {}
-                            }
-                            .card-description {}
-                        }
+                    width: 100%;
+                    .cards {
+                        grid-template-columns: 80%;
+                        justify-content: center;
+                        row-gap: 3.5rem;
                     }
                 }
-                .What-great-about-it {}
+                .vertical-line {
+                    display: none;
+                }
+                hr {
+                    display: initial;
+                    @include hr;
+                    @include container-95($width-95);
+                    margin: 4rem 0;
+                }
+                .What-great-about-it {
+                    width: 100%;
+                    .cards {
+                        grid-template-columns: 80%;
+                        justify-content: center;
+                        row-gap: 3.5rem;
+                    }
+                }
+            }
+        }
+        .skills {
+            .container {
+                @include container-95($width-95);
+                .grouped-skills {
+                    h2 {
+                        font-size: $font-size-32;
+                    }
+                }
+            }
+        }
+        .skills-categories {
+            .container {
+                @include container-95($width-95);
             }
         }
     }
