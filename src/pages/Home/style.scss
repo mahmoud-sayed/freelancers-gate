@@ -224,7 +224,7 @@
         }
     }
     .skills-categories {
-        margin: 4rem 0;
+        margin: 5rem 0;
         .container {
             @include container-95($width-86);
             .skills-categories-wrapper {
@@ -248,7 +248,7 @@
                     .skill-category-item {
                         .skill-category-item-son {
                             @include display-flex-row-alignCenter;
-                            justify-content: center;
+                            justify-content: flex-start;
                             gap: .5rem;
                             .icon {
                                 color: $light-blue;

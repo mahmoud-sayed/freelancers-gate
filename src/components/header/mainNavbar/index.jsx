@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import './../../../global/global-style.scss';
 import './style.scss';
 import Logo from '../../logo';
@@ -11,8 +11,8 @@ const MainNavbar = () => {
         <div className="main-nav-wrapper">
             <div className="container">
                 <div className="main-nav-items-left">
-                    <Logo/>
-                    <MainNavItems/>
+                    <Logo />
+                    <MainNavItems />
                 </div>
                 <div className="main-nav-items-right">
                     <Link to="/login">log in</Link>

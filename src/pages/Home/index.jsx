@@ -3,9 +3,10 @@ import './../../global/global-style.scss';
 import './style.scss';
 import { Link } from "react-router-dom";
 //react icon
-import { BsCurrencyDollar, BsFillBriefcaseFill, BsFillCreditCard2BackFill, BsPersonLinesFill, BsPersonCheckFill, BsShieldFillCheck, BsFillChatDotsFill, BsAwardFill } from 'react-icons/bs';
-import { RiTimerFill } from "react-icons/ri";
+import { BsCurrencyDollar, BsFillBriefcaseFill, BsFillCreditCard2BackFill, BsPersonLinesFill, BsPersonCheckFill, BsShieldFillCheck, BsFillChatDotsFill, BsAwardFill, BsLaptop, BsSearch, BsWordpress, BsTranslate, BsShopWindow, BsShareFill } from 'react-icons/bs';
+import { RiBookMarkLine, RiKeyboardBoxFill, RiTimerFill, RiAndroidFill, RiAppleFill, RiPencilFill, RiStarFill, RiTeamFill, RiMoreFill } from "react-icons/ri";
 import { MdMonitor } from 'react-icons/md';
+import { FaMobileAlt, FaTruck, FaJsSquare, FaLinux, FaJava, FaLaravel, FaDev, FaCalculator, FaFilm, FaUnity } from "react-icons/fa";
 //image
 import image from './../../assets/homePhotos/skills-images/img-src';
 
@@ -216,146 +217,146 @@ const Home = () => {
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaMobileAlt className="icon" />
+                                    <h4>mobile apps</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiAndroidFill className="icon" />
+                                    <h4>Android Apps</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiAppleFill className="icon" />
+                                    <h4>iphone apps</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsLaptop className="icon" />
+                                    <h4>Software Architecture</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiPencilFill className="icon" />
+                                    <h4>graphic design</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiStarFill className="icon" />
+                                    <h4>logo design</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsWordpress className="icon" />
+                                    <h4>Wordpress</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaTruck className="icon" />
+                                    <h4>Logistics</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsSearch className="icon" />
+                                    <h4>web search</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaJsSquare className="icon" />
+                                    <h4>JavaScript</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaLinux className="icon" />
+                                    <h4>linux</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaJava className="icon" />
+                                    <h4>JAVA</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaLaravel className="icon" />
+                                    <h4>Laravel</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaDev className="icon" />
+                                    <h4>software developers</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsTranslate className="icon" />
+                                    <h4>translators</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaCalculator className="icon" />
+                                    <h4>finance</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaFilm className="icon" />
+                                    <h4>film making</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsShopWindow className="icon" />
+                                    <h4>marketing</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <BsShareFill className="icon" />
+                                    <h4>digital marketing</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <FaUnity className="icon" />
+                                    <h4>game development</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiTeamFill className="icon" />
+                                    <h4>public relations</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiKeyboardBoxFill className="icon" />
+                                    <h4>data entry</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiBookMarkLine className="icon" />
+                                    <h4>copy writing</h4>
                                 </Link>
                             </div>
                             <div className="skill-category-item">
                                 <Link to="/jobs" className="skill-category-item-son">
-                                    <MdMonitor className="icon" />
-                                    <h4>website design</h4>
+                                    <RiMoreFill className="icon" />
+                                    <h4>more</h4>
                                 </Link>
                             </div>
                         </div>
