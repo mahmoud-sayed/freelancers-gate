@@ -12,9 +12,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <main>
-        <RoutesComponent />
-      </main>
+      <RoutesComponent />
       <Footer />
     </Fragment>
   );

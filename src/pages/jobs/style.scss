@@ -1,0 +1,4 @@
+@import './../../global/global-style.scss';
+.hold {
+    @include display-flex-row-alignCenter;
+}
