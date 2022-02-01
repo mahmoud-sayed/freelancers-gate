@@ -57,7 +57,7 @@ $width-95:95%; //for tablet and mobile
 }
 
 //button
-@mixin btn($bg-color:$dark-fuchsia, $paddingUpAndDown:5px, $paddingRightAndLeft:10px) {
+@mixin btn($bg-color:$dark-ruddy, $paddingUpAndDown:5px, $paddingRightAndLeft:10px) {
     background-color: $bg-color;
     border: none;
     color: white;
