@@ -50,6 +50,13 @@ $font-size-12:12px;
 $width-1200px:1200px; //for screens more than 1200px 
 $width-86:86%; // for large screen
 $width-95:95%; //for tablet and mobile
+//--------------- 
+//Global variables for entire site
+$global-pages-background:#F0F0F0; //global pages background
+$global-padding-for-min-content: 16px;
+$global-box-shadow-for-min-content:0 0 4px 0 #00000014,
+0 2px 4px 0 #0000001f;
+$global-border-radius-for-min-content:7px; //---------------
 //global css classes
 @mixin container-95($width:95%) {
     width: $width;
@@ -92,4 +99,13 @@ $width-95:95%; //for tablet and mobile
     display: flex;
     align-items: flex-end;
     background-color: #e2e4e8;
+}
+
+//min design for cards in all like aside in jobs page and jobs cards
+@mixin min-cards-design-for-all-content {
+    background-color: #fff;
+    padding: $global-padding-for-min-content;
+    border-radius: $global-border-radius-for-min-content;
+    box-shadow: $global-box-shadow-for-min-content;
+    overflow: hidden;
 }

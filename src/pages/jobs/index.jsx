@@ -69,14 +69,14 @@ const Jobs = () => {
                 </aside>
                 <main>
                     <section className="sort-jobs">
-                        <h2>top results</h2>
-
-                        <label htmlFor="jobs-sort">sort By:</label>
-
-                        <select id="jobs-sort">
-                            <option value="latest" defaultValue>latest</option>
-                            <option value="oldest">oldest</option>
-                        </select>
+                        <h2 className="sort-head">top results</h2>
+                        <div className="sort-selector">
+                            <label htmlFor="jobs-sort">sort By:</label>
+                            <select id="jobs-sort">
+                                <option value="latest" defaultValue>latest</option>
+                                <option value="oldest">oldest</option>
+                            </select>
+                        </div>
                     </section>
                     <section>
                         <div className="job">
