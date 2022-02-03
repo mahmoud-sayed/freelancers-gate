@@ -26,7 +26,10 @@
                 }
                 input[type=button] {
                     height: 36px;
-                    @include btn;
+                    @include btn($dark-blue);
+                    &:hover {
+                        background-color: $hover-blue;
+                    }
                 }
             }
         }
@@ -38,24 +41,124 @@
         margin: 2rem 0;
         aside {
             width: 280px;
-            box-shadow: $global-box-shadow-for-min-content;
-            border-radius: $global-border-radius-for-min-content;
-            overflow: hidden;
             .aside-content-wrapper {
                 @include display-flex-row-alignCenter(column, flex-start);
-                padding: $global-padding-for-min-content;
-                gap: 2rem;
-                background-color: #fff;
+                gap: 1rem;
+                width: 100%;
                 .filters {
                     display: flex;
                     flex-direction: column;
-                    gap: 1rem;
+                    box-shadow: $global-box-shadow-for-min-content;
+                    border-radius: $global-border-radius-for-min-content;
+                    overflow: hidden;
+                    padding: $global-padding-for-min-content;
+                    background-color: #fff;
+                    gap: 1.2rem;
+                    width: 100%;
+                    .filters-header {
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
                     .search-by-keyWord-wrapper {
                         @include display-flex-row-alignCenter(column, flex-start);
-                        gap: .5rem;
+                        gap: .3rem;
+                        width: 100%;
+                        h3 {
+                            color: $dark-blueBlack-text-color-jobPage;
+                            font-size: $font-size-16;
+                            font-weight: $font-wight-700;
+                        }
+                        .keyword-form {
+                            @include display-flex-row-alignCenter(column, flex-start);
+                            width: 100%;
+                            label {
+                                font-size: $font-size-14;
+                                font-weight: $font-wight-500;
+                            }
+                            input {
+                                @include small-search-input;
+                            }
+                        }
+                    }
+                    .search-by-price-wrapper {
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        gap: .3rem;
+                        width: 100%;
+                        h3 {
+                            color: $dark-blueBlack-text-color-jobPage;
+                            font-size: $font-size-16;
+                            font-weight: $font-wight-700;
+                        }
+                        .price-form {
+                            @include display-flex-row-alignCenter(column, flex-start);
+                            width: 100%;
+                            .min-search-wrapper {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                width: 100%;
+                                label {
+                                    font-size: $font-size-14;
+                                    font-weight: $font-wight-500;
+                                }
+                                input {
+                                    @include small-search-input;
+                                }
+                            }
+                            .max-search-wrapper {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                width: 100%;
+                                label {
+                                    font-size: $font-size-14;
+                                    font-weight: $font-wight-500;
+                                }
+                                input {
+                                    @include small-search-input;
+                                }
+                            }
+                        }
                     }
                 }
-                .skills-categories {}
+                .skills-categories {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    box-shadow: $global-box-shadow-for-min-content;
+                    border-radius: $global-border-radius-for-min-content;
+                    overflow: hidden;
+                    padding: $global-padding-for-min-content;
+                    background-color: #fff;
+                    width: 100%;
+                    .skills-categories-header {
+                        font-size: $font-size-20;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                    .skills-search-form {
+                        label {
+                            font-size: $font-size-14;
+                            font-weight: $font-wight-500;
+                        }
+                        input {
+                            @include small-search-input;
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: .5rem;
+                        li {
+                            max-width: fit-content;
+                            padding: 5px 7px;
+                            background-color: #c3c7cd;
+                            border-radius: 18px;
+                            font-weight: $font-wight-500;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #94979b;
+                            }
+                        }
+                    }
+                }
             }
         }
         main {
@@ -69,13 +172,33 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                .sort-head {
+                    font-size: $font-size-20;
+                    color: #0E1724;
+                }
                 .sort-selector {
                     @include display-flex-row-alignCenter;
                     gap: .5rem;
+                    .jobs-sort {
+                        color: $dark-maastricht-blue;
+                    }
+                    #jobs-sort {
+                        font-size: $font-size-16;
+                        padding: 6px 10px;
+                        color: $dark-maastricht-blue;
+                        border: .2px solid $hover-black;
+                        margin: 0 auto;
+                        border-radius: 5px;
+                        text-transform: capitalize;
+                    }
                 }
             }
             .job {
                 @include min-cards-design-for-all-content;
+                cursor: pointer;
+                &:hover {
+                    background-color: $job-posts-back-ground-hover;
+                }
             }
         }
     }

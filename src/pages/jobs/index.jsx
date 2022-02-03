@@ -23,34 +23,35 @@ const Jobs = () => {
                     <div className="aside-content-wrapper">
 
                         <section className="filters">
-                            <h2>Filters</h2>
+                            <h2 className="filters-header">Filters</h2>
                             <div className="search-by-keyWord-wrapper">
 
                                 <h3>KeyWords</h3>
-                                <form role="search" aria-label="sidebar">
+                                <form className="keyword-form" role="search" aria-label="sidebar">
                                     <label htmlFor="search-keyWord-input">Word</label>
-                                    <input type="search" id="search-keyWord-input" spellCheck="false" />
+                                    <input type="search" id="search-keyWord-input" spellCheck="false" placeholder="ex: web developer" />
                                 </form>
                             </div>
                             <div className="search-by-price-wrapper">
 
-                                <h3>Price: USD</h3>
-                                <form role="search" aria-label="sidebar">
+                                <h3>Price $USD</h3>
+                                <form className="price-form" role="search" aria-label="sidebar">
                                     <div className="min-search-wrapper">
                                         <label htmlFor="jop-minimum-price">min</label>
-                                        <input type="search" id="jop-minimum-price" spellCheck="false" />
+                                        <input type="search" id="jop-minimum-price" spellCheck="false" placeholder="ex: $50 USD" />
                                     </div>
                                     <div className="max-search-wrapper">
-                                        <label htmlFor="jop-minimum-price" >min</label>
-                                        <input type="search" id="jop-minimum-price" spellCheck="false" />
+                                        <label htmlFor="jop-maximum-price" >max</label>
+                                        <input type="search" id="jop-maximum-price" spellCheck="false" placeholder="ex: $600 USD" />
                                     </div>
                                 </form>
                             </div>
                         </section>
                         <section className="skills-categories">
-                            <form role="search" aria-label="sidebar">
+                            <h2 className="skills-categories-header">Categories &amp; Skills</h2>
+                            <form className="skills-search-form" role="search" aria-label="sidebar">
                                 <label htmlFor="categories-search"></label>
-                                <input type="search" id="categories-search" placeholder="Category OR Skill" spellCheck="false" />
+                                <input type="search" id="categories-search" placeholder="ex: category, skills" spellCheck="false" />
                             </form>
                             <ul>
                                 <li>website design</li>
@@ -69,9 +70,9 @@ const Jobs = () => {
                 </aside>
                 <main>
                     <section className="sort-jobs">
-                        <h2 className="sort-head">top results</h2>
+                        <h2 className="sort-head">Top results</h2>
                         <div className="sort-selector">
-                            <label htmlFor="jobs-sort">sort By:</label>
+                            <label htmlFor="jobs-sort">Sort by</label>
                             <select id="jobs-sort">
                                 <option value="latest" defaultValue>latest</option>
                                 <option value="oldest">oldest</option>
