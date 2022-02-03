@@ -79,22 +79,109 @@ const Jobs = () => {
                             </select>
                         </div>
                     </section>
-                    <section>
+                    <section className="jobs-section">
+
                         <div className="job">
-                            <div className="job-title"> Web app (React Next.js developer required)</div>
-                            <div className="job-description">
-                                - Looking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components well…
+                            <div className="job-card-head">
+                                <h2 className="job-title"> Front end developer (JavaScript, ReactJS)</h2>
+                                <h2 className="job-budget">
+                                    $250.00 – 750.00 USD
+                                </h2>
                             </div>
-                            <div className="required-job-skills">HTML . CSS . JavaScript . Angular5</div>
-                            <div className="reviews">
-                                <BsPersonFill />
+                            <div className="job-body-description">
+                                <p className="job-description">
+                                    Looking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components well… <span>more</span>
+                                </p>
+                                <p className="job-posted-since">Posted 8 minutes ago</p>
+                            </div>
+                            <div className="job-footer-rating-and-skills">
+                                <div className="required-job-skills">
+                                    <ul>
+                                        <li className="skill">HTML</li>
+                                        <li>.</li>
+                                        <li className="skill">CSS</li>
+                                        <li>.</li>
+                                        <li className="skill">JavaScript</li>
+                                        <li>.</li>
+                                        <li className="skill">ReactJS</li>
+                                        <li>.</li>
+                                        <li className="skill">git</li>
+                                    </ul>
+                                </div>
+                                <div className="reviews">
+                                    <BsPersonFill /> ( 1 {1 >= 1 ? "Review" : "Reviews"})
+                                </div>
                             </div>
                         </div>
-                        <div className="project-budget-estimation">
-                            <div className="project-budget"></div>
-                            <div className="project-posted-since"></div>
-                            <div className="project-estimation"></div>
+                        <div className="job">
+                            <div className="job-card-head">
+                                <h2 className="job-title"> Front end developer (JavaScript, ReactJS)</h2>
+                                <h2 className="job-budget">
+                                    $250.00 – 750.00 USD
+                                </h2>
+                            </div>
+                            <div className="job-body-description">
+                                <p className="job-description">
+                                    Looking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components well… <span>more</span>
+                                </p>
+                                <p className="job-posted-since">Posted 8 minutes ago</p>
+                            </div>
+                            <div className="job-footer-rating-and-skills">
+                                <div className="required-job-skills">
+                                    <ul>
+                                        <li className="skill">HTML</li>
+                                        <li>.</li>
+                                        <li className="skill">CSS</li>
+                                        <li>.</li>
+                                        <li className="skill">JavaScript</li>
+                                        <li>.</li>
+                                        <li className="skill">ReactJS</li>
+                                        <li>.</li>
+                                        <li className="skill">git</li>
+                                    </ul>
+                                </div>
+                                <div className="reviews">
+                                    <BsPersonFill /> ( 1 {1 >= 1 ? "Review" : "Reviews"})
+                                </div>
+                            </div>
                         </div>
+                        <div className="job">
+                            <div className="job-card-head">
+                                <h2 className="job-title"> Front end developer (JavaScript, ReactJS)</h2>
+                                <h2 className="job-budget">
+                                    $250.00 – 750.00 USD
+                                </h2>
+                            </div>
+                            <div className="job-body-description">
+                                <p className="job-description">
+                                    Looking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components well… <span>more</span>
+                                </p>
+                                <p className="job-posted-since">Posted 8 minutes ago</p>
+                            </div>
+                            <div className="job-footer-rating-and-skills">
+                                <div className="required-job-skills">
+                                    <ul>
+                                        <li className="skill">HTML</li>
+                                        <li>.</li>
+                                        <li className="skill">CSS</li>
+                                        <li>.</li>
+                                        <li className="skill">JavaScript</li>
+                                        <li>.</li>
+                                        <li className="skill">ReactJS</li>
+                                        <li>.</li>
+                                        <li className="skill">git</li>
+                                    </ul>
+                                </div>
+                                <div className="reviews">
+                                    <div className="rating">
+                                        <BsPersonFill />
+
+                                    </div>
+                                    <div className="reviews">( 1 {1 >= 1 ? "Review" : "Reviews"})</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </section>
                 </main>
             </div>
