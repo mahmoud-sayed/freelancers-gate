@@ -1,3 +1,54 @@
 @import './../../global/global-style.scss';
 // gradient background: rgb(18,75,153);
-// background: linear-gradient(45deg, rgba(18,75,153,1) 42%, rgba(2,120,226,1) 89%);
+// background: linear-gradient(45deg, rgba(18,75,153,1) 42%, rgba(2,120,226,1) 89%);main {
+.header {
+    h1 {}
+    p {}
+}
+
+.form-wrapper {
+    .new-job-form {
+        .project-name-wrapper {
+            .project-name-label {}
+            .project-name-input {}
+        }
+        .project-description-wrapper {
+            .project-description-label {}
+            .project-description-input {}
+        }
+        .require-skills-wrapper {
+            .require-skills-title {}
+            .require-skills-description {}
+            .require-skills-input {}
+        }
+        .file-wrapper {
+            .file-wrapper-input {}
+            .file-wrapper-label {}
+        }
+        .estimated-budget-wrapper {
+            .min-search-wrapper {}
+        }
+    }
+    .job-overview-wrapper {
+        h2 {}
+        .job-card-wrapper {
+            .card-head {
+                .device-icon {}
+                .project-text {}
+                .project-budget {}
+            }
+            .card-description {
+                .card-description-title {}
+                .card-description-body {}
+                .required-job-skills {
+                    ul {
+                        li {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+}
