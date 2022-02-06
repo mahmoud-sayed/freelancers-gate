@@ -2,47 +2,414 @@
 // gradient background: rgb(18,75,153);
 // background: linear-gradient(45deg, rgba(18,75,153,1) 42%, rgba(2,120,226,1) 89%);
 main {
+    width: 100%;
+    background-color: $job-posts-back-ground-hover;
     .header {
-        h1 {}
-        p {}
-    }
-    .form-wrapper {
-        .new-job-form {
-            .project-name-wrapper {
-                .project-name-label {}
-                .project-name-input {}
+        background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+        height: 265px;
+        width: 100%;
+        @include display-flex-row-alignCenter(column);
+        .container {
+            width: 780px;
+            height: 100%;
+            @include display-flex-row-alignCenter(column, flex-start);
+            justify-content: center;
+            gap: 2rem;
+            h1 {
+                color: $white;
+                font-size: $font-size-32;
+                width: 100%;
             }
-            .project-description-wrapper {
-                .project-description-label {}
-                .project-description-input {}
-            }
-            .require-skills-wrapper {
-                .require-skills-title {}
-                .require-skills-description {}
-                .require-skills-input {}
-            }
-            .file-wrapper {
-                .file-wrapper-input {}
-                .file-wrapper-label {}
-            }
-            .estimated-budget-wrapper {
-                .min-search-wrapper {}
+            p {
+                color: $white;
+                font-size: $font-size-14;
+                width: 100%;
             }
         }
-        .job-overview-wrapper {
-            h2 {}
-            .job-card-wrapper {
-                .card-head {
-                    .device-icon {}
-                    .project-text {}
-                    .project-budget {}
+    }
+    .container {
+        width: 790px;
+        margin: 3rem 0;
+        .form-wrapper {
+            @include min-cards-design-for-all-content(2rem);
+            @include display-flex-row-alignCenter(column);
+            width: 100%;
+            .new-job-form {
+                width: 100%;
+                @include display-flex-row-alignCenter(column, flex-start);
+                gap: 1.8rem;
+                .project-name-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    width: 100%;
+                    .project-name-label {}
+                    .project-name-input {
+                        @include small-search-input(44px);
+                    }
                 }
-                .card-description {
-                    .card-description-title {}
-                    .card-description-body {}
-                    .required-job-skills {
-                        ul {
-                            li {}
+                .project-description-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .project-description-label {}
+                    .project-description-input {
+                        @include small-search-input(106px);
+                    }
+                }
+                .require-skills-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .require-skills-title {}
+                    .require-skills-description {}
+                    .require-skills-input {
+                        @include small-search-input(46px);
+                    }
+                }
+                .file-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .file-wrapper-input {}
+                    .file-wrapper-label {
+                        @include small-search-input(84px);
+                        border: 1px dashed $hover-black;
+                    }
+                }
+                .estimated-budget-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .min-search-wrapper {}
+                }
+            }
+            .job-overview-wrapper {
+                h2 {}
+                .job-card-wrapper {
+                    .card-head {
+                        .device-icon {}
+                        .project-text {}
+                        .project-budget {}
+                    }
+                    .card-description {
+                        .card-description-title {}
+                        .card-description-body {}
+                        .required-job-skills {
+                            ul {
+                                display: flex;
+                                flex-direction: row;
+                                gap: .5rem;
+                                max-width: 70%;
+                                flex-wrap: wrap;
+                                .skill {
+                                    max-width: fit-content;
+                                    padding: 5px 7px;
+                                    border-radius: 10px;
+                                    font-weight: $font-wight-500;
+                                    background-color: #e1e4e8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    main {
+        @include display-flex-row-alignCenter(column);
+        .header {
+            background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+            width: 100%;
+            .container {
+                width: 780px;
+                h1 {}
+                p {}
+            }
+        }
+        .container {
+            width: 790px;
+            .form-wrapper {
+                .new-job-form {
+                    .project-name-wrapper {
+                        .project-name-label {}
+                        .project-name-input {}
+                    }
+                    .project-description-wrapper {
+                        .project-description-label {}
+                        .project-description-input {}
+                    }
+                    .require-skills-wrapper {
+                        .require-skills-title {}
+                        .require-skills-description {}
+                        .require-skills-input {}
+                    }
+                    .file-wrapper {
+                        .file-wrapper-input {}
+                        .file-wrapper-label {}
+                    }
+                    .estimated-budget-wrapper {
+                        .min-search-wrapper {}
+                    }
+                }
+                .job-overview-wrapper {
+                    h2 {}
+                    .job-card-wrapper {
+                        .card-head {
+                            .device-icon {}
+                            .project-text {}
+                            .project-budget {}
+                        }
+                        .card-description {
+                            .card-description-title {}
+                            .card-description-body {}
+                            .required-job-skills {
+                                ul {
+                                    li {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {
+    main {
+        @include display-flex-row-alignCenter(column);
+        .header {
+            background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+            width: 100%;
+            .container {
+                width: 780px;
+                h1 {}
+                p {}
+            }
+        }
+        .container {
+            width: 780px;
+            .form-wrapper {
+                .new-job-form {
+                    .project-name-wrapper {
+                        .project-name-label {}
+                        .project-name-input {}
+                    }
+                    .project-description-wrapper {
+                        .project-description-label {}
+                        .project-description-input {}
+                    }
+                    .require-skills-wrapper {
+                        .require-skills-title {}
+                        .require-skills-description {}
+                        .require-skills-input {}
+                    }
+                    .file-wrapper {
+                        .file-wrapper-input {}
+                        .file-wrapper-label {}
+                    }
+                    .estimated-budget-wrapper {
+                        .min-search-wrapper {}
+                    }
+                }
+                .job-overview-wrapper {
+                    h2 {}
+                    .job-card-wrapper {
+                        .card-head {
+                            .device-icon {}
+                            .project-text {}
+                            .project-budget {}
+                        }
+                        .card-description {
+                            .card-description-title {}
+                            .card-description-body {}
+                            .required-job-skills {
+                                ul {
+                                    li {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {
+    main {
+        @include display-flex-row-alignCenter(column);
+        .header {
+            background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+            width: 100%;
+            .container {
+                width: 70%;
+                h1 {}
+                p {}
+            }
+        }
+        .container {
+            width: 70%;
+            .form-wrapper {
+                .new-job-form {
+                    .project-name-wrapper {
+                        .project-name-label {}
+                        .project-name-input {}
+                    }
+                    .project-description-wrapper {
+                        .project-description-label {}
+                        .project-description-input {}
+                    }
+                    .require-skills-wrapper {
+                        .require-skills-title {}
+                        .require-skills-description {}
+                        .require-skills-input {}
+                    }
+                    .file-wrapper {
+                        .file-wrapper-input {}
+                        .file-wrapper-label {}
+                    }
+                    .estimated-budget-wrapper {
+                        .min-search-wrapper {}
+                    }
+                }
+                .job-overview-wrapper {
+                    h2 {}
+                    .job-card-wrapper {
+                        .card-head {
+                            .device-icon {}
+                            .project-text {}
+                            .project-budget {}
+                        }
+                        .card-description {
+                            .card-description-title {}
+                            .card-description-body {}
+                            .required-job-skills {
+                                ul {
+                                    li {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    main {
+        @include display-flex-row-alignCenter(column);
+        .header {
+            background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+            width: 100%;
+            .container {
+                width: $width-95;
+                h1 {}
+                p {}
+            }
+        }
+        .container {
+            width: $width-95;
+            .form-wrapper {
+                .new-job-form {
+                    .project-name-wrapper {
+                        .project-name-label {}
+                        .project-name-input {}
+                    }
+                    .project-description-wrapper {
+                        .project-description-label {}
+                        .project-description-input {}
+                    }
+                    .require-skills-wrapper {
+                        .require-skills-title {}
+                        .require-skills-description {}
+                        .require-skills-input {}
+                    }
+                    .file-wrapper {
+                        .file-wrapper-input {}
+                        .file-wrapper-label {}
+                    }
+                    .estimated-budget-wrapper {
+                        .min-search-wrapper {}
+                    }
+                }
+                .job-overview-wrapper {
+                    h2 {}
+                    .job-card-wrapper {
+                        .card-head {
+                            .device-icon {}
+                            .project-text {}
+                            .project-budget {}
+                        }
+                        .card-description {
+                            .card-description-title {}
+                            .card-description-body {}
+                            .required-job-skills {
+                                ul {
+                                    li {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    main {
+        @include display-flex-row-alignCenter(column);
+        .header {
+            background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+            width: 100%;
+            .container {
+                width: $width-95;
+                h1 {}
+                p {}
+            }
+        }
+        .container {
+            width: $width-95;
+            .form-wrapper {
+                .new-job-form {
+                    .project-name-wrapper {
+                        .project-name-label {}
+                        .project-name-input {}
+                    }
+                    .project-description-wrapper {
+                        .project-description-label {}
+                        .project-description-input {}
+                    }
+                    .require-skills-wrapper {
+                        .require-skills-title {}
+                        .require-skills-description {}
+                        .require-skills-input {}
+                    }
+                    .file-wrapper {
+                        .file-wrapper-input {}
+                        .file-wrapper-label {}
+                    }
+                    .estimated-budget-wrapper {
+                        .min-search-wrapper {}
+                    }
+                }
+                .job-overview-wrapper {
+                    h2 {}
+                    .job-card-wrapper {
+                        .card-head {
+                            .device-icon {}
+                            .project-text {}
+                            .project-budget {}
+                        }
+                        .card-description {
+                            .card-description-title {}
+                            .card-description-body {}
+                            .required-job-skills {
+                                ul {
+                                    li {}
+                                }
+                            }
                         }
                     }
                 }

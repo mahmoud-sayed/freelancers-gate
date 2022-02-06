@@ -110,17 +110,17 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 }
 
 //min design for cards in all like aside in jobs page and jobs cards
-@mixin min-cards-design-for-all-content {
+@mixin min-cards-design-for-all-content($padding:$global-padding-for-min-content) {
     background-color: #fff;
-    padding: $global-padding-for-min-content;
+    padding: $padding;
     border-radius: $global-border-radius-for-min-content;
     box-shadow: $global-box-shadow-for-min-content;
     overflow: hidden;
 }
 
-@mixin small-search-input {
+@mixin small-search-input($height:30px) {
     width: 100%;
-    height: 30px;
+    height: $height;
     font-size: $font-size-16;
     padding: 3px 5px;
     border: 1.5px solid $hover-black;
