@@ -52,7 +52,7 @@ const SkillsTagsField = () => {
       ))}
       <input
         value={input}
-        placeholder="Enter a tag"
+        placeholder="Enter Required Skills"
         onKeyDown={onKeyDown}
         onKeyUp={onKeyUp}
         onChange={onChange} />

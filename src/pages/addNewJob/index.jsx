@@ -7,13 +7,13 @@ const AddNewJob = () => {
     return (
         <main>
             <div className="header">
-                <div className="container">
+                <div className="header-container">
 
                     <h1 role="heading">Tell us what you need done</h1>
                     <p role="article">Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them. Pay the freelancer only when you are 100% satisfied with their work.</p>
                 </div>
             </div>
-            <div className="container">
+            <div className="content-container">
                 <section className="form-wrapper">
                     <form className="new-job-form" role="form">
                         <div className="project-name-wrapper">
@@ -25,7 +25,10 @@ const AddNewJob = () => {
 
                             <label className="project-description-label" htmlFor="project-description">Tell us more about your project</label>
                             <textarea className="project-description-input" name="" id="" cols="30" rows="10" maxLength="4000"></textarea>
-                            <p>4000 characters remaining</p>
+                            <div className="required-errors">
+
+                                <p className="remaining-error">4000 characters remaining</p>
+                            </div>
                         </div>
                         <div className="require-skills-wrapper">
                             <label className="require-skills-title" htmlFor="">What skills are required?</label>
@@ -37,19 +40,27 @@ const AddNewJob = () => {
                             <input className="file-wrapper-input" type="file" id="file-uploaded" />
                             <label className="file-wrapper-label" htmlFor="file-uploaded">Drag &amp; drop any images or documents that might be helpful in explaining your brief here (Max file size: 25 MB).</label>
                         </div>
+
+
                         <div className="estimated-budget-wrapper">
-                            <div className="min-search-wrapper">
+                            <h3>What is your estimated budget?</h3>
+                            <div className="min-budget-wrapper">
                                 <label htmlFor="jop-minimum-price">Minimum budget per hour</label>
                                 <input type="search" id="jop-minimum-price" spellCheck="false" placeholder="ex: $50 USD" />
                             </div>
-                            <div className="max-search-wrapper">
+                            <div className="max-budget-wrapper">
                                 <label htmlFor="jop-maximum-price" >Maximum budget per hour</label>
                                 <input type="search" id="jop-maximum-price" spellCheck="false" placeholder="ex: $600 USD" />
                             </div>
                         </div>
+
+                        <button type="submit">Yes, post my project</button>
                     </form>
+                </section>
+                <section className="job-overview">
+
+                    <h2 className="job-overview-caption">Are these details correct?</h2>
                     <div className="job-overview-wrapper">
-                        <h2>Are these details correct?</h2>
                         <div className="job-card-wrapper">
                             <div className="card-head">
 
@@ -78,6 +89,7 @@ const AddNewJob = () => {
                         </div>
                     </div>
                 </section>
+
             </div>
         </main>
     );

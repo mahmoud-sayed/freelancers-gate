@@ -4,12 +4,13 @@
 main {
     width: 100%;
     background-color: $job-posts-back-ground-hover;
+    @include display-flex-row-alignCenter(column);
     .header {
         background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
         height: 265px;
         width: 100%;
         @include display-flex-row-alignCenter(column);
-        .container {
+        .header-container {
             width: 780px;
             height: 100%;
             @include display-flex-row-alignCenter(column, flex-start);
@@ -27,9 +28,12 @@ main {
             }
         }
     }
-    .container {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         width: 790px;
-        margin: 3rem 0;
+        margin: 2rem 0;
         .form-wrapper {
             @include min-cards-design-for-all-content(2rem);
             @include display-flex-row-alignCenter(column);
@@ -40,57 +44,190 @@ main {
                 gap: 1.8rem;
                 .project-name-wrapper {
                     @include display-flex-row-alignCenter(column, flex-start);
+                    gap: 5px;
                     width: 100%;
-                    .project-name-label {}
+                    .project-name-label {
+                        font-size: 20px;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
                     .project-name-input {
                         @include small-search-input(44px);
                     }
                 }
                 .project-description-wrapper {
                     @include display-flex-row-alignCenter(column, flex-start);
-                    .project-description-label {}
+                    gap: 5px;
+                    width: 100%;
+                    .project-description-label {
+                        font-size: 20px;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
                     .project-description-input {
                         @include small-search-input(106px);
+                        line-height: 1.4;
+                    }
+                    .required-errors {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        width: 100%;
+                        .remaining-error {
+                            display: inline;
+                            color: #4d525b;
+                        }
                     }
                 }
                 .require-skills-wrapper {
                     @include display-flex-row-alignCenter(column, flex-start);
-                    .require-skills-title {}
-                    .require-skills-description {}
+                    gap: 5px;
+                    .require-skills-title {
+                        font-size: 20px;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                    .require-skills-description {
+                        color: $dark-blueBlack-text-color-jobPage;
+                        line-height: 1.4;
+                        margin-bottom: 5px;
+                    }
                     .require-skills-input {
                         @include small-search-input(46px);
                     }
                 }
                 .file-wrapper {
-                    @include display-flex-row-alignCenter(column, flex-start);
-                    .file-wrapper-input {}
+                    @include display-flex-row-alignCenter;
+                    gap: 10px;
+                    border: 1px dashed $hover-black;
+                    padding: 20px 16px;
+                    cursor: pointer;
+                    .file-wrapper-input {
+                        &::-webkit-file-upload-button {
+                            visibility: hidden;
+                        }
+                        &::before {
+                            content: ' + Upload File';
+                            display: inline-block;
+                            background: linear-gradient(top, #f9f9f9, #e3e3e3);
+                            border: 1px solid #999;
+                            border-radius: 3px;
+                            padding: 9px 15px;
+                            outline: none;
+                            white-space: nowrap;
+                            -webkit-user-select: none;
+                            cursor: pointer;
+                            text-shadow: 1px 1px #fff;
+                            font-size: 10pt;
+                            font-weight: $font-wight-700;
+                            &:hover {
+                                color: #4d525b;
+                                font-weight: $font-wight-700;
+                            }
+                        }
+                    }
                     .file-wrapper-label {
-                        @include small-search-input(84px);
-                        border: 1px dashed $hover-black;
+                        color: #4d525b;
+                        cursor: pointer;
                     }
                 }
                 .estimated-budget-wrapper {
                     @include display-flex-row-alignCenter(column, flex-start);
-                    .min-search-wrapper {}
+                    width: 50%;
+                    gap: .5rem;
+                    margin-bottom: 1rem;
+                    .h3 {
+                        color: $dark-blueBlack-text-color-jobPage;
+                        font-size: $font-size-16;
+                        font-weight: $font-wight-700;
+                    }
+                    .min-budget-wrapper {
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        width: 100%;
+                        gap: .3rem;
+                        label {
+                            font-size: $font-size-14;
+                            font-weight: $font-wight-500;
+                        }
+                        input {
+                            @include small-search-input(44px);
+                        }
+                    }
+                    .max-budget-wrapper {
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        width: 100%;
+                        gap: .3rem;
+                        label {
+                            font-size: $font-size-14;
+                            font-weight: $font-wight-500;
+                        }
+                        input {
+                            @include small-search-input(44px);
+                        }
+                    }
                 }
             }
+        }
+        .job-overview {
+            .job-overview-caption {
+                font-size: $font-size-24;
+                font-weight: $font-wight-700;
+                margin-left: 1rem;
+            }
             .job-overview-wrapper {
-                h2 {}
+                @include min-cards-design-for-all-content(2rem);
+                @include display-flex-row-alignCenter(column, flex-start);
+                width: 100%;
+                margin-top: 1rem;
                 .job-card-wrapper {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 3%;
                     .card-head {
-                        .device-icon {}
-                        .project-text {}
-                        .project-budget {}
+                        @include display-flex-row-alignCenter(column);
+                        justify-content: center;
+                        width: 30%;
+                        border-right: 1px solid $hover-black;
+                        padding-right: 10px;
+                        .device-icon {
+                            font-size: 100px;
+                            color: $light-blue;
+                        }
+                        .project-text {
+                            font-size: $font-size-14;
+                            margin-bottom: 1rem;
+                            font-weight: $font-wight-600;
+                        }
+                        .project-budget {
+                            font-size: $font-size-16;
+                            font-weight: $font-wight-700;
+                            white-space: nowrap;
+                        }
                     }
                     .card-description {
-                        .card-description-title {}
-                        .card-description-body {}
+                        @include display-flex-row-alignCenter(column);
+                        gap: .8rem;
+                        width: 70%;
+                        .card-description-title {
+                            font-size: $font-size-18;
+                            font-weight: $font-wight-700;
+                            width: 100%;
+                            word-wrap: break-word;
+                        }
+                        .card-description-body {
+                            width: 100%;
+                            font-size: $font-size-14;
+                            font-weight: $font-wight-400;
+                            line-height: 1.43;
+                        }
                         .required-job-skills {
+                            width: 100%;
                             ul {
                                 display: flex;
                                 flex-direction: row;
                                 gap: .5rem;
-                                max-width: 70%;
+                                width: 100%;
                                 flex-wrap: wrap;
                                 .skill {
                                     max-width: fit-content;
@@ -108,10 +245,12 @@ main {
     }
 }
 
+
+/*
 //Extra large screens, TV
 @media all and (min-width:1201px) {
     main {
-        @include display-flex-row-alignCenter(column);
+        
         .header {
             background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
             width: 100%;
@@ -170,6 +309,8 @@ main {
     }
 }
 
+*/
+
 //Desktops, large screens
 @media all and (min-width:1025px)and(max-width:1200px) {
     main {
@@ -185,49 +326,6 @@ main {
         }
         .container {
             width: 780px;
-            .form-wrapper {
-                .new-job-form {
-                    .project-name-wrapper {
-                        .project-name-label {}
-                        .project-name-input {}
-                    }
-                    .project-description-wrapper {
-                        .project-description-label {}
-                        .project-description-input {}
-                    }
-                    .require-skills-wrapper {
-                        .require-skills-title {}
-                        .require-skills-description {}
-                        .require-skills-input {}
-                    }
-                    .file-wrapper {
-                        .file-wrapper-input {}
-                        .file-wrapper-label {}
-                    }
-                    .estimated-budget-wrapper {
-                        .min-search-wrapper {}
-                    }
-                }
-                .job-overview-wrapper {
-                    h2 {}
-                    .job-card-wrapper {
-                        .card-head {
-                            .device-icon {}
-                            .project-text {}
-                            .project-budget {}
-                        }
-                        .card-description {
-                            .card-description-title {}
-                            .card-description-body {}
-                            .required-job-skills {
-                                ul {
-                                    li {}
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }
