@@ -54,7 +54,9 @@ const AddNewJob = () => {
                             </div>
                         </div>
 
-                        <button type="submit">Yes, post my project</button>
+                        <div className="submit-button">
+                            <button type="submit">Yes, post my project</button>
+                        </div>
                     </form>
                 </section>
                 <section className="job-overview">
