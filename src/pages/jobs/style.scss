@@ -356,6 +356,16 @@
         }
         .content-container {
             width: $width-95;
+            @include display-flex-row-alignCenter(column);
+            aside {
+                width: 100%;
+            }
+            main {
+                width: 100%;
+                .sort-jobs {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -372,6 +382,16 @@
         }
         .content-container {
             width: $width-95;
+            @include display-flex-row-alignCenter(column);
+            aside {
+                width: 100%;
+            }
+            main {
+                width: 100%;
+                .sort-jobs {
+                    width: 100%;
+                }
+            }
         }
     }
 }
