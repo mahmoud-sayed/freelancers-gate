@@ -100,9 +100,9 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 }
 
 //hr
-@mixin hr () {
+@mixin hr ($hr-color:#e2e4e8) {
     width: 100%;
-    border: 1.2px solid #e2e4e8;
+    border: 1.2px solid $hr-color;
     margin: 10px 0;
     display: flex;
     align-items: flex-end;
