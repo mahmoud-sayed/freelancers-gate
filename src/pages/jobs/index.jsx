@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RatingStars from "../../components/ratingStars";
 //Icons imports
 import { BsPersonFill } from 'react-icons/bs'
@@ -7,23 +7,85 @@ import { BsPersonFill } from 'react-icons/bs'
 import './style.scss';
 
 const Jobs = () => {
-    return (
-        <div className="jobs-page">
-            <div className="jobs-page-intro">
-                <div className="container">
-                    <h1>browse</h1>
-                    <form role="search">
-                        <input type="search" name="job-search" id="search-input" spellCheck="false" placeholder="Search Freelancers, Projects, or Contests" />
-                        <input type="button" value="Search" />
-                    </form>
-                </div>
-            </div>
-            <div className="content-container">
-                <aside>
-                    <div className="aside-content-wrapper">
+    // for show and hide filters in mobile view
+    const [isActive, setIsActive] = useState(false);
 
+
+    // for show and hide filters in mobile view
+    const show = () => {
+        return setIsActive((e) => !isActive);
+    }
+    // const widthOutput = document.querySelector('.jobs-page');
+
+    // function resize() {
+
+    //     widthOutput.value = window.innerWidth;
+    // }
+
+    // window.onresize = resize;
+    const screenSize = window.innerWidth;
+
+    const WindowToggleShow = () => {
+        if (screenSize <= 768) {
+            return (
+                <React.Fragment>
+                    <h2 className="filters-header" onClick={show}>Filters</h2>
+                    {isActive && (
+                        <div className="filters-and-skills-categories-wrapper">
+                            <section className="filters">
+                                <div className="search-by-keyWord-wrapper">
+
+                                    <h3>KeyWords</h3>
+                                    <form className="keyword-form" role="search" aria-label="sidebar">
+                                        <label htmlFor="search-keyWord-input">Word</label>
+                                        <input type="search" id="search-keyWord-input" spellCheck="false" placeholder="ex: web developer" />
+                                    </form>
+                                </div>
+                                <div className="search-by-price-wrapper">
+
+                                    <h3>Price $USD</h3>
+                                    <form className="price-form" role="search" aria-label="sidebar">
+                                        <div className="min-search-wrapper">
+                                            <label htmlFor="jop-minimum-price">min</label>
+                                            <input type="search" id="jop-minimum-price" spellCheck="false" placeholder="ex: $50 USD" />
+                                        </div>
+                                        <div className="max-search-wrapper">
+                                            <label htmlFor="jop-maximum-price" >max</label>
+                                            <input type="search" id="jop-maximum-price" spellCheck="false" placeholder="ex: $600 USD" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </section>
+                            <section className="skills-categories">
+                                <h2 className="skills-categories-header">Categories &amp; Skills</h2>
+                                <form className="skills-search-form" role="search" aria-label="sidebar">
+                                    <label htmlFor="categories-search"></label>
+                                    <input type="search" id="categories-search" placeholder="ex: category, skills" spellCheck="false" />
+                                </form>
+                                <ul>
+                                    <li>website design</li>
+                                    <li>mobile apps</li>
+                                    <li>Android Apps</li>
+                                    <li>graphic design</li>
+                                    <li>UI/UX</li>
+                                    <li>sales</li>
+                                    <li>wordpress</li>
+                                    <li>Laravel</li>
+                                    <li>Magento</li>
+                                    <li>data entry</li>
+                                </ul>
+                            </section>
+                        </div>
+                    )}
+                </React.Fragment>
+            )
+        } else {
+            return (
+
+                <React.Fragment>
+                    <h2 className="filters-header" >Filters</h2>
+                    <div className="filters-and-skills-categories-wrapper">
                         <section className="filters">
-                            <h2 className="filters-header">Filters</h2>
                             <div className="search-by-keyWord-wrapper">
 
                                 <h3>KeyWords</h3>
@@ -66,6 +128,28 @@ const Jobs = () => {
                                 <li>data entry</li>
                             </ul>
                         </section>
+                    </div>
+                </React.Fragment>
+            )
+        }
+    }
+
+    return (
+        <div className="jobs-page">
+            <div className="jobs-page-intro">
+                <div className="container">
+                    <h1>Browse</h1>
+                    <form role="search">
+                        <input type="search" name="job-search" id="search-input" spellCheck="false" placeholder="Search Freelancers, Projects, or Contests" />
+                        <input type="button" value="Search" />
+                    </form>
+                </div>
+            </div>
+            <div className="content-container">
+                <aside>
+                    <div className="aside-content-wrapper">
+                        {WindowToggleShow()}
+
                     </div>
                 </aside>
                 <main>

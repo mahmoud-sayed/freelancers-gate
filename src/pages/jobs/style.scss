@@ -21,7 +21,7 @@
                     width: 90%;
                     height: 36px;
                     padding: 3.5px;
-                    font-size: $font-size-18;
+                    font-size: $font-size-16;
                     font-weight: $font-wight-400;
                 }
                 input[type=button] {
@@ -37,6 +37,7 @@
     .content-container {
         width: $width-86;
         @include display-flex-row-alignCenter(row, flex-start);
+        justify-content: center;
         gap: 2rem;
         margin: 2rem 0;
         aside {
@@ -45,32 +46,106 @@
                 @include display-flex-row-alignCenter(column, flex-start);
                 gap: 1rem;
                 width: 100%;
-                .filters {
-                    display: flex;
-                    flex-direction: column;
-                    box-shadow: $global-box-shadow-for-min-content;
-                    border-radius: $global-border-radius-for-min-content;
-                    overflow: hidden;
-                    padding: $global-padding-for-min-content;
-                    background-color: #fff;
-                    gap: 1.2rem;
+                .filters-header {
+                    @include min-cards-design-for-all-content;
+                    font-weight: $font-wight-700;
+                    color: $dark-blueBlack-text-color-jobPage;
                     width: 100%;
-                    .filters-header {
-                        font-weight: $font-wight-700;
-                        color: $dark-blueBlack-text-color-jobPage;
-                    }
-                    .search-by-keyWord-wrapper {
-                        @include display-flex-row-alignCenter(column, flex-start);
-                        gap: .3rem;
-                        width: 100%;
-                        h3 {
-                            color: $dark-blueBlack-text-color-jobPage;
-                            font-size: $font-size-16;
-                            font-weight: $font-wight-700;
+                    height: 65px;
+                }
+                .filters-and-skills-categories-wrapper {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    gap: 1rem;
+                    width: 100%;
+                    animation: growDown 300ms ease-in-out forwards;
+                    transform-origin: top center;
+                    @keyframes growDown {
+                        0% {
+                            transform: scaleY(0)
                         }
-                        .keyword-form {
+                        80% {
+                            transform: scaleY(1.1)
+                        }
+                        100% {
+                            transform: scaleY(1)
+                        }
+                    }
+                    .filters {
+                        display: flex;
+                        flex-direction: column;
+                        @include min-cards-design-for-all-content;
+                        gap: 1.2rem;
+                        width: 100%;
+                        .search-by-keyWord-wrapper {
                             @include display-flex-row-alignCenter(column, flex-start);
+                            gap: .3rem;
                             width: 100%;
+                            h3 {
+                                color: $dark-blueBlack-text-color-jobPage;
+                                font-size: $font-size-16;
+                                font-weight: $font-wight-700;
+                            }
+                            .keyword-form {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                width: 100%;
+                                label {
+                                    font-size: $font-size-14;
+                                    font-weight: $font-wight-500;
+                                }
+                                input {
+                                    @include small-search-input;
+                                }
+                            }
+                        }
+                        .search-by-price-wrapper {
+                            @include display-flex-row-alignCenter(column, flex-start);
+                            gap: .3rem;
+                            width: 100%;
+                            h3 {
+                                color: $dark-blueBlack-text-color-jobPage;
+                                font-size: $font-size-16;
+                                font-weight: $font-wight-700;
+                            }
+                            .price-form {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                width: 100%;
+                                .min-search-wrapper {
+                                    @include display-flex-row-alignCenter(column, flex-start);
+                                    width: 100%;
+                                    label {
+                                        font-size: $font-size-14;
+                                        font-weight: $font-wight-500;
+                                    }
+                                    input {
+                                        @include small-search-input;
+                                    }
+                                }
+                                .max-search-wrapper {
+                                    @include display-flex-row-alignCenter(column, flex-start);
+                                    width: 100%;
+                                    label {
+                                        font-size: $font-size-14;
+                                        font-weight: $font-wight-500;
+                                    }
+                                    input {
+                                        @include small-search-input;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .skills-categories {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        @include min-cards-design-for-all-content;
+                        width: 100%;
+                        .skills-categories-header {
+                            font-size: $font-size-20;
+                            font-weight: $font-wight-700;
+                            color: $dark-blueBlack-text-color-jobPage;
+                        }
+                        .skills-search-form {
                             label {
                                 font-size: $font-size-14;
                                 font-weight: $font-wight-500;
@@ -79,82 +154,21 @@
                                 @include small-search-input;
                             }
                         }
-                    }
-                    .search-by-price-wrapper {
-                        @include display-flex-row-alignCenter(column, flex-start);
-                        gap: .3rem;
-                        width: 100%;
-                        h3 {
-                            color: $dark-blueBlack-text-color-jobPage;
-                            font-size: $font-size-16;
-                            font-weight: $font-wight-700;
-                        }
-                        .price-form {
-                            @include display-flex-row-alignCenter(column, flex-start);
-                            width: 100%;
-                            .min-search-wrapper {
-                                @include display-flex-row-alignCenter(column, flex-start);
-                                width: 100%;
-                                label {
-                                    font-size: $font-size-14;
-                                    font-weight: $font-wight-500;
+                        ul {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            gap: .5rem;
+                            li {
+                                max-width: fit-content;
+                                padding: 5px 7px;
+                                background-color: #e1e4e8;
+                                border-radius: 10px;
+                                font-weight: $font-wight-500;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: #bcbfc2;
                                 }
-                                input {
-                                    @include small-search-input;
-                                }
-                            }
-                            .max-search-wrapper {
-                                @include display-flex-row-alignCenter(column, flex-start);
-                                width: 100%;
-                                label {
-                                    font-size: $font-size-14;
-                                    font-weight: $font-wight-500;
-                                }
-                                input {
-                                    @include small-search-input;
-                                }
-                            }
-                        }
-                    }
-                }
-                .skills-categories {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                    box-shadow: $global-box-shadow-for-min-content;
-                    border-radius: $global-border-radius-for-min-content;
-                    overflow: hidden;
-                    padding: $global-padding-for-min-content;
-                    background-color: #fff;
-                    width: 100%;
-                    .skills-categories-header {
-                        font-size: $font-size-20;
-                        font-weight: $font-wight-700;
-                        color: $dark-blueBlack-text-color-jobPage;
-                    }
-                    .skills-search-form {
-                        label {
-                            font-size: $font-size-14;
-                            font-weight: $font-wight-500;
-                        }
-                        input {
-                            @include small-search-input;
-                        }
-                    }
-                    ul {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        gap: .5rem;
-                        li {
-                            max-width: fit-content;
-                            padding: 5px 7px;
-                            background-color: #e1e4e8;
-                            border-radius: 10px;
-                            font-weight: $font-wight-500;
-                            cursor: pointer;
-                            &:hover {
-                                background-color: #bcbfc2;
                             }
                         }
                     }
