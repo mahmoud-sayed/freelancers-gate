@@ -1,0 +1,15 @@
+@import './../../global/global-style.scss';
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.on {
+    color: $warning;
+}
+
+.off {
+    color: #ccc;
+}

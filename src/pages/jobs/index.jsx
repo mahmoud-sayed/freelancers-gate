@@ -1,5 +1,5 @@
 import React from "react";
-
+import RatingStars from "../../components/ratingStars";
 //Icons imports
 import { BsPersonFill } from 'react-icons/bs'
 
@@ -111,7 +111,7 @@ const Jobs = () => {
                                 <div className="reviews">
                                     <div className="rating">
                                         <BsPersonFill />
-
+                                        <RatingStars />
                                     </div>
                                     <div className="reviews">( 1 {1 >= 2 ? "Review" : "Reviews"})</div>
                                 </div>
@@ -147,9 +147,9 @@ const Jobs = () => {
                                 <div className="reviews">
                                     <div className="rating">
                                         <BsPersonFill />
-
+                                        <RatingStars />
                                     </div>
-                                    <div className="reviews">( 1 {1 >= 1 ? "Review" : "Reviews"})</div>
+                                    <div className="reviews">( 1 {1 >= 2 ? "Review" : "Reviews"})</div>
                                 </div>
                             </div>
                         </div>
@@ -183,9 +183,9 @@ const Jobs = () => {
                                 <div className="reviews">
                                     <div className="rating">
                                         <BsPersonFill />
-
+                                        <RatingStars />
                                     </div>
-                                    <div className="reviews">( 1 {1 >= 1 ? "Review" : "Reviews"})</div>
+                                    <div className="reviews">( 1 {1 >= 2 ? "Review" : "Reviews"})</div>
                                 </div>
                             </div>
                         </div>
@@ -219,9 +219,9 @@ const Jobs = () => {
                                 <div className="reviews">
                                     <div className="rating">
                                         <BsPersonFill />
-
+                                        <RatingStars />
                                     </div>
-                                    <div className="reviews">( 1 {1 >= 1 ? "Review" : "Reviews"})</div>
+                                    <div className="reviews">( 1 {1 >= 2 ? "Review" : "Reviews"})</div>
                                 </div>
                             </div>
                         </div>
@@ -255,12 +255,13 @@ const Jobs = () => {
                                 <div className="reviews">
                                     <div className="rating">
                                         <BsPersonFill />
-
+                                        <RatingStars />
                                     </div>
-                                    <div className="reviews">( 1 {1 >= 1 ? "Review" : "Reviews"})</div>
+                                    <div className="reviews">( 1 {1 >= 2 ? "Review" : "Reviews"})</div>
                                 </div>
                             </div>
                         </div>
+
 
                     </section>
                 </main>
