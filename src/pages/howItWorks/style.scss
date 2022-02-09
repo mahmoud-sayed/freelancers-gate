@@ -32,7 +32,7 @@ main {
                     h1 {
                         font-size: $font-size-48;
                         font-weight: $font-wight-700;
-                        width: 600px;
+                        width: 100%;
                         line-height: 1.17;
                     }
                     p {
@@ -53,9 +53,9 @@ main {
         margin: 2rem 0;
         .hire-freelancer-container {
             @include container-95($width-86);
-            width: 100%;
             .hire-freelancer-content {
-                @include display-flex-row-alignCenter(column);
+                @include display-flex-row-alignCenter(column,
+                flex-start);
                 justify-content: center;
                 gap: 2rem;
                 width: 100%;
@@ -65,6 +65,7 @@ main {
                     border-radius: 10px;
                     text-shadow: 3px 3px 1px rgb(186, 186, 186);
                     padding: 0 1rem;
+                    margin: 0 auto;
                 }
                 .hire-freelancer-cards-section {
                     @include display-flex-row-alignCenter(column,
@@ -72,7 +73,7 @@ main {
                     justify-content: center;
                     gap: .5rem;
                     .hire-freelancer-cards-section-title {
-                        font-size: $font-size-24;
+                        font-size: $font-size-32;
                         font-weight: $font-wight-700;
                         color: $dark-blueBlack-text-color-jobPage;
                         margin-left: .8rem;
@@ -80,7 +81,7 @@ main {
                     .hire-freelancer-cards {
                         @include display-flex-row-alignCenter(row);
                         align-items: stretch;
-                        justify-content: center;
+                        justify-content: flex-start;
                         flex-wrap: wrap;
                         gap: 1rem;
                         .card {
@@ -92,8 +93,8 @@ main {
                             gap: .5rem;
                             width: 300px;
                             .card-title {
-                                font-size: $font-size-32;
-                                font-weight: $font-wight-600;
+                                font-size: $font-size-24;
+                                font-weight: $font-wight-700;
                             }
                             .card-content {
                                 font-size: $font-size-16;
@@ -119,7 +120,7 @@ main {
         display: flex;
         justify-content: center;
         .job-advisor-container {
-            width: $width-86;
+            @include container-95($width-86);
             .job-advisor-content {
                 @include display-flex-row-alignCenter(column,
                 flex-start);
@@ -151,10 +152,10 @@ main {
         margin: 2rem 0;
         .earn-money-container {
             @include container-95($width-86);
-            width: 100%;
             .earn-money-content {
-                @include display-flex-row-alignCenter(column);
-                justify-content: center;
+                @include display-flex-row-alignCenter(column,
+                flex-start);
+                justify-content: flex-start;
                 gap: 2rem;
                 width: 100%;
                 .earn-money-title {
@@ -163,14 +164,15 @@ main {
                     border-radius: 10px;
                     text-shadow: 3px 3px 1px rgb(186, 186, 186);
                     padding: 0 1rem;
+                    margin: 0 auto;
                 }
                 .earn-money-cards-section {
                     @include display-flex-row-alignCenter(column,
                     flex-start);
-                    justify-content: center;
+                    justify-content: flex-start;
                     gap: .5rem;
                     .earn-money-cards-section-title {
-                        font-size: $font-size-24;
+                        font-size: $font-size-32;
                         font-weight: $font-wight-700;
                         color: $dark-blueBlack-text-color-jobPage;
                         margin-left: .8rem;
@@ -178,7 +180,7 @@ main {
                     .earn-money-cards {
                         @include display-flex-row-alignCenter(row);
                         align-items: stretch;
-                        justify-content: center;
+                        justify-content: flex-start;
                         flex-wrap: wrap;
                         gap: 1rem;
                         .card {
@@ -188,14 +190,296 @@ main {
                             @include display-flex-row-alignCenter(column);
                             justify-content: flex-start;
                             gap: .5rem;
-                            width: 300px;
+                            width: 280px;
                             .card-title {
-                                font-size: $font-size-32;
-                                font-weight: $font-wight-600;
+                                font-size: $font-size-24;
+                                font-weight: $font-wight-700;
                             }
                             .card-content {
                                 font-size: $font-size-16;
                                 font-weight: $font-wight-500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// to control the header height in screens over 1441px
+@media all and (min-width:1441px) {
+    main {
+        .page-intro {
+            min-height: 600px;
+            .content {
+                .container {
+                    @include container-95($width-1200px);
+                }
+            }
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    main {
+        .page-intro {
+            height: calc(100vh - 400px);
+            .content {
+                .container {
+                    @include container-95($width-1200px);
+                }
+            }
+        }
+        .hire-freelancer {
+            .hire-freelancer-container {
+                @include container-95($width-1200px);
+            }
+        }
+        .post-job {
+            .job-advisor-container {
+                @include container-95 ($width-1200px);
+            }
+        }
+        .earn-money-freelancing {
+            .earn-money-container {
+                @include container-95($width-1200px);
+            }
+        }
+    }
+}
+
+@media all and (min-width:1025px)and(max-width:1200px) {
+    main {
+        .page-intro {
+            .content {
+                .container {
+                    @include container-95();
+                }
+            }
+        }
+        .hire-freelancer {
+            .hire-freelancer-container {
+                @include container-95();
+            }
+        }
+        .post-job {
+            .job-advisor-container {
+                @include container-95();
+            }
+        }
+        .earn-money-freelancing {
+            .earn-money-container {
+                @include container-95();
+            }
+        }
+    }
+}
+
+@media all and (min-width:769px)and(max-width:1024px) {
+    main {
+        .page-intro {
+            height: 400px;
+            .content {
+                .container {
+                    @include container-95();
+                }
+            }
+        }
+        .hire-freelancer {
+            .hire-freelancer-container {
+                @include container-95();
+            }
+        }
+        .post-job {
+            .job-advisor-container {
+                @include container-95();
+            }
+        }
+        .earn-money-freelancing {
+            .earn-money-container {
+                @include container-95();
+            }
+        }
+    }
+}
+
+@media all and (min-width:481px) and (max-width:768px) {
+    main {
+        .page-intro {
+            height: 400px;
+            .content {
+                .container {
+                    @include container-95();
+                    .help-your-business {
+                        h1 {
+                            font-size: $font-size-32
+                        }
+                        p {
+                            font-size: $font-size-16
+                        }
+                    }
+                }
+            }
+        }
+        .hire-freelancer {
+            .hire-freelancer-container {
+                @include container-95();
+                .hire-freelancer-content {
+                    .hire-freelancer-title {
+                        font-size: $font-size-32;
+                    }
+                    .hire-freelancer-cards-section {
+                        .hire-freelancer-cards-section-title {
+                            font-size: $font-size-20;
+                        }
+                        .hire-freelancer-cards {
+                            .card {
+                                .card-title {
+                                    font-size: $font-size-18;
+                                    font-weight: $font-wight-700;
+                                }
+                                .card-content {
+                                    font-size: $font-size-16;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .post-job {
+            .job-advisor-container {
+                @include container-95();
+                .job-advisor-content {
+                    .job-advisor-title {
+                        font-size: $font-size-32;
+                    }
+                    .job-advisor-sup-title {
+                        font-size: $font-size-16
+                    }
+                    .job-advisor-sup-button {
+                        @include btn($dark-ruddy,
+                        6px,
+                        13px);
+                        font-size: $font-size-14;
+                    }
+                }
+            }
+        }
+        .earn-money-freelancing {
+            .earn-money-container {
+                @include container-95();
+                .earn-money-content {
+                    .earn-money-title {
+                        font-size: $font-size-32;
+                    }
+                    .earn-money-cards-section {
+                        .earn-money-cards-section-title {
+                            font-size: $font-size-20;
+                        }
+                        .earn-money-cards {
+                            .card {
+                                .card-title {
+                                    font-size: $font-size-18;
+                                    font-weight: $font-wight-700;
+                                }
+                                .card-content {
+                                    font-size: $font-size-16;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    main {
+        .page-intro {
+            height: 400px;
+            .content {
+                .container {
+                    @include container-95();
+                    .help-your-business {
+                        h1 {
+                            font-size: $font-size-32
+                        }
+                        p {
+                            font-size: $font-size-16
+                        }
+                    }
+                }
+            }
+        }
+        .hire-freelancer {
+            .hire-freelancer-container {
+                @include container-95();
+                .hire-freelancer-content {
+                    .hire-freelancer-title {
+                        font-size: $font-size-32;
+                    }
+                    .hire-freelancer-cards-section {
+                        .hire-freelancer-cards-section-title {
+                            font-size: $font-size-20;
+                        }
+                        .hire-freelancer-cards {
+                            .card {
+                                .card-title {
+                                    font-size: $font-size-18;
+                                    font-weight: $font-wight-700;
+                                }
+                                .card-content {
+                                    font-size: $font-size-16;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .post-job {
+            .job-advisor-container {
+                @include container-95();
+                .job-advisor-content {
+                    .job-advisor-title {
+                        font-size: $font-size-32;
+                    }
+                    .job-advisor-sup-title {
+                        font-size: $font-size-16
+                    }
+                    .job-advisor-sup-button {
+                        @include btn($dark-ruddy,
+                        6px,
+                        13px);
+                        font-size: $font-size-14;
+                    }
+                }
+            }
+        }
+        .earn-money-freelancing {
+            .earn-money-container {
+                @include container-95();
+                .earn-money-content {
+                    .earn-money-title {
+                        font-size: $font-size-32;
+                    }
+                    .earn-money-cards-section {
+                        .earn-money-cards-section-title {
+                            font-size: $font-size-20;
+                        }
+                        .earn-money-cards {
+                            .card {
+                                .card-title {
+                                    font-size: $font-size-18;
+                                    font-weight: $font-wight-700;
+                                }
+                                .card-content {
+                                    font-size: $font-size-16;
+                                }
                             }
                         }
                     }

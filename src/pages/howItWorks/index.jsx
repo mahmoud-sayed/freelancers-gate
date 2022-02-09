@@ -170,6 +170,23 @@ const HowItWorks = () => {
                     </div>
                 </div>
             </section>
+
+            <div className="hr-container">
+                <hr />
+            </div>
+
+            <section className="post-job">
+                <div className="job-advisor-container">
+                    <div className="job-advisor-content">
+                        <h2 className="job-advisor-title">So what are you waiting for?</h2>
+                        <h3 className="job-advisor-sup-title">Search for the right job and write your best bid proposal now.</h3>
+                        <button className="job-advisor-sup-button">Browse Jobs</button>
+                    </div>
+                </div>
+
+            </section>
+
+
         </main>
     );
 }
