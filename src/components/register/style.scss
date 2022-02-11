@@ -1,0 +1,130 @@
+@import './../../global/global-style.scss';
+.sign-up-form-section {
+    background-color: $global-pages-background;
+    width: 100%;
+    .form-section {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .container {
+            width: 350px;
+            @include min-cards-design-for-all-content(16px);
+            margin: 2rem 0;
+            @include display-flex-row-alignCenter(column);
+            justify-content: center;
+            height: 630px;
+            .form-wrapper {
+                @include display-flex-row-alignCenter(column);
+                justify-content: center;
+                gap: 1.5rem;
+                width: 100%;
+                .form-welcome {
+                    font-size: $font-size-20;
+                    font-weight: $font-wight-700;
+                }
+                .auth-buttons {
+                    @include display-flex-row-alignCenter(column);
+                    justify-content: center;
+                    gap: .5rem;
+                    width: 100%;
+                    .google-login {
+                        @include btn();
+                        color: $white;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        background-color: #C62828;
+                        @include display-flex-row-alignCenter;
+                        justify-content: center;
+                        padding: 8px 0;
+                        border-radius: 5px;
+                        gap: .5rem;
+                        width: 100%;
+                    }
+                    .facebook-login {
+                        @include btn();
+                        color: $white;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        background-color: #0E64AA;
+                        @include display-flex-row-alignCenter;
+                        justify-content: center;
+                        padding: 8px 0;
+                        border-radius: 5px;
+                        gap: .5rem;
+                        width: 100%;
+                    }
+                }
+                .or-wrapper {
+                    @include display-flex-row-alignCenter;
+                    justify-content: space-between;
+                    width: 90%;
+                    hr {
+                        @include hr;
+                        width: 45%;
+                        margin: 0 auto;
+                    }
+                    .or {
+                        width: 6%;
+                    }
+                }
+                .form {
+                    width: 100%;
+                    @include display-flex-row-alignCenter(column);
+                    justify-content: center;
+                    gap: 1rem;
+                    input[type=email] {
+                        @include small-search-input;
+                        font-size: $font-size-16;
+                    }
+                    input[type=password] {
+                        @include small-search-input;
+                        font-size: $font-size-16;
+                    }
+                    .polices-agreement {
+                        width: 100%;
+                        @include display-flex-row-alignCenter;
+                        justify-content: space-between;
+                        .check-box-wrapper {
+                            @include display-flex-row-alignCenter;
+                            justify-content: center;
+                            gap: .5rem;
+                            font-size: $font-size-12;
+                            label {
+                                .colored {
+                                    color: $dark-blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    input[type=submit] {
+                        @include btn;
+                        width: 100%;
+                        background-color: $dark-blue;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        padding: 8px 0;
+                    }
+                }
+                hr {
+                    @include hr;
+                    width: 90%;
+                    margin: 0 0;
+                }
+                .have-no-account-wrapper {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    gap: .5rem;
+                    font-size: $font-size-14;
+                    .sign-up {
+                        cursor: pointer;
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}

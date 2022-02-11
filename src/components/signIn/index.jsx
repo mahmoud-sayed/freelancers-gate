@@ -1,12 +1,12 @@
 import React from 'react';
 import Logo from './../logo';
-import { FaGoogle, FaFacebook } from 'react-icons/fa'
+import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 const SignIn = () => {
 
     return (
-        <main>
+        <section className='login-form-section-wrapper'>
             <section className='form-section'>
                 <div className="container">
                     <div className="form-wrapper">
@@ -45,7 +45,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </section>
-        </main>
+        </section>
     );
 }
 export default SignIn;

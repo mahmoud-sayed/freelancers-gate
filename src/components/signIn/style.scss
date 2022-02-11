@@ -1,5 +1,5 @@
 @import './../../global/global-style.scss';
-main {
+.login-form-section-wrapper {
     background-color: $global-pages-background;
     width: 100%;
     .form-section {
@@ -7,12 +7,12 @@ main {
         justify-content: center;
         width: 100%;
         .container {
-            width: 400px;
+            width: 350px;
             @include min-cards-design-for-all-content(16px);
-            height: 580px;
             margin: 2rem 0;
             @include display-flex-row-alignCenter(column);
             justify-content: center;
+            height: 570px;
             .form-wrapper {
                 @include display-flex-row-alignCenter(column);
                 justify-content: center;
@@ -117,7 +117,7 @@ main {
                     font-size: $font-size-14;
                     .sign-up {
                         cursor: pointer;
-                        color: $dark-blue;
+                        color: $dark-blue
                     }
                 }
             }

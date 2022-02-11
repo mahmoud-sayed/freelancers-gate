@@ -5,9 +5,9 @@ import './style.scss';
 
 const Login = () => {
     return (
-        <div>
-            <SignIn/>
-        </div>
+        <main>
+            <SignIn />
+        </main>
     );
 }
 

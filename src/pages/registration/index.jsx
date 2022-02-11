@@ -1,12 +1,13 @@
 import React from "react";
-import './../../global/global-style.scss';
+import Register from "../../components/register";
+
 import './style.scss';
 
 const Registration = () => {
     return (
-        <div>
-            <h1>Registration</h1>
-        </div>
+        <main>
+            <Register />
+        </main>
     );
 }
 
