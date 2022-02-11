@@ -7,15 +7,17 @@ main {
     @include display-flex-row-alignCenter(column);
     .header {
         background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
-        height: 265px;
+        height: 500px;
         width: 100%;
         @include display-flex-row-alignCenter(column);
+        margin-bottom: -250px;
         .header-container {
             width: 780px;
             height: 100%;
             @include display-flex-row-alignCenter(column, flex-start);
-            justify-content: center;
+            justify-content: flex-start;
             gap: 2rem;
+            padding-top: 115px;
             h1 {
                 color: $white;
                 font-size: $font-size-32;
