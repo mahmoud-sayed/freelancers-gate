@@ -139,3 +139,21 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 //second section title
 //primary h2 font
 //secondary
+
+/*
+// media query for all screens view
+//------------------------------------//
+// to control the header height in screens over 1441px
+@media all and (min-width:1441px) {}
+//Extra large screens, TV
+@media all and (min-width:1201px) {}
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {}
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {}
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {}
+// mobile view
+@media all and (max-width: 480px) {}
+
+*/

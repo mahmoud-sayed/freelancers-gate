@@ -1,0 +1,77 @@
+@import './../../global/global-style.scss';
+.single-job-page {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95($width-86);
+        }
+    }
+    .body-wrapper {
+        @include container-95($width-86);
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95($width-86);
+        }
+    }
+    .body-wrapper {
+        @include container-95($width-86);
+    }
+}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95($width-86);
+        }
+    }
+    .body-wrapper {
+        @include container-95($width-86);
+    }
+}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95($width-86);
+        }
+    }
+    .body-wrapper {
+        @include container-95($width-86);
+    }
+}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95;
+        }
+    }
+    .body-wrapper {
+        @include container-95;
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    @include display-flex-row-alignCenter(column);
+    .single-job-header {
+        .single-job-header-container {
+            @include container-95;
+        }
+    }
+    .body-wrapper {
+        @include container-95;
+    }
+}

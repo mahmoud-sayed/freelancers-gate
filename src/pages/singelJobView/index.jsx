@@ -4,9 +4,17 @@ import './style.scss';
 
 const SingleJobView = () => {
     return (
-        <div>
-            <h1>SingleJobView</h1>
-        </div>
+        <section className="single-job-page">
+            <section className="single-job-header">
+                <div className="single-job-header-container">
+                    ddd
+                </div>
+            </section>
+            <div className="body-wrapper">
+                <main></main>
+                <aside></aside>
+            </div>
+        </section>
     );
 }
 
