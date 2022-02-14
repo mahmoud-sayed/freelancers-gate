@@ -13,6 +13,8 @@ import Login from "./../../pages/login";
 import Profile from "./../../pages/profile";
 import Registration from "./../../pages/registration";
 import SingleJobView from "./../../pages/singelJobView";
+import SingleJob from "../singleJob";
+import Proposals from "../proposals";
 
 
 function RoutesComponent() {
@@ -29,7 +31,10 @@ function RoutesComponent() {
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/singlejobview" element={<SingleJobView />} />
+            <Route path="/singlejobview" element={<SingleJobView />} >
+                <Route path="/singlejobview/singleJob" element={<SingleJob />} />
+                <Route path="/singlejobview/proposals" element={<Proposals />} />
+            </Route>
         </Routes>
 
     );

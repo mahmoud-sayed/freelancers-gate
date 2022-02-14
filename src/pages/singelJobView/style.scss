@@ -1,9 +1,35 @@
 @import './../../global/global-style.scss';
 .single-job-page {
+    width: 100%;
     @include display-flex-row-alignCenter(column);
     .single-job-header {
+        height: 150px;
+        width: 100%;
+        background-color: $dark-maastricht-blue;
         .single-job-header-container {
+            height: 100%;
             @include container-95($width-86);
+            @include display-flex-row-alignCenter(column, flex-start);
+            justify-content: flex-end;
+            gap: 2.5rem;
+            color: $text-color-white;
+            .single-job-title {
+                font-size: $font-size-24;
+                font-weight: $font-wight-700;
+            }
+            .single-job-nav {
+                @include display-flex-row-alignCenter;
+                max-height: 30px;
+                .single-job-nav-item {
+                    padding: 7px 5px 7px 5px;
+                    font-size: $font-size-14;
+                    font-weight: $font-wight-700;
+                    cursor: pointer;
+                    &:hover {
+                        border-bottom: 2px inset $text-color-white;
+                    }
+                }
+            }
         }
     }
     .body-wrapper {
@@ -13,65 +39,70 @@
 
 //Extra large screens, TV
 @media all and (min-width:1201px) {
-    @include display-flex-row-alignCenter(column);
-    .single-job-header {
-        .single-job-header-container {
-            @include container-95($width-86);
+    .single-job-page {
+        .single-job-header {
+            .single-job-header-container {
+                @include container-95($width-1200px);
+            }
         }
-    }
-    .body-wrapper {
-        @include container-95($width-86);
+        .body-wrapper {
+            @include container-95($width-1200px);
+        }
     }
 }
 
 //Desktops, large screens
 @media all and (min-width:1025px)and(max-width:1200px) {
-    @include display-flex-row-alignCenter(column);
-    .single-job-header {
-        .single-job-header-container {
-            @include container-95($width-86);
+    .single-job-page {
+        .single-job-header {
+            .single-job-header-container {
+                @include container-95;
+            }
         }
-    }
-    .body-wrapper {
-        @include container-95($width-86);
+        .body-wrapper {
+            @include container-95;
+        }
     }
 }
 
 //Small screens, laptops
 @media all and (min-width:769px)and(max-width:1024px) {
-    @include display-flex-row-alignCenter(column);
-    .single-job-header {
-        .single-job-header-container {
-            @include container-95($width-86);
+    .single-job-page {
+        .single-job-header {
+            .single-job-header-container {
+                @include container-95;
+            }
         }
-    }
-    .body-wrapper {
-        @include container-95($width-86);
+        .body-wrapper {
+            @include container-95;
+        }
     }
 }
 
 //iPads, Tablets
 @media all and (min-width:481px) and (max-width:768px) {
-    @include display-flex-row-alignCenter(column);
-    .single-job-header {
-        .single-job-header-container {
+    .single-job-page {
+        .single-job-header {
+            .single-job-header-container {
+                @include container-95;
+            }
+        }
+        .body-wrapper {
             @include container-95;
         }
-    }
-    .body-wrapper {
-        @include container-95;
     }
 }
 
 // mobile view
 @media all and (max-width: 480px) {
-    @include display-flex-row-alignCenter(column);
-    .single-job-header {
-        .single-job-header-container {
+    .single-job-page {
+        .single-job-header {
+            .single-job-header-container {
+                @include container-95;
+            }
+        }
+        .body-wrapper {
             @include container-95;
         }
-    }
-    .body-wrapper {
-        @include container-95;
     }
 }
