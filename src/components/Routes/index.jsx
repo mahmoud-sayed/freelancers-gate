@@ -32,8 +32,8 @@ function RoutesComponent() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/singlejobview" element={<SingleJobView />} >
-                <Route path="/singlejobview/singleJob" element={<SingleJob />} />
-                <Route path="/singlejobview/proposals" element={<Proposals />} />
+                <Route index element={<SingleJob />} />
+                <Route path="proposals" element={<Proposals />} />
             </Route>
         </Routes>
 

@@ -2,7 +2,7 @@ import React from "react";
 import './style.scss';
 const Proposals = () => {
   return (
-    <div>
+    <div >
       Proposals
     </div>
   );
