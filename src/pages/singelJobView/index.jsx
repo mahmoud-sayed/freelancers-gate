@@ -22,9 +22,11 @@ const SingleJobView = () => {
                     </ul>
                 </div>
             </section>
-            <div className="body-wrapper">
-                <Outlet />
-            </div>
+            <section className="single-job-body-wrapper">
+                <div className="single-job-body-content">
+                    <Outlet />
+                </div>
+            </section>
         </section>
 
     );

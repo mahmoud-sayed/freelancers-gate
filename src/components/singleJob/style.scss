@@ -1,1 +1,28 @@
 @import './../../global/global-style.scss';
+.job-details-wrapper {
+    @include display-flex-row-alignCenter(row, flex-start);
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    .job-details-main {
+        @include min-cards-design-for-all-content;
+        width: 70%;
+        height: 200px;
+    }
+    .job-details-side-bar {
+        width: 280px;
+        @include display-flex-row-alignCenter(column);
+        gap: 1rem;
+        .job-details-side-about-client {
+            height: 200px;
+            width: 100%;
+            @include min-cards-design-for-all-content;
+        }
+        .job-details-side-apply-tips {
+            height: 200px;
+            width: 100%;
+            @include min-cards-design-for-all-content;
+        }
+    }
+}

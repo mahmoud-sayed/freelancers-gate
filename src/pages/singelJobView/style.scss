@@ -36,8 +36,13 @@
             }
         }
     }
-    .body-wrapper {
-        @include container-95($width-86);
+    .single-job-body-wrapper {
+        background-color: $global-pages-background;
+        width: 100%;
+        .single-job-body-content {
+            width: 100%;
+            @include container-95($width-86);
+        }
     }
 }
 
@@ -49,8 +54,10 @@
                 @include container-95($width-1200px);
             }
         }
-        .body-wrapper {
-            @include container-95($width-1200px);
+        .single-job-body-wrapper {
+            .single-job-body-content {
+                @include container-95($width-1200px);
+            }
         }
     }
 }
@@ -63,8 +70,10 @@
                 @include container-95;
             }
         }
-        .body-wrapper {
-            @include container-95;
+        .single-job-body-wrapper {
+            .single-job-body-content {
+                @include container-95;
+            }
         }
     }
 }
@@ -77,8 +86,10 @@
                 @include container-95;
             }
         }
-        .body-wrapper {
-            @include container-95;
+        .single-job-body-wrapper {
+            .single-job-body-content {
+                @include container-95;
+            }
         }
     }
 }
@@ -91,8 +102,10 @@
                 @include container-95;
             }
         }
-        .body-wrapper {
-            @include container-95;
+        .single-job-body-wrapper {
+            .single-job-body-content {
+                @include container-95;
+            }
         }
     }
 }
@@ -105,8 +118,10 @@
                 @include container-95;
             }
         }
-        .body-wrapper {
-            @include container-95;
+        .single-job-body-wrapper {
+            .single-job-body-content {
+                @include container-95;
+            }
         }
     }
 }
