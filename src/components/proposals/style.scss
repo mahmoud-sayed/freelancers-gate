@@ -11,8 +11,90 @@
         gap: 1rem;
         .proposal {
             @include min-cards-design-for-all-content;
+            @include display-flex-row-alignCenter(column, flex-start);
+            justify-content: center;
+            gap: 1.5rem;
             width: 100%;
-            height: 200px;
+            .proposal-header {
+                width: 100%;
+                @include display-flex-row-alignCenter(row, flex-start);
+                justify-content: space-between;
+                .proposal-header-img-freelancerInfo {
+                    width: auto;
+                    @include display-flex-row-alignCenter;
+                    gap: 1rem;
+                    .proposal-header-image {
+                        width: 80px;
+                        height: 64px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    .proposal-header-description {
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        .name-tag {
+                            @include display-flex-row-alignCenter;
+                            gap: .5rem;
+                        }
+                        .flag {
+                            width: 21px;
+                            height: 16px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                        .freelancer {
+                            font-size: $font-size-24;
+                            font-weight: 600;
+                            color: $dark-black
+                        }
+                        .freelancer-name-tag {
+                            font-size: $font-size-20;
+                            font-weight: $font-wight-400;
+                            color: #76797e;
+                        }
+                    }
+                }
+                .proposal-header-rate-time {
+                    width: fit-content;
+                    @include display-flex-row-alignCenter(column, flex-end);
+                    .proposal-rate {
+                        font-size: $font-size-20;
+                        font-weight: $font-wight-500;
+                        word-wrap: nowrap;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                    .proposal-estimation {
+                        font-size: $font-size-16;
+                        font-weight: $font-wight-400;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                }
+            }
+            .proposal-body {
+                width: 100%;
+                @include display-flex-row-alignCenter;
+                justify-content: flex-start;
+                p {
+                    width: 80%;
+                    font-size: $font-size-16;
+                    font-weight: $font-wight-400;
+                }
+            }
+            .proposal-footer {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                p {
+                    color: #4d525b;
+                    font-weight: $font-wight-600;
+                    font-size: $font-size-14;
+                }
+            }
         }
     }
     .proposal-applied-AVG {
@@ -23,6 +105,38 @@
             height: 80px;
             width: 100%;
             @include min-cards-design-for-all-content;
+            @include display-flex-row-alignCenter;
+            justify-content: space-between;
+            .bid {
+                height: 100%;
+                @include display-flex-row-alignCenter(column);
+                width: 45%;
+                h3 {
+                    font-size: $font-size-14;
+                    font-weight: $font-wight-400;
+                }
+                p {
+                    font-size: $font-size-16;
+                    font-weight: $font-wight-600;
+                }
+            }
+            .line {
+                height: 100%;
+                width: 2px;
+                background-color: #b5b7bc;
+            }
+            .avg-bid {
+                @include display-flex-row-alignCenter(column);
+                width: 45%;
+                h3 {
+                    font-size: $font-size-14;
+                    font-weight: $font-wight-400;
+                }
+                p {
+                    font-size: $font-size-16;
+                    font-weight: $font-wight-600;
+                }
+            }
         }
     }
 }
@@ -34,7 +148,28 @@
 @media all and (min-width:1025px)and(max-width:1200px) {}
 
 //Small screens, laptops
-@media all and (min-width:769px)and(max-width:1024px) {}
+@media all and (min-width:769px)and(max-width:1024px) {
+    .proposals-page-wrapper {
+        @include display-flex-row-alignCenter(column);
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        .proposals-wrapper {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .proposal {
+                width: 100%;
+            }
+        }
+        .proposal-applied-AVG {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .job-details-side-about-client {
+                width: 100%;
+            }
+        }
+    }
+}
 
 //iPads, Tablets
 @media all and (min-width:481px) and (max-width:768px) {
