@@ -37,20 +37,24 @@
                         .name-tag {
                             @include display-flex-row-alignCenter;
                             gap: .5rem;
-                        }
-                        .flag {
-                            width: 21px;
-                            height: 16px;
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
+                            .flag-and-name-wrapper {
+                                @include display-flex-row-alignCenter;
+                                gap: .5rem;
+                                .flag {
+                                    width: 21px;
+                                    height: 16px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                                .freelancer {
+                                    font-size: $font-size-24;
+                                    font-weight: 600;
+                                    color: $dark-black;
+                                }
                             }
-                        }
-                        .freelancer {
-                            font-size: $font-size-24;
-                            font-weight: 600;
-                            color: $dark-black
                         }
                         .freelancer-name-tag {
                             font-size: $font-size-20;
@@ -183,6 +187,47 @@
             @include display-flex-row-alignCenter(column);
             .proposal {
                 width: 100%;
+                .proposal-header {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .proposal-header-img-freelancerInfo {
+                        .proposal-header-image {
+                            max-width: 64px;
+                            height: 52px;
+                        }
+                        .proposal-header-description {
+                            .name-tag {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                gap: 0;
+                                .flag-and-name-wrapper {
+                                    .freelancer {
+                                        font-size: $font-size-16;
+                                    }
+                                }
+                            }
+                            .freelancer-name-tag {
+                                font-size: $font-size-14;
+                            }
+                        }
+                    }
+                    .proposal-header-rate-time {
+                        align-items: center;
+                        .proposal-rate {
+                            font-size: $font-size-14;
+                        }
+                        .proposal-estimation {
+                            font-size: $font-size-14;
+                        }
+                    }
+                }
+                .proposal-body {
+                    p {
+                        width: 100%;
+                        font-size: $font-size-14;
+                    }
+                }
+                .proposal-footer {
+                    justify-content: flex-start;
+                }
             }
         }
         .proposal-applied-AVG {
@@ -207,6 +252,47 @@
             @include display-flex-row-alignCenter(column);
             .proposal {
                 width: 100%;
+                .proposal-header {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    .proposal-header-img-freelancerInfo {
+                        .proposal-header-image {
+                            max-width: 64px;
+                            height: 52px;
+                        }
+                        .proposal-header-description {
+                            .name-tag {
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                gap: 0;
+                                .flag-and-name-wrapper {
+                                    .freelancer {
+                                        font-size: $font-size-16;
+                                    }
+                                }
+                            }
+                            .freelancer-name-tag {
+                                font-size: $font-size-14;
+                            }
+                        }
+                    }
+                    .proposal-header-rate-time {
+                        align-items: center;
+                        .proposal-rate {
+                            font-size: $font-size-14;
+                        }
+                        .proposal-estimation {
+                            font-size: $font-size-14;
+                        }
+                    }
+                }
+                .proposal-body {
+                    p {
+                        width: 100%;
+                        font-size: $font-size-14;
+                    }
+                }
+                .proposal-footer {
+                    justify-content: flex-start;
+                }
             }
         }
         .proposal-applied-AVG {
