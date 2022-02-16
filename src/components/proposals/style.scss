@@ -2,7 +2,7 @@
 .proposals-page-wrapper {
     @include display-flex-row-alignCenter(row, flex-start);
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
     margin: 2rem 0;
     .proposals-wrapper {
@@ -23,6 +23,63 @@
             height: 80px;
             width: 100%;
             @include min-cards-design-for-all-content;
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    .proposals-page-wrapper {
+        @include display-flex-row-alignCenter(column);
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        .proposals-wrapper {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .proposal {
+                width: 100%;
+            }
+        }
+        .proposal-applied-AVG {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .job-details-side-about-client {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    .proposals-page-wrapper {
+        @include display-flex-row-alignCenter(column);
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        .proposals-wrapper {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .proposal {
+                width: 100%;
+            }
+        }
+        .proposal-applied-AVG {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .job-details-side-about-client {
+                width: 100%;
+            }
         }
     }
 }

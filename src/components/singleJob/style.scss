@@ -2,7 +2,7 @@
 .job-details-wrapper {
     @include display-flex-row-alignCenter(row, flex-start);
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 100%;
     margin: 2rem 0;
     .job-details-main {
@@ -23,6 +23,58 @@
             height: 200px;
             width: 100%;
             @include min-cards-design-for-all-content;
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    .job-details-wrapper {
+        @include display-flex-row-alignCenter(column);
+        .job-details-main {
+            width: 100%;
+        }
+        .job-details-side-bar {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            gap: 1rem;
+            .job-details-side-about-client {
+                width: 100%;
+            }
+            .job-details-side-apply-tips {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    .job-details-wrapper {
+        @include display-flex-row-alignCenter(column);
+        justify-content: center;
+        width: 100%;
+        .job-details-main {
+            width: 100%;
+        }
+        .job-details-side-bar {
+            width: 100%;
+            @include display-flex-row-alignCenter(column);
+            .job-details-side-about-client {
+                width: 100%;
+            }
+            .job-details-side-apply-tips {
+                width: 100%;
+            }
         }
     }
 }
