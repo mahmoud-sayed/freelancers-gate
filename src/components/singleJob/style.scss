@@ -6,9 +6,79 @@
     width: 100%;
     margin: 2rem 0;
     .job-details-main {
-        @include min-cards-design-for-all-content;
+        @include display-flex-row-alignCenter(column);
+        justify-content: flex-start;
+        gap: .5rem;
         width: 70%;
-        height: 200px;
+        .job-details-header {
+            @include min-cards-design-for-all-content;
+            @include display-flex-row-alignCenter;
+            justify-content: space-between;
+            width: 100%;
+            .job-details-title {
+                font-size: $font-size-20;
+                font-weight: $font-wight-700;
+            }
+            .job-details-budget {
+                @include display-flex-row-alignCenter(column, flex-end);
+                .job-budget {
+                    font-size: $font-size-16;
+                    font-weight: $font-wight-700;
+                    color: $dark-blueBlack-text-color-jobPage;
+                }
+                .binding-clock {
+                    @include display-flex-row-alignCenter;
+                    gap: .5rem;
+                    .clock {
+                        font-size: $font-size-12;
+                        color: $medium-lightBlack-text-color-jobPage;
+                    }
+                    .job-ends-after {
+                        font-size: 11px;
+                        color: $medium-lightBlack-text-color-jobPage;
+                        font-weight: $font-wight-700;
+                    }
+                }
+            }
+        }
+        .job-description-skills {
+            @include display-flex-row-alignCenter(column, flex-start);
+            @include min-cards-design-for-all-content;
+            gap: 1.5rem;
+            width: 100%;
+            .job-description {
+                width: 100%;
+                font-size: $font-size-14;
+            }
+            .required-job-skills {
+                width: 100%;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    gap: .5rem;
+                    max-width: 100%;
+                    flex-wrap: wrap;
+                    .skill {
+                        max-width: fit-content;
+                        padding: 5px 7px;
+                        border-radius: 10px;
+                        font-weight: $font-wight-500;
+                        background-color: #fff;
+                        border: 1px solid #e1e4e8;
+                    }
+                }
+            }
+            .job-description-footer {
+                width: 100%;
+                @include display-flex-row-alignCenter;
+                justify-content: space-between;
+                .report-project {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    gap: .2rem;
+                }
+            }
+        }
     }
     .job-details-side-bar {
         width: 280px;
@@ -65,6 +135,14 @@
         width: 100%;
         .job-details-main {
             width: 100%;
+            .job-details-header {
+                @include display-flex-row-alignCenter(column, flex-start);
+                gap: .5rem;
+                .job-details-budget {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    gap: .2rem;
+                }
+            }
         }
         .job-details-side-bar {
             width: 100%;
