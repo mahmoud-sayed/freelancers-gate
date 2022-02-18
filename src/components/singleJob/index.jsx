@@ -48,6 +48,12 @@ const SingleJob = () => {
           </div>
 
         </div>
+        <div className="place-bid-wrapper">
+          <div className="place-bid-header">
+
+          </div>
+          <div className="place-bid-body-form-footer"></div>
+        </div>
       </section>
       <aside className="job-details-side-bar">
         <div className="job-details-side-about-client"></div>
