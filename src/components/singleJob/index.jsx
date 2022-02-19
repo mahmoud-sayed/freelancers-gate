@@ -79,9 +79,29 @@ const SingleJob = () => {
         </div>
         <div className="place-bid-wrapper">
           <div className="place-bid-header">
-
+            <h3 className="place-bid-title">Place a Bid on this Project</h3>
           </div>
-          <div className="place-bid-body-form-footer"></div>
+          <div className="place-bid-body-form-footer">
+            <form>
+              <div className="inputs-bids-wrapper">
+                <div className="amount-content">
+                  <label htmlFor="amount">Bid Amount</label>
+                  <input type="text" id="amount" placeholder="ex: 500 USD" />
+                </div>
+                <div className="time-frame-content">
+                  <label htmlFor="time-frame">This project will be delivered in</label>
+                  <input type="text" id="time-frame" placeholder="ex: 7 Days" />
+                </div>
+              </div>
+              <div className="proposal-description">
+                <label className="proposal-description-label" htmlFor="proposal-description-label">Describe your proposal</label>
+                <textarea className="proposal-description-textarea" placeholder="what makes you the best candidate for the project?" id="proposal-description-label" rows="5" />
+              </div>
+              <p>We care about your safety. Stay safe and secure online by keeping your communication and payment within the site. Only freelancers-gate.com is authorized to collect fees from its users.</p>
+
+              <button type="submit" className="place-bid-button">Place Bid</button>
+            </form>
+          </div>
         </div>
       </section>
       <aside className="job-details-side-bar">

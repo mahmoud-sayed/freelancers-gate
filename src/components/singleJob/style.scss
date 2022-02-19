@@ -8,7 +8,7 @@
     .job-details-main {
         @include display-flex-row-alignCenter(column);
         justify-content: flex-start;
-        gap: .5rem;
+        gap: .2rem;
         width: 70%;
         .job-details-header {
             @include min-cards-design-for-all-content;
@@ -126,6 +126,96 @@
                 }
             }
         }
+        .place-bid-wrapper {
+            @include display-flex-row-alignCenter(column);
+            gap: .2rem;
+            width: 100%;
+            margin-top: 1rem;
+            .place-bid-header {
+                @include min-cards-design-for-all-content;
+                width: 100%;
+                .place-bid-title {
+                    font-size: $font-size-20;
+                    color: $dark-blueBlack-text-color-jobPage;
+                }
+            }
+            .place-bid-body-form-footer {
+                @include min-cards-design-for-all-content;
+                width: 100%;
+                form {
+                    @include display-flex-row-alignCenter(column);
+                    gap: 3rem;
+                    width: 100%;
+                    margin: 1.5rem 0;
+                    .inputs-bids-wrapper {
+                        @include display-flex-row-alignCenter(row, flex-start);
+                        justify-content: space-evenly;
+                        width: 100%;
+                        .amount-content {
+                            @include display-flex-row-alignCenter(column, flex-start);
+                            justify-content: center;
+                            width: 100%;
+                            gap: .4rem;
+                            label {
+                                font-size: $font-size-14;
+                                font-weight: $font-wight-700;
+                                color: $dark-blueBlack-text-color-jobPage;
+                            }
+                            input {
+                                @include small-search-input;
+                                width: 80%;
+                            }
+                        }
+                        .time-frame-content {
+                            @include display-flex-row-alignCenter(column, flex-start);
+                            justify-content: center;
+                            width: 100%;
+                            gap: .4rem;
+                            label {
+                                font-size: $font-size-14;
+                                font-weight: $font-wight-700;
+                                color: $dark-blueBlack-text-color-jobPage;
+                            }
+                            input {
+                                @include small-search-input;
+                                width: 80%;
+                            }
+                        }
+                    }
+                    .proposal-description {
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        justify-content: center;
+                        width: 100%;
+                        gap: .4rem;
+                        .proposal-description-label {
+                            font-size: $font-size-14;
+                            font-weight: $font-wight-700;
+                            color: $dark-blueBlack-text-color-jobPage;
+                            width: 100%;
+                        }
+                        .proposal-description-textarea {
+                            width: 100%;
+                            @include small-search-input(180px);
+                            font-size: $font-size-16;
+                            justify-self: flex-start;
+                        }
+                    }
+                    p {
+                        font-size: $font-size-14;
+                        font-weight: $font-wight-400;
+                        color: $medium-lightBlack-text-color-jobPage;
+                        width: 100%;
+                    }
+                    .place-bid-button {
+                        @include btn($dark-blue, 8px, 12px);
+                        align-self: end;
+                        font-size: $font-size-14;
+                        font-weight: $font-wight-600;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
     }
     .job-details-side-bar {
         width: 280px;
@@ -151,7 +241,32 @@
 @media all and (min-width:1025px)and(max-width:1200px) {}
 
 //Small screens, laptops
-@media all and (min-width:769px)and(max-width:1024px) {}
+@media all and (min-width:769px)and(max-width:1024px) {
+    .job-details-wrapper {
+        .job-details-main {
+            .place-bid-wrapper {
+                .place-bid-body-form-footer {
+                    form {
+                        .inputs-bids-wrapper {
+                            @include display-flex-row-alignCenter(column);
+                            gap: 2rem;
+                            .amount-content {
+                                input {
+                                    width: 70%;
+                                }
+                            }
+                            .time-frame-content {
+                                input {
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 //iPads, Tablets
 @media all and (min-width:481px) and (max-width:768px) {
@@ -159,6 +274,26 @@
         @include display-flex-row-alignCenter(column);
         .job-details-main {
             width: 100%;
+            .place-bid-wrapper {
+                .place-bid-body-form-footer {
+                    form {
+                        .inputs-bids-wrapper {
+                            @include display-flex-row-alignCenter(column);
+                            gap: 2rem;
+                            .amount-content {
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                            .time-frame-content {
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .job-details-side-bar {
             width: 100%;
@@ -188,6 +323,26 @@
                 .job-details-budget {
                     @include display-flex-row-alignCenter(column, flex-start);
                     gap: .2rem;
+                }
+            }
+            .place-bid-wrapper {
+                .place-bid-body-form-footer {
+                    form {
+                        .inputs-bids-wrapper {
+                            @include display-flex-row-alignCenter(column);
+                            gap: 2rem;
+                            .amount-content {
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                            .time-frame-content {
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
