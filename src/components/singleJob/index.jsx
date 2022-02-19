@@ -1,7 +1,13 @@
 import React from "react";
 import './style.scss';
 import { BsFillClockFill, BsFillFlagFill } from 'react-icons/bs';
+import { IoIosAttach } from 'react-icons/io';
 const SingleJob = () => {
+
+  //to open PDF File
+  const openPDFFile = () => {
+    window.open(`file-name.pdf`);
+  }
   return (
     <section className="job-details-wrapper">
       <section className="job-details-main">
@@ -46,7 +52,30 @@ const SingleJob = () => {
               <p className="report">Report Project</p>
             </div>
           </div>
-
+          <div className="attachments-wrapper">
+            <div className="line"></div>
+            <h3 className="attachments-title">Attachments</h3>
+            <div className="attachments">
+              <IoIosAttach className="attachment-icon" />
+              <p className="file-name" onClick={openPDFFile}>file name</p>
+            </div>
+            <div className="attachments">
+              <IoIosAttach className="attachment-icon" />
+              <p className="file-name" onClick={openPDFFile}>file name</p>
+            </div>
+            <div className="attachments">
+              <IoIosAttach className="attachment-icon" />
+              <p className="file-name" onClick={openPDFFile}>file name</p>
+            </div>
+            <div className="attachments">
+              <IoIosAttach className="attachment-icon" />
+              <p className="file-name" onClick={openPDFFile}>file name</p>
+            </div>
+            <div className="attachments">
+              <IoIosAttach className="attachment-icon" />
+              <p className="file-name" onClick={openPDFFile}>file name</p>
+            </div>
+          </div>
         </div>
         <div className="place-bid-wrapper">
           <div className="place-bid-header">

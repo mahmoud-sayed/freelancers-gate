@@ -95,6 +95,36 @@
                     cursor: pointer;
                 }
             }
+            .attachments-wrapper {
+                width: 100%;
+                .line {
+                    background-color: #aeafb1;
+                    height: 1px;
+                    width: 100%;
+                    margin: 5px 0;
+                }
+                .attachments-title {
+                    font-size: $font-size-16;
+                    color: $medium-lightBlack-text-color-jobPage;
+                }
+                .attachments {
+                    @include display-flex-row-alignCenter(row, center);
+                    justify-content: flex-start;
+                    gap: .5rem;
+                    font-weight: $font-wight-400;
+                    .attachment-icon {
+                        font-size: $font-size-16;
+                    }
+                    .file-name {
+                        color: $dark-blue;
+                        cursor: pointer;
+                        font-weight: $font-wight-400;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
         }
     }
     .job-details-side-bar {
