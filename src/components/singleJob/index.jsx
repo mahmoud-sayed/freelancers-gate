@@ -1,6 +1,7 @@
 import React from "react";
 import './style.scss';
 import { BsFillClockFill, BsFillFlagFill } from 'react-icons/bs';
+import { FcDocument } from 'react-icons/fc';
 import { IoIosAttach } from 'react-icons/io';
 const SingleJob = () => {
 
@@ -105,8 +106,45 @@ const SingleJob = () => {
         </div>
       </section>
       <aside className="job-details-side-bar">
-        <div className="job-details-side-about-client"></div>
-        <div className="job-details-side-apply-tips"></div>
+        <div className="job-details-side-about-client">
+          <div className="job-client-header">
+            <h2>About the Client</h2>
+          </div>
+          <div className="job-client-body">
+            <div className="job-client-basic-info">
+              <div className="info-wrapper">
+                <div className="info-icon"></div>
+                <div className="info-description">United Kingdom</div>
+                <div className="info-hint"></div>
+              </div>
+            </div>
+            <div className="job-client-verification">
+              <div className="verification">
+                <div className="verification-icon"></div>
+                <div className="verification-description"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="job-details-side-apply-tips">
+          <div className="job-tips-header">
+            <h2>How to write a winning bid</h2>
+          </div>
+          <div className="job-tips-body">
+
+            <FcDocument className="icon" />
+            <p className="best-chance">Your best chance of winning this project is writing a great bid proposal here!</p>
+            <p>Great bids are ones that:</p>
+            <ul>
+              <li>Are engaging and well written without spelling or grammatical errors</li>
+              <li>Show a clear understanding of what is required for this specific project - personalize your response!</li>
+              <li>Explain how your skills &amp; experience relate to the project and your approach to working on it</li>
+              <li>Ask questions to clarify any unclear details</li>
+            </ul>
+            <p>Most of all - don't spam or post cut-and-paste bids. You will be penalized or banned if you do so.</p>
+          </div>
+
+        </div>
       </aside>
     </section>
   );
