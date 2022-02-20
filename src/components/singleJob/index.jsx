@@ -1,8 +1,11 @@
 import React from "react";
 import './style.scss';
-import { BsFillClockFill, BsFillFlagFill } from 'react-icons/bs';
+import { BsFillClockFill, BsFillFlagFill, BsPersonFill } from 'react-icons/bs';
 import { FcDocument } from 'react-icons/fc';
 import { IoIosAttach } from 'react-icons/io';
+import { IoLocationSharp, IoShieldCheckmark, IoCardOutline, IoMail } from 'react-icons/io5';
+import { FaAddressCard, FaPhoneAlt } from 'react-icons/fa';
+import RatingStars from './../ratingStars/index';
 const SingleJob = () => {
 
   //to open PDF File
@@ -113,15 +116,49 @@ const SingleJob = () => {
           <div className="job-client-body">
             <div className="job-client-basic-info">
               <div className="info-wrapper">
-                <div className="info-icon"></div>
+                <div className="info-icon"><IoLocationSharp /></div>
                 <div className="info-description">United Kingdom</div>
-                <div className="info-hint"></div>
+                <div className="info-hint">
+                  <img src="https://via.placeholder.com/21x16" alt="flag of country name" />
+                </div>
+              </div>
+              <div className="info-wrapper">
+                <div className="info-icon"><BsPersonFill /></div>
+                <div className="info-description"><RatingStars /></div>
+                <div className="info-hint">0.0
+                  (0 reviews)</div>
+              </div>
+              <div className="info-wrapper">
+                <div className="info-icon"><BsFillClockFill /></div>
+                <div className="info-description">Member since</div>
+                <div className="info-hint">Jul 30, 2021</div>
               </div>
             </div>
             <div className="job-client-verification">
+              <h3>Client Verification</h3>
               <div className="verification">
-                <div className="verification-icon"></div>
-                <div className="verification-description"></div>
+                <div className="verification-icon"><FaAddressCard /></div>
+                <div className="verification-description">Identity verified</div>
+              </div>
+              <div className="verification">
+                <div className="verification-icon"><IoShieldCheckmark /></div>
+                <div className="verification-description">Payment verified</div>
+              </div>
+              <div className="verification">
+                <div className="verification-icon"><IoCardOutline /></div>
+                <div className="verification-description">Deposit made</div>
+              </div>
+              <div className="verification">
+                <div className="verification-icon"><IoMail /></div>
+                <div className="verification-description">Email verified</div>
+              </div>
+              <div className="verification">
+                <div className="verification-icon"><BsPersonFill /></div>
+                <div className="verification-description">Profile completed</div>
+              </div>
+              <div className="verification">
+                <div className="verification-icon"><FaPhoneAlt /></div>
+                <div className="verification-description">Phone verified</div>
               </div>
             </div>
           </div>

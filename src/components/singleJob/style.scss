@@ -236,9 +236,46 @@
             }
             .job-client-body {
                 @include min-cards-design-for-all-content;
+                @include display-flex-row-alignCenter(column, flex-start);
+                gap: 1rem;
                 width: 100%;
-                padding: 2rem;
-                .job-client-basic-info {}
+                .job-client-basic-info {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    gap: .6rem;
+                    .info-wrapper {
+                        @include display-flex-row-alignCenter;
+                        justify-content: center;
+                        gap: .5rem;
+                        font-size: $font-size-14;
+                        color: $dark-blueBlack-text-color-jobPage;
+                        .info-icon {
+                            font-size: $font-size-16;
+                            color: $dark-blueBlack-text-color-jobPage;
+                            opacity: .8;
+                        }
+                    }
+                }
+                .job-client-verification {
+                    @include display-flex-row-alignCenter(column, flex-start);
+                    gap: 1rem;
+                    h3 {
+                        font-size: $font-size-16;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                    .verification {
+                        @include display-flex-row-alignCenter;
+                        justify-content: center;
+                        gap: .5rem;
+                        font-size: $font-size-14;
+                        color: $medium-lightBlack-text-color-jobPage;
+                        .verification-icon {
+                            font-size: $font-size-14;
+                            color: $dark-blueBlack-text-color-jobPage;
+                            opacity: .8;
+                        }
+                    }
+                }
             }
         }
         .job-details-side-apply-tips {
