@@ -1,0 +1,24 @@
+@import './../../global/global-style.scss';
+main {
+    background-color: $global-pages-background;
+    width: 100%;
+    .header-background {
+        background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
+        height: 500px;
+        width: 100%;
+        margin-bottom: -250px;
+    }
+    .container {
+        @include container-95($width-86);
+        .profile-header {
+            @include display-flex-row-alignCenter;
+            @include min-cards-design-for-all-content;
+            width: 100%;
+            .profile-image {
+                width: 265px;
+                height: 265px;
+            }
+            .profile-basic-info {}
+        }
+    }
+}
