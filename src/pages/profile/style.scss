@@ -4,7 +4,7 @@ main {
     width: 100%;
     .header-background {
         background: linear-gradient(45deg, rgba(18, 75, 153, 1) 42%, rgba(2, 120, 226, 1) 89%);
-        height: 500px;
+        height: 64vh;
         width: 100%;
         margin-bottom: -250px;
     }
@@ -12,13 +12,188 @@ main {
         @include container-95($width-86);
         .profile-header {
             @include display-flex-row-alignCenter;
+            gap: 2rem;
             @include min-cards-design-for-all-content;
             width: 100%;
+            height: fit-content;
             .profile-image {
                 width: 265px;
                 height: 265px;
             }
-            .profile-basic-info {}
+            .profile-basic-info {
+                @include display-flex-row-alignCenter(column, flex-start);
+                justify-content: center;
+                gap: 1rem;
+                width: 100%;
+                .name-tagName {
+                    width: 100%;
+                    @include display-flex-row-alignCenter;
+                    justify-content: space-between;
+                    .name-tagName-wrapper {
+                        @include display-flex-row-alignCenter;
+                        gap: 1rem;
+                        .freelancer {
+                            font-size: $font-size-24;
+                            font-weight: $font-wight-700;
+                            color: $dark-blueBlack-text-color-jobPage;
+                        }
+                        .freelancer-name-tag {
+                            font-size: $font-size-24;
+                            font-weight: $font-wight-400;
+                            color: $medium-lightBlack-text-color-jobPage;
+                        }
+                    }
+                    button {
+                        justify-self: flex-end;
+                        @include btn($dark-blue, 10px, 15px);
+                        font-size: $font-size-14;
+                        font-weight: $font-wight-700;
+                        border-radius: 3px;
+                        color: $text-color-white;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $hover-blue;
+                        }
+                    }
+                }
+                .title {
+                    h2 {
+                        font-size: $font-size-20;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                }
+                .rating-stars {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    gap: .5rem;
+                }
+                .money-rate {
+                    height: 100%;
+                    @include display-flex-row-alignCenter(row, center);
+                    justify-content: flex-start;
+                    gap: .5rem;
+                    .money-sign {
+                        .icon {
+                            font-size: $font-size-24;
+                            color: #BEC0C2;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                .location-country {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    gap: .5rem;
+                    .flag {
+                        img {
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                .join-since {
+                    @include display-flex-row-alignCenter;
+                    justify-content: center;
+                    gap: .5rem;
+                    .icon-wrapper {
+                        .icon {
+                            font-size: $font-size-24;
+                            color: #BEC0C2;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    main {
+        .container {
+            @include container-95($width-1200px);
+        }
+    }
+}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {
+    main {
+        .container {
+            @include container-95($width-95);
+        }
+    }
+}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {
+    main {
+        .container {
+            @include container-95($width-95);
+            .profile-header {
+                .profile-basic-info {
+                    .name-tagName {
+                        .name-tagName-wrapper {
+                            @include display-flex-row-alignCenter(column);
+                            gap: 0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    main {
+        .container {
+            @include container-95($width-95);
+            .profile-header {
+                @include display-flex-row-alignCenter(column);
+                justify-content: center;
+                .profile-basic-info {
+                    @include display-flex-row-alignCenter(column);
+                    justify-content: center;
+                    .name-tagName {
+                        @include display-flex-row-alignCenter(column);
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    main {
+        .container {
+            @include container-95($width-95);
+            .profile-header {
+                @include display-flex-row-alignCenter(column);
+                justify-content: center;
+                .profile-basic-info {
+                    @include display-flex-row-alignCenter(column);
+                    justify-content: center;
+                    .name-tagName {
+                        @include display-flex-row-alignCenter(column);
+                        gap: 1rem;
+                        .name-tagName-wrapper {
+                            @include display-flex-row-alignCenter(column);
+                            gap: .2rem;
+                        }
+                    }
+                    .title {
+                        width: 100%;
+                        justify-self: center;
+                    }
+                }
+            }
         }
     }
 }
