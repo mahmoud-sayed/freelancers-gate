@@ -1,0 +1,70 @@
+@import './../../global/global-style.scss';
+.main-chat-page {
+    width: 100%;
+    background-color: $global-pages-background;
+    .container {
+        @include container-95($width-86);
+        .content-wrapper {
+            width: 100%;
+            @include min-cards-design-for-all-content;
+            margin: 2rem 0;
+            .clients-chats {}
+            .chat-wrapper {}
+        }
+    }
+}
+
+//Extra large screens, TV
+@media all and (min-width:1201px) {
+    .main-chat-page {
+        width: 100%;
+        background-color: $global-pages-background;
+        .container {
+            @include container-95($width-1200px);
+        }
+    }
+}
+
+//Desktops, large screens
+@media all and (min-width:1025px)and(max-width:1200px) {
+    .main-chat-page {
+        width: 100%;
+        background-color: $global-pages-background;
+        .container {
+            @include container-95;
+        }
+    }
+}
+
+//Small screens, laptops
+@media all and (min-width:769px)and(max-width:1024px) {
+    .main-chat-page {
+        width: 100%;
+        background-color: $global-pages-background;
+        .container {
+            @include container-95;
+        }
+    }
+}
+
+//iPads, Tablets
+@media all and (min-width:481px) and (max-width:768px) {
+    .main-chat-page {
+        width: 100%;
+        background-color: $global-pages-background;
+        .container {
+            @include container-95;
+        }
+    }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+    .main-chat-page {
+        width: 100%;
+        background-color: $global-pages-background;
+        .container {
+            @include container-95;
+        }
+    }
+}

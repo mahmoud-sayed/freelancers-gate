@@ -1,12 +1,22 @@
 import React from "react";
-import './../../global/global-style.scss';
+
 import './style.scss';
 
 const Chat = () => {
     return (
-        <div>
-            <h1>Chat</h1>
-        </div>
+        <main className="main-chat-page">
+            <div className="container">
+                <div className="content-wrapper">
+
+                    <section className="clients-chats">
+
+                    </section>
+                    <section className="chat-wrapper">
+
+                    </section>
+                </div>
+            </div>
+        </main>
     );
 }
 

@@ -9,7 +9,7 @@ import RatingStars from './../../components/ratingStars/index';
 
 const Profile = () => {
     return (
-        <main>
+        <main className="profile">
             <section className="header-background"></section>
             <div className="container">
                 <section className="profile-header">

@@ -1,5 +1,5 @@
 @import './../../global/global-style.scss';
-main {
+.profile {
     background-color: $global-pages-background;
     width: 100%;
     padding-bottom: 2rem;
@@ -355,7 +355,7 @@ main {
 
 //Extra large screens, TV
 @media all and (min-width:1201px) {
-    main {
+    .profile {
         .container {
             @include container-95($width-1200px);
         }
@@ -364,7 +364,7 @@ main {
 
 //Desktops, large screens
 @media all and (min-width:1025px)and(max-width:1200px) {
-    main {
+    .profile {
         .container {
             @include container-95($width-95);
         }
@@ -373,7 +373,7 @@ main {
 
 //Small screens, laptops
 @media all and (min-width:769px)and(max-width:1024px) {
-    main {
+    .profile {
         .container {
             @include container-95($width-95);
             .profile-header {
@@ -392,7 +392,7 @@ main {
 
 //iPads, Tablets
 @media all and (min-width:481px) and (max-width:768px) {
-    main {
+    .profile {
         .container {
             @include container-95($width-95);
             .profile-header {
@@ -445,7 +445,7 @@ main {
 
 // mobile view
 @media all and (max-width: 480px) {
-    main {
+    .profile {
         .container {
             @include container-95($width-95);
             .profile-header {
