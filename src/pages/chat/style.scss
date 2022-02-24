@@ -6,9 +6,110 @@
         @include container-95($width-86);
         .content-wrapper {
             width: 100%;
-            @include min-cards-design-for-all-content;
+            @include min-cards-design-for-all-content(0);
+            @include display-flex-row-alignCenter;
+            height: 600px;
             margin: 2rem 0;
-            .clients-chats {}
+            .clients-chats {
+                width: 300px;
+                height: 100%;
+                background-color: #cfe1fc;
+                padding: 30px 16px;
+                .clients-chat-wrapper {
+                    width: 100%;
+                    @include display-flex-row-alignCenter(column);
+                    .search-input {
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: 50px;
+                        @include display-flex-row-alignCenter;
+                        .search-icon {
+                            position: absolute;
+                            z-index: 2;
+                            top: 8px;
+                            left: 10px;
+                            color: $medium-lightBlack-text-color-jobPage;
+                            font-weight: $font-wight-700;
+                        }
+                        .search {
+                            @include small-search-input;
+                            border-color: #7caeff;
+                            width: 100%;
+                            z-index: 1;
+                            padding-left: 35px;
+                        }
+                    }
+                    .chat-sidebar {
+                        width: 100%;
+                        @include display-flex-row-alignCenter(column, flex-start);
+                        gap: 1rem;
+                        .client-chat-sidebar {
+                            width: 100%;
+                            @include display-flex-row-alignCenter;
+                            gap: 1rem;
+                            .client-img {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .client-name-and-lastSentMessage {
+                                width: calc(100% - (1rem + 50px));
+                                @include display-flex-row-alignCenter(column, flex-start);
+                                .name-and-last-time-send {
+                                    @include display-flex-row-alignCenter;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    .client-name {
+                                        font-size: $font-size-16;
+                                        font-weight: 700;
+                                        color: $dark-blue;
+                                    }
+                                    .last-time-send {
+                                        font-size: $font-size-12;
+                                        font-weight: 500;
+                                        color: $light-black;
+                                    }
+                                }
+                                .lastSentMessage-and-notification-num {
+                                    width: 100%;
+                                    @include display-flex-row-alignCenter;
+                                    justify-content: space-between;
+                                    .last-sent-message {
+                                        font-size: $font-size-14;
+                                        font-weight: 500;
+                                        color: $medium-dark-black;
+                                    }
+                                    .notification-num {
+                                        padding: 0 6.5px;
+                                        font-size: $font-size-11;
+                                        color: #fff;
+                                        border-radius: 20px;
+                                        background-color: $dark-blue;
+                                    }
+                                }
+                            }
+                        }
+                        .active {
+                            background-color: #7caeff;
+                            border-radius: 10px 0 0px 10px;
+                            padding: 2px 0;
+                            width: 105%;
+                            .client-name-and-lastSentMessage {
+                                .lastSentMessage-and-notification-num {
+                                    .notification-num {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .chat-wrapper {}
         }
     }
