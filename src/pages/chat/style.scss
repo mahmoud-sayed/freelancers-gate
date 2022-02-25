@@ -1,7 +1,7 @@
 @import './../../global/global-style.scss';
 .main-chat-page {
     width: 100%;
-    background-color: $global-pages-background;
+    background-color: #7caeff;
     .container {
         @include container-95($width-86);
         .content-wrapper {
@@ -13,36 +13,39 @@
             .clients-chats {
                 width: 300px;
                 height: 100%;
-                background-color: #cfe1fc;
+                background-color: #f9f9f9;
                 padding: 30px 16px;
+                border-right: 1px solid $light-black;
                 .clients-chat-wrapper {
                     width: 100%;
                     @include display-flex-row-alignCenter(column);
-                    .search-input {
-                        position: relative;
-                        width: 100%;
-                        margin-bottom: 50px;
-                        @include display-flex-row-alignCenter;
-                        .search-icon {
-                            position: absolute;
-                            z-index: 2;
-                            top: 8px;
-                            left: 10px;
-                            color: $medium-lightBlack-text-color-jobPage;
-                            font-weight: $font-wight-700;
-                        }
-                        .search {
-                            @include small-search-input;
-                            border-color: #7caeff;
+                    .search-form {
+                        .search-input {
+                            position: relative;
                             width: 100%;
-                            z-index: 1;
-                            padding-left: 35px;
+                            margin-bottom: 50px;
+                            @include display-flex-row-alignCenter;
+                            .search-icon {
+                                position: absolute;
+                                z-index: 2;
+                                top: 8px;
+                                left: 10px;
+                                color: $medium-lightBlack-text-color-jobPage;
+                                font-weight: $font-wight-700;
+                            }
+                            .search {
+                                @include small-search-input;
+                                border-color: #7caeff;
+                                width: 100%;
+                                z-index: 1;
+                                padding-left: 35px;
+                            }
                         }
                     }
                     .chat-sidebar {
                         width: 100%;
                         @include display-flex-row-alignCenter(column, flex-start);
-                        gap: 1rem;
+                        gap: .5rem;
                         .client-chat-sidebar {
                             width: 100%;
                             @include display-flex-row-alignCenter;
@@ -95,10 +98,10 @@
                             }
                         }
                         .active {
-                            background-color: #7caeff;
-                            border-radius: 10px 0 0px 10px;
+                            background-color: #7caeff54;
+                            border-radius: 30px 0px 0px 30px;
                             padding: 2px 0;
-                            width: 105%;
+                            width: 100%;
                             .client-name-and-lastSentMessage {
                                 .lastSentMessage-and-notification-num {
                                     .notification-num {
@@ -110,7 +113,109 @@
                     }
                 }
             }
-            .chat-wrapper {}
+            .chat-wrapper {
+                @include display-flex-row-alignCenter(column, flex-start);
+                width: calc(100% - 300px);
+                height: 100%;
+                padding: 16px 20px;
+                .chat-header {
+                    width: 100%;
+                    flex-grow: 1;
+                    max-height: 70px;
+                    border-bottom: 2px solid #b8babc6d;
+                    @include display-flex-row-alignCenter;
+                    gap: 1rem;
+                    .chat-client-img {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .chat-client-name {
+                        font-size: $font-size-20;
+                        font-weight: $font-wight-700;
+                        color: $dark-blueBlack-text-color-jobPage;
+                    }
+                }
+                .chat-body {
+                    width: 100%;
+                    flex-grow: 10;
+                }
+                .chat-footer-send-message {
+                    width: 100%;
+                    flex-grow: 1;
+                    max-height: 70px;
+                    border-top: 2px solid #b8babc6d;
+                    @include display-flex-row-alignCenter;
+                    .message-form {
+                        width: 100%;
+                        height: 100%;
+                        @include display-flex-row-alignCenter;
+                        justify-content: space-evenly;
+                        gap: 1rem;
+                        .file-upload {
+                            cursor: pointer;
+                            label {
+                                cursor: pointer;
+                                .file-icon {
+                                    cursor: pointer;
+                                    margin-top: 5px;
+                                    font-size: $font-size-24;
+                                    color: $light-black;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                            input {
+                                display: none;
+                            }
+                        }
+                        input {
+                            @include small-search-input;
+                            width: 80%;
+                            border: none;
+                            border-bottom: 1px solid $dark-blue;
+                            &:hover {
+                                border: none;
+                                border-radius: 3px;
+                                transition: .3s;
+                            }
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+                        .send-message {
+                            background-color: $dark-blue;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            label {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                .send-message-icon {
+                                    display: block;
+                                    color: #fff;
+                                    font-size: $font-size-18;
+                                    margin: 0 auto;
+                                    cursor: pointer;
+                                }
+                            }
+                            .send-message-button {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -118,8 +223,6 @@
 //Extra large screens, TV
 @media all and (min-width:1201px) {
     .main-chat-page {
-        width: 100%;
-        background-color: $global-pages-background;
         .container {
             @include container-95($width-1200px);
         }
@@ -129,8 +232,6 @@
 //Desktops, large screens
 @media all and (min-width:1025px)and(max-width:1200px) {
     .main-chat-page {
-        width: 100%;
-        background-color: $global-pages-background;
         .container {
             @include container-95;
         }
@@ -140,8 +241,6 @@
 //Small screens, laptops
 @media all and (min-width:769px)and(max-width:1024px) {
     .main-chat-page {
-        width: 100%;
-        background-color: $global-pages-background;
         .container {
             @include container-95;
         }
@@ -151,8 +250,6 @@
 //iPads, Tablets
 @media all and (min-width:481px) and (max-width:768px) {
     .main-chat-page {
-        width: 100%;
-        background-color: $global-pages-background;
         .container {
             @include container-95;
         }
@@ -162,8 +259,6 @@
 // mobile view
 @media all and (max-width: 480px) {
     .main-chat-page {
-        width: 100%;
-        background-color: $global-pages-background;
         .container {
             @include container-95;
         }
