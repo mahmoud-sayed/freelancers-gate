@@ -83,7 +83,49 @@ const Chat = () => {
                             </div>
                             <p className="chat-client-name">Mahmoud S.</p>
                         </div>
-                        <div className="chat-body"></div>
+                        <div className="chat-body">
+                            <div className="chat-freelancer-wrapper">
+                                <div className="chat-freelancer-design">
+                                    <div className="chat-freelancer-design-text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, non cumque amet, qui asperiores adipisci, magni illum sit alias ipsam corrupti natus!
+                                    </p></div>
+                                    <div className="chat-freelancer-design-img"><img src="https://via.placeholder.com/25x25" alt="sender imag" /></div>
+                                </div>
+                            </div>
+                            <div className="chat-freelancer-wrapper">
+                                <div className="chat-freelancer-design">
+                                    <div className="chat-freelancer-design-text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, non cumque amet, qui asperiores adipisci, magni illum sit alias ipsam corrupti natus!
+                                    </p></div>
+                                    <div className="chat-freelancer-design-img"><img src="https://via.placeholder.com/25x25" alt="sender imag" /></div>
+                                </div>
+                            </div>
+                            <div className="chat-freelancer-wrapper">
+                                <div className="chat-freelancer-design">
+                                    <div className="chat-freelancer-design-text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, non cumque amet, qui asperiores adipisci, magni illum sit alias ipsam corrupti natus!
+                                    </p></div>
+                                    <div className="chat-freelancer-design-img"><img src="https://via.placeholder.com/25x25" alt="sender imag" /></div>
+                                </div>
+                            </div>
+                            <div className="chat-client-wrapper">
+
+                                <div className="chat-client-design">
+                                    <div className="chat-client-design-img">
+                                        <img src="https://via.placeholder.com/25x25" alt="client imag" />
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae nulla animi porro. Dolore soluta odit, quam rem sit quo eligendi?</p>
+                                </div>
+                            </div>
+                            <div className="chat-client-wrapper">
+
+                                <div className="chat-client-design">
+                                    <div className="chat-client-design-img">
+                                        <img src="https://via.placeholder.com/25x25" alt="client imag" />
+                                    </div>
+                                    <p>hello freelancer</p>
+                                </div>
+                            </div>
+
+
+                        </div>
                         <div className="chat-footer-send-message">
                             <form className="message-form" action="">
                                 <div class="file-upload">
