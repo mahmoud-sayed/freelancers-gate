@@ -41,8 +41,15 @@ connect bussiness owners with freelancers to get things done
 ## creation steps, Issues I faced and how I did solve it
 
 - installed sass, router, redux
+
 - created basic empty pages and components
+
 - added global file styling using sass with functions and vars
+
 - created navbar and footer design maked all links working with pages
+
+- done creating all basic site pages design but still need to add more things to make the site more adorable
+
+- create
 
 ## errors and issues I faced
