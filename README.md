@@ -50,6 +50,8 @@ connect bussiness owners with freelancers to get things done
 
 - done creating all basic site pages design but still need to add more things to make the site more adorable
 
-- create
+- create fake rest API server using JSON server to use it to finish front end functionality
 
 ## errors and issues I faced
+
+- try to create fake json server I used this wrong command `npm install json-server`, but the right one is `npm install -g json-server`
