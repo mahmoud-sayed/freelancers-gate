@@ -1,0 +1,44 @@
+{
+    "users": [{
+            "id": 1,
+            "name": "mahmoud S.",
+            "tag-name": "@mamoudBoraye88",
+            "email": "mahmoudalsayied@gmail.com",
+            "phone": "+201062330082",
+            "country": "Hurghada, Egypt",
+            "title": "Front end developer (javaScript / ReactJS)",
+            "rate-per-hour": 50,
+            "reviews": 4,
+            "joined-date": "December 25, 2015",
+            "about": "I'm a Passionate Web Developer... Front End developer building websites using: HTML, CSS, JavaScript. React.js + Redux I specialized in JavaScript and have some experience working with PHP, MySQL, Magento 2, Laravel Framework, familiar with Jira, G Suite, I can use my skills, learning along the way,I am a self-motivated person have a great passion for programming.",
+            "skills": ["html", "css", "JavaScript", "ReactJs", "git"],
+            "clients-reviews": [{
+                    "id": 1,
+                    "client-id": 3,
+                    "client-rate": 5,
+                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way"
+
+                },
+                {
+                    "id": 2,
+                    "client-id": 2,
+                    "client-rate": 3,
+                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way"
+                }
+            ],
+            "freelancers-reviews": [{
+                "id": 1,
+                "freelancer-id": 3,
+                "freelancer-rate": 5,
+                "freelancer-review": "this client was clear with me and he helped me to understand his requirements to done the job"
+            }, {
+                "id": 2,
+                "freelancer-id": 1,
+                "freelancer-rate": 3,
+                "freelancer-review": "this client was clear with me and he helped me to understand his requirements to done the job"
+            }]
+
+        },
+        {}
+    ]
+}
