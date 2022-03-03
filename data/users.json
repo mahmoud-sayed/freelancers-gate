@@ -8,22 +8,31 @@
             "country": "Hurghada, Egypt",
             "title": "Front end developer (javaScript / ReactJS)",
             "rate-per-hour": 50,
-            "reviews": 4,
+            "stars-review": 4,
             "joined-date": "December 25, 2015",
             "about": "I'm a Passionate Web Developer... Front End developer building websites using: HTML, CSS, JavaScript. React.js + Redux I specialized in JavaScript and have some experience working with PHP, MySQL, Magento 2, Laravel Framework, familiar with Jira, G Suite, I can use my skills, learning along the way,I am a self-motivated person have a great passion for programming.",
             "skills": ["html", "css", "JavaScript", "ReactJs", "git"],
             "clients-reviews": [{
                     "id": 1,
-                    "client-id": 3,
+                    "client-id-that-will-referral-for-his-account-details": 3,
                     "client-rate": 5,
-                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way"
+                    "project-budget": 250,
+                    "project-link": "wordpress developer to fix my current website",
+                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way",
+                    "project-require-skills": ["HTML", "CSS", "JavaScript"],
+                    "client-info": "url for client photo"
+
 
                 },
                 {
                     "id": 2,
-                    "client-id": 2,
+                    "client-id-that-will-referral-for-his-account-details": 3,
                     "client-rate": 3,
-                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way"
+                    "project-budget": 250,
+                    "project-link": "wordpress developer to fix my current website",
+                    "client-review": "this developer have the needed skills to meet my job requirements and he done the job in really good way",
+                    "project-require-skills": ["HTML", "CSS", "JavaScript"],
+                    "client-info": "url for client photo"
                 }
             ],
             "freelancers-reviews": [{

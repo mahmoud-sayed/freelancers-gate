@@ -124,22 +124,25 @@ const Profile = () => {
                         </div>
                     </section>
                     <section className="portfolio">
-
                         <div className="title-button">
                             <h3>Portfolio</h3>
                             <button>Add</button>
                         </div>
                         <hr />
-
                     </section>
                     <section className="experience">
-
                         <div className="title-button">
                             <h3>Experience</h3>
                             <button>Add</button>
                         </div>
                         <hr />
-
+                    </section>
+                    <section className="education">
+                        <div className="title-button">
+                            <h3>Education</h3>
+                            <button>Add</button>
+                        </div>
+                        <hr />
                     </section>
 
 

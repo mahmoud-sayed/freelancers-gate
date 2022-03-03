@@ -349,6 +349,34 @@
                     @include hr;
                 }
             }
+            .education {
+                width: 100%;
+                @include min-cards-design-for-all-content;
+                .title-button {
+                    @include display-flex-row-alignCenter;
+                    justify-content: space-between;
+                    h3 {
+                        font-size: $font-size-24;
+                        font-weight: $font-wight-700;
+                        margin-left: 1rem;
+                    }
+                    button {
+                        justify-self: flex-end;
+                        @include btn($dark-blue, 10px, 15px);
+                        font-size: $font-size-14;
+                        font-weight: $font-wight-700;
+                        border-radius: 3px;
+                        color: $text-color-white;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $hover-blue;
+                        }
+                    }
+                }
+                hr {
+                    @include hr;
+                }
+            }
         }
     }
 }
