@@ -1,0 +1,13 @@
+{
+    "posts": [{
+        "id": 1,
+        "job-title": "Front end developer (JavaScript, ReactJS)",
+        "budget": {
+            "min": 250.00,
+            "max": 750.00
+        },
+        "job-description": "Looking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components wellLooking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components wellLooking for next.js developer to work on our app. There will be an interview call for selection so only apply if you have worked with next.js before and know how to create api using next.js and being able to write react components well",
+        "posted-since": 8,
+        "required-skills": ["HTML", "CSS", "JavaScript"]
+    }]
+}
