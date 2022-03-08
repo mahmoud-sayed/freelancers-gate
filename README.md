@@ -46,11 +46,13 @@ connect bussiness owners with freelancers to get things done
 
 - added global file styling using sass with functions and vars
 
-- created navbar and footer design maked all links working with pages
+- created navbar and footer design make all links working with pages
 
 - done creating all basic site pages design but still need to add more things to make the site more adorable
 
 - create fake rest API server using JSON server to use it to finish front end functionality
+
+- fitch data and pass it to children's using the old way (pass py props).
 
 ## errors and issues I faced
 
