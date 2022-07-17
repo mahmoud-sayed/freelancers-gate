@@ -50,9 +50,11 @@ connect bussiness owners with freelancers to get things done
 
 - done creating all basic site pages design but still need to add more things to make the site more adorable
 
-- create fake rest API server using JSON server to use it to finish front end functionality
+- create fake initial data in json file
 
-- fitch data and pass it to children's using the old way (pass py props).
+- installed Firebase and connected firebase as database to my site
+
+- 
 
 ## errors and issues I faced
 
