@@ -26,7 +26,7 @@ export const deleteUser = (id) => {
 };
 
 // get single user
-export const getSingelUser = (id) => {
+export const getSingleUser = (id) => {
   const userDocs = doc(db, 'users', id);
   getDoc(userDocs);
 };
