@@ -39,7 +39,7 @@ const Register = () => {
                         <hr />
                         <div className="have-no-account-wrapper">
                             <p>Don't have an account?</p>
-                            <p className='sign-up'>Sign Up</p>
+                            <p className='sign-up'>Sign In</p>
                         </div>
                     </div>
                 </div>
@@ -47,6 +47,6 @@ const Register = () => {
         </section>
 
     );
-}
+};
 
 export default Register;
