@@ -120,14 +120,17 @@ const Proposals = () => {
               <p className="proposal-estimation">in 7 days</p>
             </div>
           </div>
+
           <div className="proposal-body">
             <p>Hello, Hireprofl.
               Reading job description carefully and noticed that you are going to develop job board with react and node js.
               As MERN stack developer I am confident to complete this project and I can charge above requires.
               I hope to work for you and I am sure that I will give you perfect result.
-              https://darkgalaxies.io/
+              <a href="https://darkgalaxies.io/
               https://www.gfinityesports.com/halo-infinite/halo-circle-store/
-              Thanks.
+              Thanks"> https://darkgalaxies.io/
+                https://www.gfinityesports.com/halo-infinite/halo-circle-store/
+                Thanks.</a>
               Best Regards.
               Evegenia.</p>
           </div>
@@ -152,5 +155,5 @@ const Proposals = () => {
       </aside>
     </section>
   );
-}
+};
 export default Proposals;
