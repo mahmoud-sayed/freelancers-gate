@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './../logo';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
+import { Link } from 'react-router-dom';
 //import { Link } from 'react-router-dom';
 const SignIn = () => {
 
@@ -40,12 +41,12 @@ const SignIn = () => {
                         <hr />
                         <div className="have-no-account-wrapper">
                             <p>Don't have an account?</p>
-                            <p className='sign-up'>Sign Up</p>
+                            <p className='sign-up'><Link to='\registration'>Sign Up</Link></p>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
     );
-}
+};
 export default SignIn;

@@ -1,11 +1,14 @@
 @import './../../global/global-style.scss';
+
 .login-form-section-wrapper {
     background-color: $global-pages-background;
     width: 100%;
+
     .form-section {
         display: flex;
         justify-content: center;
         width: 100%;
+
         .container {
             width: 350px;
             @include min-cards-design-for-all-content(16px);
@@ -13,20 +16,24 @@
             @include display-flex-row-alignCenter(column);
             justify-content: center;
             height: 570px;
+
             .form-wrapper {
                 @include display-flex-row-alignCenter(column);
                 justify-content: center;
                 gap: 1.5rem;
                 width: 100%;
+
                 .form-welcome {
                     font-size: $font-size-20;
                     font-weight: $font-wight-700;
                 }
+
                 .auth-buttons {
                     @include display-flex-row-alignCenter(column);
                     justify-content: center;
                     gap: .5rem;
                     width: 100%;
+
                     .google-login {
                         @include btn();
                         color: $white;
@@ -40,6 +47,7 @@
                         gap: .5rem;
                         width: 100%;
                     }
+
                     .facebook-login {
                         @include btn();
                         color: $white;
@@ -54,46 +62,56 @@
                         width: 100%;
                     }
                 }
+
                 .or-wrapper {
                     @include display-flex-row-alignCenter;
                     justify-content: space-between;
                     width: 90%;
+
                     hr {
                         @include hr;
                         width: 45%;
                         margin: 0 auto;
                     }
+
                     .or {
                         width: 6%;
                     }
                 }
+
                 .form {
                     width: 100%;
                     @include display-flex-row-alignCenter(column);
                     justify-content: center;
                     gap: 1rem;
+
                     input[type=email] {
                         @include small-search-input;
                         font-size: $font-size-16;
                     }
+
                     input[type=password] {
                         @include small-search-input;
                         font-size: $font-size-16;
                     }
+
                     .remember-and-forget-pass {
                         width: 100%;
                         @include display-flex-row-alignCenter;
                         justify-content: space-between;
+
                         .check-box-wrapper {
                             @include display-flex-row-alignCenter;
                             justify-content: center;
                             gap: .3rem;
                         }
+
                         .forget-password {
                             color: $dark-blue;
                             cursor: pointer;
                         }
                     }
+
                     input[type=submit] {
                         @include btn;
                         width: 100%;
@@ -105,19 +123,24 @@
                         padding: 8px 0;
                     }
                 }
+
                 hr {
                     @include hr;
                     width: 90%;
                     margin: 0 0;
                 }
+
                 .have-no-account-wrapper {
                     @include display-flex-row-alignCenter;
                     justify-content: center;
                     gap: .5rem;
                     font-size: $font-size-14;
+
                     .sign-up {
-                        cursor: pointer;
-                        color: $dark-blue
+                        a {
+                            cursor: pointer;
+                            color: $dark-blue
+                        }
                     }
                 }
             }

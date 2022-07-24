@@ -5,12 +5,13 @@ import './style.scss';
 //redux imports
 import { useDispatch, useSelector } from "react-redux";
 import { handelRegistrationSubmit } from "../../redux/userReducer/action";
+import { Link } from 'react-router-dom';
 
 // will accept E-mails like this >> "workingexample@email.com", 
 const emailRGX = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
 
 // Minimum 5 characters, at least one letter and one number:
-const passRGX = new RegExp('^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}$');
+const passRGX = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
 const Register = () => {
 
@@ -38,7 +39,7 @@ const Register = () => {
 
     // form validation errors
     const [errMessage, setErrMessage] = useState('');
-    const [sucess, setSucsess] = useState(false);
+    //const [success, setSuccess] = useState(false);
 
 
     //redux
@@ -61,8 +62,10 @@ const Register = () => {
         console.log(result);
         console.log(pass);
         setValidPass(result);
-        const match = pass === validPass;
-    }, [pass, validPass]);
+        const match = pass === confirmPass;
+        setValidConfirmPass(match);
+    }, [pass, confirmPass]);
+
 
     useEffect(() => {
         setErrMessage('');
@@ -72,37 +75,15 @@ const Register = () => {
 
     const formSubmit = (e) => {
         e.preventDefault();
+        // if submit button hacked with js
+        const v1 = emailRGX.test(email);
+        const v2 = passRGX.test(pass);
+        if (!v1 || !v2 || policesAgreement === false) {
+            setErrMessage('invalid entry');
 
-        /*
-                if (!emailRGX.test(email)) {
-                    setEmailError('enter valid email');
-                } else {
-                    setEmailError('');
-                }
-        
-                if (!pass.test(passRGX)) {
-                    setPassError('enter at lest 5 characters, at least one letter and one number');
-                } else {
-                    setPassError('');
-                }
-        
-                if (!confirmPass.test(passRGX) && pass !== confirmPass) {
-                    setConfirmPassError('password not match');
-                } else {
-                    setConfirmPassError('');
-                }
-        
-                if (
-                    email.match(emailRGX)
-                    &&
-                    pass.match(passRGX)
-                    &&
-                    confirmPass.match(passRGX)
-                    &&
-                    pass === confirmPass
-                ) {
-                    handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
-                }*/
+        } else {
+            setErrMessage('you have register successful');
+        }
     };
 
     return (
@@ -135,48 +116,66 @@ const Register = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 value={email}
                                 required
-
+                                aria-invalid={validEmail ? 'false' : 'true'}
+                                aria-describedby="uidnote"
+                                onFocus={() => setEmailFocus(true)}
+                                onBlur={() => setEmailFocus(false)}
                             />
+                            <p id="uidnote" className={emailFocus && email && !validEmail ? 'instructions' : 'offScreen'}>set valid email Example: workingexample@email.com</p>
                             <input
                                 type="password"
                                 name="password"
-
                                 placeholder='Password'
+                                required
+                                aria-describedby='passNode'
+                                aria-invalid={validPass ? 'false' : 'true'}
                                 onChange={(e) => setPass(e.target.value)}
+                                onFocus={() => setPassFocus(true)}
+                                onBlur={() => setPassFocus(false)}
                                 value={pass}
                             />
+                            <p id="passNode" className={passFocus && !validPass ? 'instructions' : 'offScreen'}>password must be a minimum of 8 characters including number, Upper, Lower And one special character</p>
                             <input
                                 type="password"
                                 name="confirm-password"
-
-                                placeholder='confirm password'
+                                required
+                                aria-invalid={validPass ? 'false' : 'true'}
                                 onChange={(e) => setConfirmPass(e.target.value)}
+                                onFocus={() => setValidPassFocus(true)}
+                                onBlur={() => setValidPassFocus(false)}
+                                placeholder='confirm password'
                                 value={confirmPass}
+                                id='myInput'
                             />
+                            <p id="confirmed" className={validPassFocus && !validConfirmPass ? 'instructions' : 'offScreen'}>
+                                Must match the first password  input field
+                            </p>
                             <div className="polices-agreement">
                                 <div className="check-box-wrapper">
                                     <input
                                         type="checkbox"
                                         name="remember-me"
                                         id="agree"
-                                        onChange={(e) => setPolicesAgreement(!policesAgreement)}
+                                        onChange={() => setPolicesAgreement(!policesAgreement)}
                                         checked={policesAgreement}
                                     />
 
-                                    <label htmlFor='agree'>I agree to the Freelancer <span className="colored">User Agreement</span> and <span className="colored">Privacy Policy</span>.</label>
+                                    <label htmlFor='agree'>I agree to the Freelancer-gate<span className="colored">User Agreement</span> and <span className="colored">Privacy Policy</span>.</label>
+
                                 </div>
                             </div>
-                            <input type="submit" value="Join Freelancers Gate" />
+                            <button className={!validEmail || !validPass || !validConfirmPass || !policesAgreement ? 'submit-button-disabled' : "submit-button"}
+                                disabled={!validEmail || !validPass || !validConfirmPass || !policesAgreement ? true : false} type="submit" >Join Freelancers Gate</button>
                         </form>
                         <hr />
                         <div className="have-no-account-wrapper">
                             <p>Don't have an account?</p>
-                            <p className='sign-up'>Sign In</p>
+                            <p className='sign-up'><Link to='/login'>Sign In</Link></p>
                         </div>
                     </div>
                 </div>
             </section>
-        </section>
+        </section >
 
     );
 };

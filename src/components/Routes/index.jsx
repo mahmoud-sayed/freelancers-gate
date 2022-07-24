@@ -21,6 +21,7 @@ function RoutesComponent() {
     return (
         <Routes>
             <Route index path="/" element={<Home />} />
+            <Route index path="/freelancers-gate" element={<Home />} />
             <Route path="/howitworks" element={<HowItWorks />} />
             <Route path="/addnewjob" element={<AddNewJob />} />
             <Route path="/chat" element={<Chat />} />

@@ -85,17 +85,33 @@
                     justify-content: center;
                     gap: 1rem;
 
+                    // success messages style
                     .errMessage {
-                        color: red;
+                        @include btn;
+                        width: 100%;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        border-radius: 5px;
+                        padding: 8px 0;
+                        background-color: $hover-green;
                     }
 
                     .offScreen {
                         display: none
                     }
 
+
                     input[type=email] {
                         @include small-search-input;
                         font-size: $font-size-16;
+
+                    }
+
+                    //email validation
+                    .instructions {
+                        font-size: $font-size-12;
+                        color: red;
+                        margin-top: -15px;
                     }
 
                     input[type=password] {
@@ -124,13 +140,24 @@
                         }
                     }
 
-                    input[type=submit] {
+                    .submit-button {
                         @include btn;
                         width: 100%;
                         background-color: $dark-blue;
                         font-size: $font-size-18;
                         font-weight: $font-wight-700;
                         cursor: pointer;
+                        border-radius: 5px;
+                        padding: 8px 0;
+                    }
+
+                    .submit-button-disabled {
+                        @include btn;
+                        width: 100%;
+                        background-color: rgb(215, 214, 214);
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        cursor: initial;
                         border-radius: 5px;
                         padding: 8px 0;
                     }
@@ -149,8 +176,10 @@
                     font-size: $font-size-14;
 
                     .sign-up {
-                        cursor: pointer;
-                        color: $dark-blue;
+                        a {
+                            cursor: pointer;
+                            color: $dark-blue;
+                        }
                     }
                 }
             }
