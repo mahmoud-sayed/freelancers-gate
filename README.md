@@ -54,8 +54,15 @@ connect bussiness owners with freelancers to get things done
 
 - installed Firebase and connected firebase as database to my site
 
-- 
+- make the registration form validation and send data to database in Firebase
+
+- added users fetching function to the App.js and will add all other fetching function in it 
 
 ## errors and issues I faced
 
 - try to create fake json server I used this wrong command `npm install json-server`, but the right one is `npm install -g json-server`
+
+- founded another way to make the fake json server and it is working like that 1- create the data folder and create the db.json inside of it then wrote this command 
+"npx json-server -w data/db.json -p 100 " then it will work
+
+- I found that the fake json server will not give me what I want to add nested data inside of it so I start to use Firebase instead

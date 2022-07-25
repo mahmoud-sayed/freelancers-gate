@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { handelRegistrationSubmit } from "../../redux/userReducer/action";
 import { Link } from 'react-router-dom';
 
+
 // will accept E-mails like this >> "workingexample@email.com", 
 const emailRGX = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
 
@@ -14,6 +15,7 @@ const emailRGX = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"
 const passRGX = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
 const Register = () => {
+
 
     const userRef = useRef(); // to set the focus on the user when the component load
     const errRef = useRef(); // to set the focus on the error when there is error set so the screen reader can get it
@@ -52,15 +54,11 @@ const Register = () => {
 
     useEffect(() => {
         const result = emailRGX.test(email);
-        console.log(result);
-        console.log(email);
         setValidEmail(result);
     }, [email]);
 
     useEffect(() => {
         const result = passRGX.test(pass);
-        console.log(result);
-        console.log(pass);
         setValidPass(result);
         const match = pass === confirmPass;
         setValidConfirmPass(match);
@@ -83,8 +81,10 @@ const Register = () => {
 
         } else {
             setErrMessage('you have register successful');
+            handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
         }
     };
+
 
     return (
         <section className="sign-up-form-section">

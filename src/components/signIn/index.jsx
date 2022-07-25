@@ -41,7 +41,7 @@ const SignIn = () => {
                         <hr />
                         <div className="have-no-account-wrapper">
                             <p>Don't have an account?</p>
-                            <p className='sign-up'><Link to='\registration'>Sign Up</Link></p>
+                            <p className='sign-up'><Link to='/registration'>Sign Up</Link></p>
                         </div>
                     </div>
                 </div>

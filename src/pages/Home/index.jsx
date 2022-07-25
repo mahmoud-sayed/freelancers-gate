@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './../../global/global-style.scss';
 import './style.scss';
 import { Link } from "react-router-dom";
@@ -9,9 +9,14 @@ import { MdMonitor } from 'react-icons/md';
 import { FaMobileAlt, FaTruck, FaJsSquare, FaLinux, FaJava, FaLaravel, FaDev, FaCalculator, FaFilm, FaUnity } from "react-icons/fa";
 //image
 import image from './../../assets/homePhotos/skills-images/img-src';
+import { useDispatch } from "react-redux";
+
 
 
 const Home = () => {
+
+
+
     return (
         <main>
             <div className="home-wrapper">
@@ -367,6 +372,6 @@ const Home = () => {
             </div>
         </main>
     );
-}
+};
 
 export default Home;
