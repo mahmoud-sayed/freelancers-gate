@@ -49,7 +49,7 @@ const Register = () => {
 
     useEffect(() => {
         // to set the focus on the email input once the component render
-        //userRef.current.focus();
+        userRef.current.focus();
     }, []);
 
     useEffect(() => {

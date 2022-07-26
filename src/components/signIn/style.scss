@@ -85,6 +85,21 @@
                     justify-content: center;
                     gap: 1rem;
 
+                    // success messages style
+                    .errMessage {
+                        @include btn;
+                        width: 100%;
+                        font-size: $font-size-18;
+                        font-weight: $font-wight-700;
+                        border-radius: 5px;
+                        padding: 8px 0;
+                        background-color: $hover-green;
+                    }
+
+                    .offScreen {
+                        display: none
+                    }
+
                     input[type=email] {
                         @include small-search-input;
                         font-size: $font-size-16;
