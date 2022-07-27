@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { handelRegistrationSubmit } from "../../redux/userReducer/action";
 import { Link } from 'react-router-dom';
 
+//firebase imports
+import { useAuth } from "../../context/AuthProvider";
+
 
 // will accept E-mails like this >> "workingexample@email.com", 
 const emailRGX = new RegExp("([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])");
@@ -43,6 +46,9 @@ const Register = () => {
     const [errMessage, setErrMessage] = useState('');
     //const [success, setSuccess] = useState(false);
 
+    //firebase Auth
+    const { signUp } = useAuth();
+
 
     //redux
     const dispatch = useDispatch();
@@ -78,10 +84,10 @@ const Register = () => {
         const v2 = passRGX.test(pass);
         if (!v1 || !v2 || policesAgreement === false) {
             setErrMessage('invalid entry');
-
         } else {
             setErrMessage('you have register successful');
             handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
+            signUp(email, pass);
         }
     };
 

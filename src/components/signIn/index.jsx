@@ -1,10 +1,14 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import Logo from './../logo';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
 import { Link } from 'react-router-dom';
-//import { Link } from 'react-router-dom';
+import AuthContext from '../../context/AuthProvider';
+
+const LOGIN_AUTH = '/auth';
+
 const SignIn = () => {
+    const { setAuth } = useContext(AuthContext);
     const emailRef = useRef();
     const errRef = useRef();
 
@@ -23,6 +27,14 @@ const SignIn = () => {
 
     const handelSubmit = (e) => {
         e.preventDefault();
+        try {
+            if (email.length > 5 && pass.length >= 8) {
+
+            }
+
+        } catch (err) {
+            console.log(err);
+        }
         setErr('logged in successfully');
     };
     return (
