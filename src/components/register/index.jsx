@@ -5,10 +5,10 @@ import './style.scss';
 //redux imports
 import { useDispatch, useSelector } from "react-redux";
 import { handelRegistrationSubmit } from "../../redux/userReducer/action";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //firebase imports
-import { useAuth } from "../../context/AuthProvider";
+import { useUserAuth } from './../../context/AuthProvider';
 
 
 // will accept E-mails like this >> "workingexample@email.com", 
@@ -47,7 +47,10 @@ const Register = () => {
     //const [success, setSuccess] = useState(false);
 
     //firebase Auth
-    const { signUp } = useAuth();
+    const { signUp } = useUserAuth();
+
+    // to Navigate the user to another page
+    const navigate = useNavigate();
 
 
     //redux
@@ -77,7 +80,7 @@ const Register = () => {
 
 
 
-    const formSubmit = (e) => {
+    const formSubmit = async (e) => {
         e.preventDefault();
         // if submit button hacked with js
         const v1 = emailRGX.test(email);
@@ -85,9 +88,15 @@ const Register = () => {
         if (!v1 || !v2 || policesAgreement === false) {
             setErrMessage('invalid entry');
         } else {
-            setErrMessage('you have register successful');
-            handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
-            signUp(email, pass);
+            try {
+                await signUp(email, pass);
+                handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
+                setErrMessage('Registered Successfully');
+                navigate("/profile", { replace: true });
+            } catch (err) {
+                setErrMessage(err.message);
+            }
+
         }
     };
 

@@ -2,13 +2,11 @@ import React, { useEffect, useState, useRef, useContext } from 'react';
 import Logo from './../logo';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
-import { Link } from 'react-router-dom';
-import AuthContext from '../../context/AuthProvider';
-
-const LOGIN_AUTH = '/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import { useUserAuth } from './../../context/AuthProvider';
 
 const SignIn = () => {
-    const { setAuth } = useContext(AuthContext);
+
     const emailRef = useRef();
     const errRef = useRef();
 
@@ -16,6 +14,8 @@ const SignIn = () => {
     const [pass, setPass] = useState('');
     const [err, setErr] = useState('');
     const [success, setSeccess] = useState(false);
+    const { signIn } = useUserAuth();
+    const navigate = useNavigate();
 
     useEffect(() => {
         emailRef.current.focus();
@@ -25,17 +25,20 @@ const SignIn = () => {
         setErr('');
     }, [email, pass]);
 
-    const handelSubmit = (e) => {
+    const handelSubmit = async (e) => {
         e.preventDefault();
-        try {
-            if (email.length > 5 && pass.length >= 8) {
+        if (email.length > 6 && pass.length >= 8) {
+            try {
+                await signIn(email, pass);
+                setErr('logged in successfully');
+                navigate('/profile');
 
+            } catch (err) {
+                setErr(err.message);
             }
-
-        } catch (err) {
-            console.log(err);
         }
-        setErr('logged in successfully');
+
+
     };
     return (
         <section className='login-form-section-wrapper'>
