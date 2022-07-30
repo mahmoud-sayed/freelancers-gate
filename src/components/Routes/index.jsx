@@ -14,6 +14,7 @@ import Registration from "./../../pages/registration";
 import SingleJobView from "./../../pages/singelJobView";
 import SingleJob from "../singleJob";
 import Proposals from "../proposals";
+import ProtectedRoute from './ProtectedRoute';
 
 
 function RoutesComponent() {
@@ -24,12 +25,12 @@ function RoutesComponent() {
             <Route index path="/freelancers-gate" element={<Home />} />
             <Route path="/howitworks" element={<HowItWorks />} />
             <Route path="/addnewjob" element={<AddNewJob />} />
-            <Route path="/chat" element={<Chat />} />
+            <Route path="/chat" element={<ProtectedRoute><Chat /></ProtectedRoute>} />
             <Route path="/emailus" element={<EmailUs />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registration" element={<Registration />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="/singlejobview" element={<SingleJobView />} >
                 <Route index element={<SingleJob />} />
                 <Route path="proposals" element={<Proposals />} />

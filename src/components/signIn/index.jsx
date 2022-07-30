@@ -5,6 +5,7 @@ import './style.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useUserAuth } from './../../context/AuthProvider';
 
+
 const SignIn = () => {
 
     const emailRef = useRef();
@@ -14,7 +15,7 @@ const SignIn = () => {
     const [pass, setPass] = useState('');
     const [err, setErr] = useState('');
     const [success, setSeccess] = useState(false);
-    const { signIn } = useUserAuth();
+    const { signIn, googleSignIn, faceBookSignIn } = useUserAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -25,6 +26,26 @@ const SignIn = () => {
         setErr('');
     }, [email, pass]);
 
+    const handelGoogleSignIn = async (e) => {
+        e.preventDefault();
+        try {
+            await googleSignIn();
+            navigate('/profile');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    const handelFaceBookSignIn = async (e) => {
+        e.preventDefault();
+        try {
+            await faceBookSignIn();
+            navigate('/profile');
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
     const handelSubmit = async (e) => {
         e.preventDefault();
         if (email.length > 6 && pass.length >= 8) {
@@ -34,6 +55,9 @@ const SignIn = () => {
                 navigate('/profile');
 
             } catch (err) {
+                if (err) {
+                    setErr('this email not registered');
+                }
                 setErr(err.message);
             }
         }
@@ -50,9 +74,12 @@ const SignIn = () => {
                         <h1 className='form-welcome'>Welcome Back</h1>
                         <div className="auth-buttons">
 
-                            <button className='google-login'>
+                            <button className='google-login' onClick={handelGoogleSignIn}>
                                 <FaGoogle className='google-icon' /><p className='google-text'>Log in with Google</p></button>
-                            <button className='facebook-login'><FaFacebook className='facebook-icon' /><p className='facebook-text'>Log in with facebook</p></button>
+                            <button className='facebook-login' onClick={handelFaceBookSignIn} >
+                                <FaFacebook className='facebook-icon' />
+                                <p className='facebook-text'>Log in with facebook</p>
+                            </button>
                         </div>
                         <div className="or-wrapper">
                             <hr />

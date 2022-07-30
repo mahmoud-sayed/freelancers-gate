@@ -6,8 +6,11 @@ import { IoShieldCheckmark, IoCardOutline, IoMail } from 'react-icons/io5';
 import { FaAddressCard, FaPhoneAlt } from 'react-icons/fa';
 import './style.scss';
 import RatingStars from './../../components/ratingStars/index';
+import { useUserAuth } from './../../context/AuthProvider';
 
 const Profile = () => {
+    const { user } = useUserAuth();
+    console.log(user);
     return (
         <main className="profile">
             <section className="header-background"></section>
@@ -150,6 +153,6 @@ const Profile = () => {
             </div>
         </main>
     );
-}
+};
 
 export default Profile;
