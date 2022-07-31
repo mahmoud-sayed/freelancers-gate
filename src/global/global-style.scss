@@ -1,79 +1,80 @@
 //main Dark Colors
-$dark-ruddy:#F7022A;
-$dark-blue:#007fed;
-$dark-maastricht-blue:#001e40;
-$dark-green:#379E54;
-$dark-yellow:#F77D0E;
+$dark-ruddy: #F7022A;
+$dark-blue: #007fed;
+$dark-maastricht-blue: #001e40;
+$dark-green: #379E54;
+$dark-yellow: #F77D0E;
 $dark-black: #000;
-$white:#fff;
-$text-color-white:#f7f7f7;
+$white: #fff;
+$text-color-white: #f7f7f7;
 // & Hover
-$hover-ruddy:#FD3556;
-$hover-blue:#139FF0;
-$hover-maastricht-blue:#003D82;
-$hover-green:#5DC16A;
-$hover-yellow:#FFC24E;
-$hover-black:#8D8E90;
+$hover-ruddy: #FD3556;
+$hover-blue: #139FF0;
+$hover-maastricht-blue: #003D82;
+$hover-green: #5DC16A;
+$hover-yellow: #FFC24E;
+$hover-black: #8D8E90;
 //---------------
 // Medium Dark Colors
 $medium-dark-black: #3a393f;
-$medium-dark-blue:#29B2FE;
-$medium-dart-green:#5DC16A;
-$medium-dark-yellow:#FFC24E;
+$medium-dark-blue: #29B2FE;
+$medium-dart-green: #5DC16A;
+$medium-dark-yellow: #FFC24E;
 //---------------
 // Light colors
-$light-black:#8D8E90;
-$light-blue:#28B4F2;
-$light-fuchsia:#FA5F9B;
+$light-black: #8D8E90;
+$light-blue: #28B4F2;
+$light-fuchsia: #FA5F9B;
 //$light-green:;
 //---------------
 //warning
 $danger: #EB3730;
-$warning:#FFC107;
-$success:#28A745;
+$warning: #FFC107;
+$success: #28A745;
 //---------------
 // Font & text 
-$font-wight-400:400;
-$font-wight-500:500;
-$font-wight-600:600;
-$font-wight-700:700;
-$text-color:#0e1724;
-$font-size-48:48px;
-$font-size-41:41px;
-$font-size-32:32px;
-$font-size-24:24px;
-$font-size-20:20px;
-$font-size-18:18px;
-$font-size-16:16px;
-$font-size-14:14px;
-$font-size-12:12px;
-$font-size-11:11px;
+$font-wight-400: 400;
+$font-wight-500: 500;
+$font-wight-600: 600;
+$font-wight-700: 700;
+$text-color: #0e1724;
+$font-size-48: 48px;
+$font-size-41: 41px;
+$font-size-32: 32px;
+$font-size-24: 24px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+$font-size-16: 16px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+$font-size-11: 11px;
 //---------------
 // container width
-$width-1200px:1200px; //for screens more than 1200px 
-$width-86:86%; // for large screen
-$width-95:95%; //for tablet and mobile
+$width-1200px: 1200px; //for screens more than 1200px 
+$width-86: 86%; // for large screen
+$width-95: 95%; //for tablet and mobile
 //--------------- 
 //Global variables for entire site
-$global-pages-background:#F0F0F0; //global pages background
+$global-pages-background: #F0F0F0; //global pages background
 $global-padding-for-min-content: 16px;
-$global-box-shadow-for-min-content:0 0 4px 0 #00000014,
-0 2px 4px 0 #0000001f;
-$global-border-radius-for-min-content:7px;
-$job-posts-back-ground-hover:#F0F0F0;
+$global-box-shadow-for-min-content: 0 0 4px 0 #00000014,
+    0 2px 4px 0 #0000001f;
+$global-border-radius-for-min-content: 7px;
+$job-posts-back-ground-hover: #F0F0F0;
 //---------------
 //text colors
-$dark-blueBlack-text-color-jobPage:#0E1724;
-$medium-lightBlack-text-color-jobPage:#4d525b;
+$dark-blueBlack-text-color-jobPage: #0E1724;
+$medium-lightBlack-text-color-jobPage: #4d525b;
+
 //---------------
 //global css classes
-@mixin container-95($width:95%) {
+@mixin container-95($width: 95%) {
     width: $width;
     margin: 0 auto;
 }
 
 //button
-@mixin btn($bg-color:$dark-ruddy, $paddingUpAndDown:5px, $paddingRightAndLeft:10px) {
+@mixin btn($bg-color: $dark-ruddy, $paddingUpAndDown: 5px, $paddingRightAndLeft: 10px) {
     background-color: $bg-color;
     border: none;
     color: white;
@@ -85,7 +86,7 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 
 //------------
 //Font
-@mixin text-style($color:$text-color, $font-size:$font-size-18, $font-wight:$font-wight-400, $font-style: normal, $line-height:1.55) {
+@mixin text-style($color: $text-color, $font-size: $font-size-18, $font-wight: $font-wight-400, $font-style: normal, $line-height: 1.55) {
     font-size: $font-size;
     color: $color;
     font-weight: $font-wight;
@@ -94,14 +95,14 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 
 //-------------
 //display flex
-@mixin display-flex-row-alignCenter($flex-direction:row, $align-items:center) {
+@mixin display-flex-row-alignCenter($flex-direction: row, $align-items: center) {
     display: flex;
     flex-direction: $flex-direction;
     align-items: $align-items;
 }
 
 //hr
-@mixin hr ($hr-color:#e2e4e8) {
+@mixin hr ($hr-color: #e2e4e8) {
     width: 100%;
     border: 1.2px solid $hr-color;
     margin: 10px 0;
@@ -111,7 +112,7 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
 }
 
 //min design for cards in all like aside in jobs page and jobs cards
-@mixin min-cards-design-for-all-content($padding:$global-padding-for-min-content) {
+@mixin min-cards-design-for-all-content($padding: $global-padding-for-min-content) {
     background-color: #fff;
     padding: $padding;
     border-radius: $global-border-radius-for-min-content;
@@ -119,18 +120,20 @@ $medium-lightBlack-text-color-jobPage:#4d525b;
     overflow: hidden;
 }
 
-@mixin small-search-input($height:30px) {
+@mixin small-search-input($height: 30px) {
     width: 100%;
     height: $height;
     font-size: $font-size-16;
     padding: 3px 5px;
     border: 1px solid $hover-black;
     border-radius: 3px;
+
     &:hover {
         border: 1px solid $hover-blue;
         border-radius: 3px;
         transition: .3s;
     }
+
     &:focus-visible {
         outline: 1.5px solid $hover-blue;
     }

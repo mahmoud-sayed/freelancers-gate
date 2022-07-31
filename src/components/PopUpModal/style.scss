@@ -1,0 +1,27 @@
+@import './../../global/global-style.scss';
+
+.popup-wrapper {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.783);
+    z-index: 999;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    @include min-cards-design-for-all-content();
+    padding: 4rem 5rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

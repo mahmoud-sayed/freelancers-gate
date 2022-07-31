@@ -36,6 +36,13 @@ connect bussiness owners with freelancers to get things done
 
 - React-icons v-4.3.1: `npm install react-icons --save` study=> look at the DOCs
 
+- firebase v-^9.9.0: `npm i firebase` study=> look at the DOCs & youtube
+
+- react-Icons v-^4.3.1: `npm i react-icons` study=> look at DOCs
+
+- redux-thunk v-^2.4.1: `npm i redux-thunk` study=> look at DOCs
+
+
 ---
 
 ## creation steps, Issues I faced and how I did solve it
@@ -57,6 +64,10 @@ connect bussiness owners with freelancers to get things done
 - make the registration form validation and send data to database in Firebase
 
 - added users fetching function to the App.js and will add all other fetching function in it 
+
+- worked on auth for email and pass & gmail & facebook
+
+- make popup using react Portal
 
 ## errors and issues I faced
 

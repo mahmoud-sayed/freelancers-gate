@@ -4,6 +4,7 @@ import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useUserAuth } from './../../context/AuthProvider';
+import PopUpModal from '../PopUpModal/PopUpModal';
 
 
 const SignIn = () => {
@@ -15,7 +16,8 @@ const SignIn = () => {
     const [pass, setPass] = useState('');
     const [err, setErr] = useState('');
     const [success, setSeccess] = useState(false);
-    const { signIn, googleSignIn, faceBookSignIn } = useUserAuth();
+    const { signIn, googleSignIn, faceBookSignIn, forgetPass } = useUserAuth();
+    const [popUpOpen, setPopUpOpen] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -46,6 +48,16 @@ const SignIn = () => {
         }
     };
 
+    const handelForgetPassword = async (e) => {
+        e.preventDefault();
+        try {
+            await forgetPass(email);
+
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
     const handelSubmit = async (e) => {
         e.preventDefault();
         if (email.length > 6 && pass.length >= 8) {
@@ -66,8 +78,23 @@ const SignIn = () => {
     };
     return (
         <section className='login-form-section-wrapper'>
+
             <section className='form-section'>
                 <div className="container">
+                    <PopUpModal
+                        open={popUpOpen}
+                    >
+                        <div className='popup-content-signIn'>
+                            <form className='reset-password-form'>
+                                <input type="text" autoComplete='off' placeholder='example@company.com' />
+                                <div className='popup-buttons'>
+                                    <button className='submit-action'>Send</button>
+                                    <button className='close-action'>Close</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </PopUpModal>
                     <div className="form-wrapper">
 
                         <Logo />
@@ -106,11 +133,11 @@ const SignIn = () => {
                                 required
                             />
                             <div className="remember-and-forget-pass">
-                                <div className="check-box-wrapper">
+                                {/* <div className="check-box-wrapper">
                                     <input type="checkbox" name="remember-me" id="remember-me" />
                                     <label htmlFor='remember-me'>Remember me</label>
-                                </div>
-                                <p className='forget-password'>Forgot Password?</p>
+                                </div> */}
+                                <p className='forget-password' onClick={() => setPopUpOpen(!popUpOpen)}>Forgot Password?</p>
 
                             </div>
                             <input type="submit" value="Log in" />
