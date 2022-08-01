@@ -15,7 +15,7 @@
             margin: 2rem 0;
             @include display-flex-row-alignCenter(column);
             justify-content: center;
-            height: 630px;
+            min-height: 630px;
 
             .form-wrapper {
                 @include display-flex-row-alignCenter(column);
@@ -93,7 +93,7 @@
                         font-weight: $font-wight-700;
                         border-radius: 5px;
                         padding: 8px 0;
-                        background-color: $hover-green;
+                        background-color: $danger;
                     }
 
                     .offScreen {

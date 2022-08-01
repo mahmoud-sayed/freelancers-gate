@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useRef, useContext } from 'react';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import Logo from './../logo';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import './style.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useUserAuth } from './../../context/AuthProvider';
 import PopUpModal from '../PopUpModal/PopUpModal';
+
 
 
 const SignIn = () => {
@@ -15,9 +16,10 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [err, setErr] = useState('');
-    const [success, setSeccess] = useState(false);
+    const [success, setSuccess] = useState(false);
     const { signIn, googleSignIn, faceBookSignIn, forgetPass } = useUserAuth();
     const [popUpOpen, setPopUpOpen] = useState(false);
+    const [emailToResetHisPass, setEmailToResetHisPass] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -28,13 +30,17 @@ const SignIn = () => {
         setErr('');
     }, [email, pass]);
 
+    useLayoutEffect(() => {
+
+    }, [success]);
+
     const handelGoogleSignIn = async (e) => {
         e.preventDefault();
         try {
             await googleSignIn();
             navigate('/profile');
         } catch (err) {
-            console.log(err.message);
+            if (err) setErr('something wrong with google login');
         }
     };
 
@@ -44,38 +50,41 @@ const SignIn = () => {
             await faceBookSignIn();
             navigate('/profile');
         } catch (err) {
-            console.log(err.message);
+            if (err) setErr('something wrong with FaceBook login');
         }
     };
 
-    const handelForgetPassword = async (e) => {
+    const handelResetPassSubmit = async (e) => {
         e.preventDefault();
         try {
-            await forgetPass(email);
+            await forgetPass(emailToResetHisPass);
+            setPopUpOpen(false);
 
         } catch (err) {
-            console.log(err.message);
+            if (err) setErr('something wrong');
         }
     };
+
 
     const handelSubmit = async (e) => {
         e.preventDefault();
         if (email.length > 6 && pass.length >= 8) {
             try {
                 await signIn(email, pass);
-                setErr('logged in successfully');
+                setPopUpOpen(true);
+                setSuccess(true);
                 navigate('/profile');
 
             } catch (err) {
-                if (err) {
-                    setErr('this email not registered');
-                }
-                setErr(err.message);
+                if (err) setErr('email or password not right');
             }
+        } else {
+            setErr('email or password not right');
         }
 
 
     };
+
     return (
         <section className='login-form-section-wrapper'>
 
@@ -84,15 +93,20 @@ const SignIn = () => {
                     <PopUpModal
                         open={popUpOpen}
                     >
-                        <div className='popup-content-signIn'>
-                            <form className='reset-password-form'>
-                                <input type="text" autoComplete='off' placeholder='example@company.com' />
-                                <div className='popup-buttons'>
-                                    <button className='submit-action'>Send</button>
-                                    <button className='close-action'>Close</button>
-                                </div>
-                            </form>
-                        </div>
+                        {success === true ?
+                            <p>success</p>
+                            :
+
+                            <div className='popup-content-signIn'>
+                                <form onSubmit={handelResetPassSubmit} className='reset-password-form'>
+                                    <input type="text" autoComplete='off' placeholder='example@company.com' onChange={(e) => setEmailToResetHisPass(e.target.value)} value={emailToResetHisPass} />
+                                    <div className='popup-buttons'>
+                                        <button type='submit' className='submit-action'>Send</button>
+                                        <button className='close-action' onClick={() => setPopUpOpen(false)}>Close</button>
+                                    </div>
+                                </form>
+                            </div>
+                        }
 
                     </PopUpModal>
                     <div className="form-wrapper">
@@ -123,6 +137,7 @@ const SignIn = () => {
                                 value={email}
                                 autoComplete='off'
                                 required
+                                onFocus={() => setErr('')}
                             />
                             <input
                                 type="password"
@@ -131,6 +146,7 @@ const SignIn = () => {
                                 value={pass}
                                 autoComplete='off'
                                 required
+                                onFocus={() => setErr('')}
                             />
                             <div className="remember-and-forget-pass">
                                 {/* <div className="check-box-wrapper">

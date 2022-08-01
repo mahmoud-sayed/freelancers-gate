@@ -23,5 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset -5px -5px 5px $hover-blue, inset 5px 5px 5px $hover-blue;
+
   }
 }

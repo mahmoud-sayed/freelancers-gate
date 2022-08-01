@@ -15,42 +15,46 @@
             margin: 2rem 0;
             @include display-flex-row-alignCenter(column);
             justify-content: center;
-            height: 570px;
+            min-height: 570px;
 
             .popup-content-signIn {
-                @include display-flex-row-alignCenter(column);
-                gap: 1.5rem;
 
-                input {
-                    @include small-search-input();
-                }
 
-                .popup-buttons {
-                    @include display-flex-row-alignCenter();
-                    gap: 2rem;
+                .reset-password-form {
+                    @include display-flex-row-alignCenter(column);
+                    gap: 1.5rem;
 
-                    .submit-action {
-                        @include btn($dark-blue);
-                        color: $white;
-                        font-size: $font-size-18;
-                        font-weight: $font-wight-700;
-                        border-radius: 5px;
-
-                        &:hover {
-                            background-color: $hover-blue;
-                        }
-
+                    input {
+                        @include small-search-input();
                     }
 
-                    .close-action {
-                        @include btn();
-                        color: $white;
-                        font-size: $font-size-18;
-                        font-weight: $font-wight-700;
-                        border-radius: 5px;
+                    .popup-buttons {
+                        @include display-flex-row-alignCenter();
+                        gap: 2rem;
 
-                        &:hover {
-                            background-color: $hover-ruddy;
+                        .submit-action {
+                            @include btn($dark-blue);
+                            color: $white;
+                            font-size: $font-size-18;
+                            font-weight: $font-wight-700;
+                            border-radius: 5px;
+
+                            &:hover {
+                                background-color: $hover-blue;
+                            }
+
+                        }
+
+                        .close-action {
+                            @include btn();
+                            color: $white;
+                            font-size: $font-size-18;
+                            font-weight: $font-wight-700;
+                            border-radius: 5px;
+
+                            &:hover {
+                                background-color: $hover-ruddy;
+                            }
                         }
                     }
                 }
@@ -132,7 +136,7 @@
                         font-weight: $font-wight-700;
                         border-radius: 5px;
                         padding: 8px 0;
-                        background-color: $hover-green;
+                        background-color: $danger;
                     }
 
                     .offScreen {

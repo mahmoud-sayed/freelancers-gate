@@ -94,7 +94,7 @@ const Register = () => {
                 setErrMessage('Registered Successfully');
                 navigate("/profile", { replace: true });
             } catch (err) {
-                setErrMessage(err.message);
+                if (err) setErrMessage('email already registered');
             }
 
         }
