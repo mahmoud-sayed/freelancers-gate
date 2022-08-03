@@ -6,6 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useUserAuth } from './../../context/AuthProvider';
 import PopUpModal from '../PopUpModal/PopUpModal';
 
+// cookies imports
+import RemoveCookies from '../CookiesHandling/removeCookies';
+import SetCookies from '../CookiesHandling/setCookies';
 
 
 const SignIn = () => {
@@ -69,10 +72,11 @@ const SignIn = () => {
     const handelSubmit = async (e) => {
         e.preventDefault();
         if (email.length > 6 && pass.length >= 8) {
+            RemoveCookies('usrin');
+            const userData = [email, pass];
             try {
                 await signIn(email, pass);
-                setPopUpOpen(true);
-                setSuccess(true);
+                SetCookies('useRin', JSON.stringify());
                 navigate('/profile');
 
             } catch (err) {
