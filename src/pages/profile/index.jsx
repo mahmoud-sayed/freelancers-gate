@@ -10,7 +10,7 @@ import { useUserAuth } from './../../context/AuthProvider';
 
 const Profile = () => {
     const { user } = useUserAuth();
-    console.log(user);
+
     return (
         <main className="profile">
             <section className="header-background"></section>

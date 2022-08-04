@@ -42,7 +42,9 @@ connect bussiness owners with freelancers to get things done
 
 - redux-thunk v-^2.4.1: `npm i redux-thunk` study=> look at DOCs
 
-- 
+- js-cookie v- 3.0.1: `npm i js-cookie` study=> (https://www.npmjs.com/package/js-cookie)
+
+
 
 
 ---
@@ -71,6 +73,8 @@ connect bussiness owners with freelancers to get things done
 
 - make popup using react Portal
 
+- installed js-cookie to handel adding cookies to the browser
+
 ## errors and issues I faced
 
 - try to create fake json server I used this wrong command `npm install json-server`, but the right one is `npm install -g json-server`
@@ -79,3 +83,5 @@ connect bussiness owners with freelancers to get things done
 "npx json-server -w data/db.json -p 100 " then it will work
 
 - I found that the fake json server will not give me what I want to add nested data inside of it so I start to use Firebase instead
+
+- when the user login and token saved in the cookies if he refreshed the page he will redirected to the login page and he will still have access to the login and register pages from URl, I need to know how to make the both pages not show off for him again as long as he logged in
