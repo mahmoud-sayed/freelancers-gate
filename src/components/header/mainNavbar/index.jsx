@@ -5,6 +5,7 @@ import Logo from '../../logo';
 import { Link } from 'react-router-dom';
 import MainNavItems from "../mainNavItems";
 import { useUserAuth } from './../../../context/AuthProvider';
+import RemoveCookies from "../../CookiesHandling/removeCookies";
 
 
 const MainNavbar = () => {
@@ -13,6 +14,7 @@ const MainNavbar = () => {
     const handelLogOut = async () => {
         try {
             await logOut();
+            RemoveCookies('token');
         } catch (err) {
             console.log(err.message);
 

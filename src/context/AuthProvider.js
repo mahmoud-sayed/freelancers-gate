@@ -10,9 +10,6 @@ import {
   signInWithPopup,
   sendPasswordResetEmail
 } from 'firebase/auth';
-import SetCookies from "../components/CookiesHandling/setCookies";
-import GetCookies from "../components/CookiesHandling/getCookies";
-import RemoveCookies from "../components/CookiesHandling/removeCookies";
 
 const AuthContext = createContext();
 

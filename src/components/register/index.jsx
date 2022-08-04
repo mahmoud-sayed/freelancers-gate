@@ -9,6 +9,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 //firebase imports
 import { useUserAuth } from './../../context/AuthProvider';
+import SetCookies from "../CookiesHandling/setCookies";
+import RemoveCookies from "../CookiesHandling/removeCookies";
 
 
 // will accept E-mails like this >> "workingexample@email.com", 
@@ -47,7 +49,7 @@ const Register = () => {
     //const [success, setSuccess] = useState(false);
 
     //firebase Auth
-    const { signUp } = useUserAuth();
+    const { signUp, user } = useUserAuth();
 
     // to Navigate the user to another page
     const navigate = useNavigate();
@@ -90,6 +92,8 @@ const Register = () => {
         } else {
             try {
                 await signUp(email, pass);
+                RemoveCookies('token');
+                SetCookies('token', JSON.stringify(user.accessToken));
                 handelRegistrationSubmit(email, pass, policesAgreement, dispatch);
                 setErrMessage('Registered Successfully');
                 navigate("/profile", { replace: true });

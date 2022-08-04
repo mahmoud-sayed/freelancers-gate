@@ -20,7 +20,7 @@ const SignIn = () => {
     const [pass, setPass] = useState('');
     const [err, setErr] = useState('');
     const [success, setSuccess] = useState(false);
-    const { signIn, googleSignIn, faceBookSignIn, forgetPass } = useUserAuth();
+    const { signIn, googleSignIn, faceBookSignIn, forgetPass, user } = useUserAuth();
     const [popUpOpen, setPopUpOpen] = useState(false);
     const [emailToResetHisPass, setEmailToResetHisPass] = useState('');
     const navigate = useNavigate();
@@ -76,7 +76,8 @@ const SignIn = () => {
             const userData = [email, pass];
             try {
                 await signIn(email, pass);
-                SetCookies('useRin', JSON.stringify());
+                RemoveCookies('token');
+                SetCookies('token', JSON.stringify(user.accessToken));
                 navigate('/profile');
 
             } catch (err) {

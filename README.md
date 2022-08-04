@@ -42,6 +42,8 @@ connect bussiness owners with freelancers to get things done
 
 - redux-thunk v-^2.4.1: `npm i redux-thunk` study=> look at DOCs
 
+- 
+
 
 ---
 
