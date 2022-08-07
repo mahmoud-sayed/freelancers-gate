@@ -48,9 +48,12 @@ const Register = () => {
     const [errMessage, setErrMessage] = useState('');
     //const [success, setSuccess] = useState(false);
 
+    // google and facebook sign in
+    const { googleSignIn, faceBookSignIn } = useUserAuth();
+
     //firebase Auth
     const { signUp, user } = useUserAuth();
-
+    console.log(user);
     // to Navigate the user to another page
     const navigate = useNavigate();
 
@@ -80,6 +83,25 @@ const Register = () => {
         setErrMessage('');
     }, [email, pass, validPass]);
 
+    const handelGoogleRegister = async (e) => {
+        e.preventDefault();
+        try {
+            await googleSignIn();
+            navigate('/profile');
+        } catch (err) {
+            if (err) setErrMessage('something wrong with google login');
+        }
+    };
+
+    const handelFaceBookRegister = async (e) => {
+        e.preventDefault();
+        try {
+            await faceBookSignIn();
+            navigate('/profile');
+        } catch (err) {
+            if (err) setErrMessage('something wrong with FaceBook login');
+        }
+    };
 
 
     const formSubmit = async (e) => {
@@ -116,9 +138,9 @@ const Register = () => {
                         <h1 className='form-welcome'>Sign Up</h1>
                         <div className="auth-buttons">
 
-                            <button className='google-login'>
+                            <button className='google-login' onClick={handelGoogleRegister}>
                                 <FaGoogle className='google-icon' /><p className='google-text'>Sign Up with Google</p></button>
-                            <button className='facebook-login'><FaFacebook className='facebook-icon' /><p className='facebook-text'>Sign Up with facebook</p></button>
+                            <button className='facebook-login' onClick={handelFaceBookRegister}><FaFacebook className='facebook-icon' /><p className='facebook-text'>Sign Up with facebook</p></button>
                         </div>
                         <div className="or-wrapper">
                             <hr />

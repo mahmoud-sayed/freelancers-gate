@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
       unSubScribe();
     };
   }, []);
-
+  console.log(user);
 
   return (
     <AuthContext.Provider
