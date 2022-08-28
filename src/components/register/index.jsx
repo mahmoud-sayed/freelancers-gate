@@ -87,6 +87,7 @@ const Register = () => {
         e.preventDefault();
         try {
             await googleSignIn();
+
             navigate('/profile');
         } catch (err) {
             if (err) setErrMessage('something wrong with google login');
@@ -97,7 +98,8 @@ const Register = () => {
         e.preventDefault();
         try {
             await faceBookSignIn();
-            navigate('/profile');
+            console.log(user);
+            //navigate('/profile');
         } catch (err) {
             if (err) setErrMessage('something wrong with FaceBook login');
         }

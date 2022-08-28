@@ -130,7 +130,7 @@ const Home = () => {
                             <div className="skills-wrapper">
                                 <div className="skill">
                                     <Link to="/jobs" className="skill-link">
-                                        <img src={image.salse} alt="Professional Sales" />
+                                        <img src='https://i.postimg.cc/P5HFCYnt/salse.png' alt="Professional Sales" />
                                     </Link>
                                     <h3>Professional Sales</h3>
                                 </div>
