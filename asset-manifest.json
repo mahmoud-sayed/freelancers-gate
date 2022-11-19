@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/freelancers-gate/static/css/main.17c55094.chunk.css",
-    "main.js": "/freelancers-gate/static/js/main.e3343169.chunk.js",
-    "main.js.map": "/freelancers-gate/static/js/main.e3343169.chunk.js.map",
+    "main.css": "/freelancers-gate/static/css/main.03e89a06.chunk.css",
+    "main.js": "/freelancers-gate/static/js/main.872b046c.chunk.js",
+    "main.js.map": "/freelancers-gate/static/js/main.872b046c.chunk.js.map",
     "runtime-main.js": "/freelancers-gate/static/js/runtime-main.326a06d8.js",
     "runtime-main.js.map": "/freelancers-gate/static/js/runtime-main.326a06d8.js.map",
-    "static/js/2.75c5ff1d.chunk.js": "/freelancers-gate/static/js/2.75c5ff1d.chunk.js",
-    "static/js/2.75c5ff1d.chunk.js.map": "/freelancers-gate/static/js/2.75c5ff1d.chunk.js.map",
+    "static/js/2.ce144764.chunk.js": "/freelancers-gate/static/js/2.ce144764.chunk.js",
+    "static/js/2.ce144764.chunk.js.map": "/freelancers-gate/static/js/2.ce144764.chunk.js.map",
     "index.html": "/freelancers-gate/index.html",
-    "static/css/main.17c55094.chunk.css.map": "/freelancers-gate/static/css/main.17c55094.chunk.css.map",
-    "static/js/2.75c5ff1d.chunk.js.LICENSE.txt": "/freelancers-gate/static/js/2.75c5ff1d.chunk.js.LICENSE.txt",
+    "static/css/main.03e89a06.chunk.css.map": "/freelancers-gate/static/css/main.03e89a06.chunk.css.map",
+    "static/js/2.ce144764.chunk.js.LICENSE.txt": "/freelancers-gate/static/js/2.ce144764.chunk.js.LICENSE.txt",
     "static/media/adminstration.png": "/freelancers-gate/static/media/adminstration.8ce23ea8.png",
     "static/media/android.f907ad73.png": "/freelancers-gate/static/media/android.f907ad73.png",
     "static/media/apple.fc23fe67.png": "/freelancers-gate/static/media/apple.fc23fe67.png",
@@ -18,10 +18,10 @@
     "static/media/developers.png": "/freelancers-gate/static/media/developers.bf27fb40.png",
     "static/media/digital-marketing.png": "/freelancers-gate/static/media/digital-marketing.0d237d47.png",
     "static/media/finance.png": "/freelancers-gate/static/media/finance.261ab1bc.png",
-    "static/media/style.scss": "/freelancers-gate/static/media/pexels-ivan-samkov-4458554.fe45e2d5.jpg",
     "static/media/graphic-designers.png": "/freelancers-gate/static/media/graphic-designers.c4d55954.png",
     "static/media/hr.png": "/freelancers-gate/static/media/hr.b5b9a4dc.png",
     "static/media/media-production.png": "/freelancers-gate/static/media/media-production.bd553d5b.png",
+    "static/media/style.scss": "/freelancers-gate/static/media/pexels-ivan-samkov-4458554.fe45e2d5.jpg",
     "static/media/salse.png": "/freelancers-gate/static/media/salse.225aa5bd.png",
     "static/media/translators.png": "/freelancers-gate/static/media/translators.28aa9539.png",
     "static/media/voice-over.png": "/freelancers-gate/static/media/voice-over.81fbda40.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.326a06d8.js",
-    "static/js/2.75c5ff1d.chunk.js",
-    "static/css/main.17c55094.chunk.css",
-    "static/js/main.e3343169.chunk.js"
+    "static/js/2.ce144764.chunk.js",
+    "static/css/main.03e89a06.chunk.css",
+    "static/js/main.872b046c.chunk.js"
   ]
 }
